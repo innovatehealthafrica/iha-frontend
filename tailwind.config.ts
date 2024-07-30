@@ -31,10 +31,18 @@ const config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+
+          'dark-green': '#0D241D',
+          'green': '#008629',
+          'lemon-green': '#2DFF17',
+          'bright-orange': '#FFC332',
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+
+          'cyan': '#91FFE6',
+          'sky-blue': '#E1FFF4',
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -56,6 +64,10 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+
+        // Additional colors
+        'light-pink': '#FFA3FB',
+        'sea-green': '#A7FF91',
       },
       borderRadius: {
         lg: "var(--radius)",
