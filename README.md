@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Innovate Health Africa Web App
 
 ## Getting Started
 
@@ -20,6 +20,15 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Folder Structure
+
+[folder structure for the project](https://nextjs.org/_next/image?url=%2Flearn%2Flight%2Flearn-folder-structure.png&w=3840&q=75&dpl=dpl_7Am6V8nToLz8EEokD8P1frn9vUpW)
+
+- `/app/lib`: Contains functions used in your application, such as reusable utility functions and data fetching functions. A file containing server action functions can be here too.
+- `/app/ui`: Contains all the UI components for your application, such as cards, tables, and forms. To save time, we've pre-styled these components for you. Each page can have its own folder for page specific components here too e.g. `/app/ui/landing`
+- `/public`: Contains all the static assets for your application, such as images.
+- `/scripts`: Contains a seeding script that you'll use to populate your database and perform other critical functions.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -33,4 +42,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
