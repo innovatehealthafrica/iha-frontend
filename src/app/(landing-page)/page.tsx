@@ -11,6 +11,10 @@ import {
 } from "@/components/ui/carousel";
 import Testimonial from "./components/testimonial";
 import TestimonialSection from "./components/testimonial-section";
+import ConnectWithInnovatorSection from "./components/connect-with-innovators";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import PortfolioSection from "./components/PortfolioSection";
 
 const statistics = [
   { label: "Healthcare solution developed", value: 250 },
@@ -101,6 +105,12 @@ export default function Home() {
 
       {/* Testimonials */}
       <TestimonialSection />
+
+      {/* Connect With Innovators */}
+      <ConnectWithInnovatorSection />
+
+      {/* Portfolios */}
+      <PortfolioSection />
     </>
   );
 }
