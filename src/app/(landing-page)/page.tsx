@@ -1,54 +1,21 @@
 import { Button } from "@/ui/button";
 import Image from "next/image";
 import heroImage from "@/assets/images/hero-image.png";
-import StartupLaunchIcon from "./components/startup-launch-icon";
-import { ArrowRight, Book, LifeBuoy } from "lucide-react";
-import { Share1Icon } from "@radix-ui/react-icons";
-import { cn } from "@/lib/utils";
+import KeySolutionsSection from "./components/key-solutions-section";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Testimonial from "./components/testimonial";
+import TestimonialSection from "./components/testimonial-section";
 
 const statistics = [
   { label: "Healthcare solution developed", value: 250 },
   { label: "Healthcare Innovators Trained", value: 1200 },
   { label: "Research conducted", value: 100 },
-];
-
-const solutions = [
-  [
-    {
-      title: "Venture Lab",
-      description:
-        "Turn your Idea into a market ready product with the support of our expert teams and trusted partners",
-      cta: "Build with us",
-      color: "bg-primary-bright-orange",
-      icon: <StartupLaunchIcon fill="white" />,
-    },
-    {
-      title: "Innovation Support",
-      description:
-        "Access support to smartly apply innovation and technology in solving your organization’s social and commercial problems.",
-      cta: "Build with us",
-      color: "bg-primary-green",
-      icon: <LifeBuoy color="white" />,
-    },
-  ],
-  [
-    {
-      title: "School of Healthcare Innovation",
-      description:
-        "Equip yourself with cutting-edge skills to lead healthcare innovation—join 1,200+ professionals who have transformed their careers with us",
-      cta: "Learn with us",
-      color: "bg-primary-green",
-      icon: <Book color="white" className="size-5" />,
-    },
-    {
-      title: "Innovator’s Network",
-      description:
-        "Join our network of healthcare innovators, entrepreneurs and investors",
-      cta: "Join now",
-      color: "bg-primary-bright-orange",
-      icon: <Share1Icon color="white" className="size-5" />,
-    },
-  ],
 ];
 
 export default function Home() {
@@ -109,79 +76,31 @@ export default function Home() {
       </section>
 
       {/* Key Solutions */}
-      <section className="bg-white pt-32">
-        <div className="py-8 px-28 space-x-12 max-w-screen-2xl mx-auto flex">
-          <div className="flex flex-col justify-center">
-            <h3 className="font-[600] text-4xl">Get started with us at IHA!</h3>
-            <p className="font-light text-base mt-6">
-              Explore Our Key Solutions empowering You with the Tools,
-              Knowledge, Platform and Network to Drive Healthcare Innovation
+      <KeySolutionsSection />
+
+      {/* Programs and Initiatives Section */}
+      <section className="bg-primary-green/85 bg-no-repeat bg-cover">
+        <div className="flex py-28 px-24 space-x-12 max-w-screen-2xl mx-auto">
+          <div className="flex flex-col justify-center w-full">
+            <h2 className="font-[500] text-5xl text-white">
+              Our Programs & Initiatives
+            </h2>
+
+            <p className="mt-12 text-white">
+              Our programs and initiatives empower Africa healthcare innovators
+              with the support, skills and resources to drive innovation,
+              transform ideas into impactful products, and improve healthcare
+              outcome—positively impacting millions of lives across the
+              continent
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-x-8 px-12">
-            <div className="grid gap-y-11 pb-24">
-              {solutions[0].map((solution, index) => (
-                <div
-                  className={cn(
-                    "shadow-[2px_2px_50px_7px_rgba(0,0,0,0.15)] py-7 px-8 h-96",
-                    "rounded-tl-[40px]"
-                  )}
-                  key={index}
-                >
-                  <div className="flex items-center">
-                    <span
-                      className={cn(
-                        "size-12 flex justify-center items-center rounded-full",
-                        solution.color
-                      )}
-                    >
-                      {solution.icon}
-                    </span>
-                    <h4 className="font-bold text-xl ps-4">{solution.title}</h4>
-                  </div>
-
-                  <p className="mt-14 text-base">{solution.description}</p>
-
-                  <Button variant="outline" className="mt-10 rounded-full">
-                    {solution.cta} <ArrowRight />{" "}
-                  </Button>
-                </div>
-              ))}
-            </div>
-
-            <div className="grid gap-y-11 pt-24">
-              {solutions[1].map((solution, index) => (
-                <div
-                  className={cn(
-                    "shadow-[2px_2px_50px_7px_rgba(0,0,0,0.15)] py-7 px-8 h-96",
-                    "rounded-tr-[40px]"
-                  )}
-                  key={index}
-                >
-                  <div className="flex items-center">
-                    <span
-                      className={cn(
-                        "size-12 flex justify-center items-center rounded-full",
-                        solution.color
-                      )}
-                    >
-                      {solution.icon}
-                    </span>
-                    <h4 className="font-bold text-xl ps-4">{solution.title}</h4>
-                  </div>
-
-                  <p className="mt-14 text-base">{solution.description}</p>
-
-                  <Button variant="outline" className="mt-10 rounded-full">
-                    {solution.cta} <ArrowRight />{" "}
-                  </Button>
-                </div>
-              ))}
-            </div>
-          </div>
+          <div className=""></div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <TestimonialSection />
     </>
   );
 }
