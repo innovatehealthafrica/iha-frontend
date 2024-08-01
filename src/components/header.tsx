@@ -60,7 +60,7 @@ const Link = ({ href, ...props }: LinkProps) => {
     >
       <NextLink
         href={href}
-        className="NavigationMenuLink font-[400] text-lg"
+        className="NavigationMenuLink font-[400] text-base"
         {...props}
       />
     </NavigationMenuLink>
@@ -89,7 +89,7 @@ export default function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="font-[400] text-lg">
+              <NavigationMenuTrigger className="font-[400]">
                 Programs
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -108,7 +108,7 @@ export default function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="font-[400] text-lg">
+              <NavigationMenuTrigger className="font-[400]">
                 Portfolio
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -131,7 +131,7 @@ export default function Header() {
             </NavigationMenuItem>
 
             <Button
-              className="rounded-full px-6 bg-primary-green hover:bg-primary-green/90 text-lg"
+              className="rounded-full px-6 bg-primary-green hover:bg-primary-green/90"
               size="lg"
             >
               Work with us
