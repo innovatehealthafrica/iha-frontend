@@ -7,6 +7,7 @@ import ConnectWithInnovatorSection from "./components/connect-with-innovators";
 import PortfolioSection from "./components/PortfolioSection";
 import connectedImage from "@/assets/images/connected.png";
 import PartnerSection from "./components/partners-section";
+import BlogSection from "./components/blog-section";
 
 const statistics = [
   { label: "Healthcare solution developed", value: 250 },
@@ -121,6 +122,7 @@ export default function Home() {
             <Button
               className="w-fit mt-9 rounded-full bg-black text-white hover:bg-black/60"
               variant="secondary"
+              size="lg"
             >
               Join Community
             </Button>
@@ -138,6 +140,9 @@ export default function Home() {
 
       {/* Partners */}
       <PartnerSection />
+
+      {/* News and Highlights */}
+      <BlogSection />
     </>
   );
 }
