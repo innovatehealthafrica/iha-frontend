@@ -8,6 +8,7 @@ import PortfolioSection from "./components/PortfolioSection";
 import connectedImage from "@/assets/images/connected.png";
 import PartnerSection from "./components/partners-section";
 import BlogSection from "./components/blog-section";
+import ContactUsSection from "./components/contact-us-section";
 
 const statistics = [
   { label: "Healthcare solution developed", value: 250 },
@@ -143,6 +144,9 @@ export default function Home() {
 
       {/* News and Highlights */}
       <BlogSection />
+
+      {/* Contact us */}
+      <ContactUsSection />
     </>
   );
 }
