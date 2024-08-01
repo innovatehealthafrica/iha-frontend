@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/ui/button";
 import Image from "next/image";
 import heroImage from "@/assets/images/hero-image.png";
@@ -28,15 +30,15 @@ export default function Home() {
         }}
       >
         <div className="flex py-8 pb-36 px-24 space-x-12 max-w-screen-2xl mx-auto">
-          <div className="flex flex-col justify-center w-full">
-            <h1 className="font-bold text-4xl text-white">
+          <div className="flex flex-col justify-center w-full max-w-xl">
+            <h1 className="font-bold text-[2.5rem] leading-normal text-white">
               Building Tomorrow’s Healthcare{" "}
               <span className="text-primary-bright-orange">Solution</span>{" "}
               Today, <br />
               <span className="text-white/50">By Africans, for Africa</span>
             </h1>
 
-            <p className="mt-12 text-white">
+            <p className="mt-12 text-white text-xl">
               We{"'"}re driving the co-creation of healthcare solutions with
               everyone from developers to end users, turning ideas into
               real-world impacts.
@@ -47,7 +49,7 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="">
+          <div className="flex justify-center w-full">
             <Image
               src={heroImage}
               alt="Building Tomorrow’s Healthcare Solution Today, By Africans, for
@@ -66,8 +68,10 @@ export default function Home() {
               key={index}
               className="col-span-1 px-4 py-6 shadow-lg rounded-3xl space-y-3 bg-white"
             >
-              <h3 className="text-xl">{stat.label}</h3>
-              <p className="font-bold text-5xl">{stat.value}+</p>
+              <h3 className="text-xl text-center">{stat.label}</h3>
+              <p className="font-bold text-[2.5rem] text-center">
+                {stat.value}+
+              </p>
             </div>
           ))}
         </div>

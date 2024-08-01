@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Poppins as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Toaster } from "react-hot-toast";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -28,7 +31,10 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <Header />
         {children}
+        <Footer />
+        <Toaster position="bottom-center" />
       </body>
     </html>
   );

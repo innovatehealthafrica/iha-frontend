@@ -1,13 +1,25 @@
+"use client";
+
 import { Button } from "@/ui/button";
-import React from "react";
+import { FormEventHandler } from "react";
 
 import colourPrints from "@/assets/images/africa-print.png";
 import greyPrints from "@/assets/images/africa-print-grey.png";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import toast from "react-hot-toast";
+import { Info } from "lucide-react";
 
 export default function ContactUsSection() {
+  const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+
+    toast.error("We are unable to submit your request at the moment.", {
+      icon: <Info />,
+      className: "border border-primary-green",
+    });
+  };
   return (
     <section className="bg-white py-24 relative">
       <div className="absolute top-0 flex">
@@ -29,6 +41,12 @@ export default function ContactUsSection() {
             className="bg-black text-white hover:bg-black/80 hover:text-white rounded-lg"
             size="lg"
             variant="secondary"
+            onClick={() =>
+              toast("Feature coming soon.", {
+                icon: <Info />,
+                className: "border border-primary-green",
+              })
+            }
           >
             Schedule a meeting
           </Button>
@@ -39,7 +57,7 @@ export default function ContactUsSection() {
             <span className="w-full h-1 border-t"></span>
           </div>
 
-          <form className="">
+          <form onSubmit={handleSubmit} className="">
             <Input
               placeholder="Your name"
               className="h-12 rounded-lg px-6 mb-6"
