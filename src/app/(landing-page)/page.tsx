@@ -2,19 +2,11 @@ import { Button } from "@/ui/button";
 import Image from "next/image";
 import heroImage from "@/assets/images/hero-image.png";
 import KeySolutionsSection from "./components/key-solutions-section";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Testimonial from "./components/testimonial";
 import TestimonialSection from "./components/testimonial-section";
 import ConnectWithInnovatorSection from "./components/connect-with-innovators";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
 import PortfolioSection from "./components/PortfolioSection";
+import connectedImage from "@/assets/images/connected.png";
+import PartnerSection from "./components/partners-section";
 
 const statistics = [
   { label: "Healthcare solution developed", value: 250 },
@@ -111,6 +103,41 @@ export default function Home() {
 
       {/* Portfolios */}
       <PortfolioSection />
+
+      {/* CTA */}
+      <section className="bg-white py-28">
+        <div className="flex py-8 pb-36 px-24 space-x-12 max-w-screen-2xl mx-auto">
+          <div className="flex flex-col justify-center w-full max-w-lg">
+            <h2 className="font-[600] text-[2.5rem] leading-normal">
+              Join the largest community of healthcare innovators
+            </h2>
+
+            <p className="mt-4">
+              Join the largest community of innovators, encompassing product
+              developers, data scientists, engineers, healthcare professionals,
+              AI developers, cloud engineers, and more.
+            </p>
+
+            <Button
+              className="w-fit mt-9 rounded-full bg-black text-white hover:bg-black/60"
+              variant="secondary"
+            >
+              Join Community
+            </Button>
+          </div>
+
+          <div className="w-full flex justify-center">
+            <Image
+              src={connectedImage}
+              alt="Image of innovators connected by one goal"
+              className="min-w-[553px] w-[553px]"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Partners */}
+      <PartnerSection />
     </>
   );
 }
