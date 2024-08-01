@@ -44,7 +44,11 @@ const programs = [
   },
 ];
 
-const Link = ({ href, ...props }) => {
+interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  href: string;
+}
+
+const Link = ({ href, ...props }: LinkProps) => {
   const pathname = usePathname();
   const isActive = href === pathname;
 
