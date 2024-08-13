@@ -29,22 +29,22 @@ export default function Home() {
           backgroundBlendMode: "darken",
         }}
       >
-        <div className="flex py-8 pb-36 px-24 space-x-12 max-w-screen-2xl mx-auto">
+        <div className="flex flex-col lg:flex-row py-8 pb-36 px-8 lg:px-24 space-x-12 max-w-screen-2xl mx-auto">
           <div className="flex flex-col justify-center w-full max-w-xl">
-            <h1 className="font-bold text-[2.5rem] leading-normal text-white">
+            <h1 className="font-bold text-2xl lg:text-[2.0rem]  leading-normal text-white">
               Building Tomorrow’s Healthcare{" "}
               <span className="text-primary-bright-orange">Solution</span>{" "}
               Today, <br />
               <span className="text-white/50">By Africans, for Africa</span>
             </h1>
 
-            <p className="mt-12 text-white text-xl">
+            <p className="mt-6 text-white text-lg">
               We{"'"}re driving the co-creation of healthcare solutions with
               everyone from developers to end users, turning ideas into
               real-world impacts.
             </p>
 
-            <Button className="w-fit mt-9 rounded-full bg-white text-primary-green">
+            <Button className="w-fit mt-6 rounded-full bg-white text-primary-green">
               Read More
             </Button>
           </div>
@@ -54,7 +54,7 @@ export default function Home() {
               src={heroImage}
               alt="Building Tomorrow’s Healthcare Solution Today, By Africans, for
             Africa"
-              className="min-w-[553px] w-[553px]"
+              className="w-full max-w-[553px] h-auto"
             />
           </div>
         </div>
