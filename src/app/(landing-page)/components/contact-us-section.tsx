@@ -26,10 +26,11 @@ export default function ContactUsSection() {
         <Image src={colourPrints} alt="africa prints" className="w-[42px]" />
         <Image src={greyPrints} alt="africa prints" className="w-20" />
       </div>
+
       <div className="w-full max-w-screen-xl mx-auto flex">
-        <div className="max-w-lg flex flex-col justify-center px-12">
+        <div className="flex flex-col justify-center px-12 w-1/2">
           <h3 className="font-[600] text-5xl mb-4">Get in Touch</h3>
-          <p>
+          <p className="max-w-lg ">
             We’re open to answer your questions, discuss Partnerships, Services,
             and Collaborative Opportunities!
           </p>

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import ihaLogo from "@/assets/logo/iha-black.png";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -16,6 +16,8 @@ import {
 import { usePathname } from "next/navigation";
 import { Button } from "@/ui/button";
 import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
+import { useToggle } from "@/hooks/useToggle";
 
 const programs = [
   {
@@ -56,29 +58,31 @@ const Link = ({ href, ...props }: LinkProps) => {
     <NavigationMenuLink
       asChild
       active={isActive}
-      className={navigationMenuTriggerStyle()}
+      className={cn("font-[400] text-base", navigationMenuTriggerStyle())}
     >
-      <NextLink
-        href={href}
-        className="NavigationMenuLink font-[400] text-base"
-        {...props}
-      />
+      <NextLink href={href} className="NavigationMenuLinks" {...props} />
     </NavigationMenuLink>
   );
 };
 
 export default function Header() {
+  const [isToggled, toggle, setToggle] = useToggle();
+
   return (
     <header className="py-6">
-      <div className="w-full max-w-screen-xl mx-auto flex justify-between">
-        <div>
+      <div className="w-full max-w-screen-xl px-4 md:px-0 mx-auto flex justify-between items-center">
+        <div className="">
           <NextLink href={"/"}>
             <Image src={ihaLogo} alt="IHA logo" className="h-14 w-auto" />
             <span className="sr-only">IHA logo</span>
           </NextLink>
         </div>
 
-        <NavigationMenu>
+        {/* Animated Menu Icon */}
+        <AnimatedMenuIcon isOpen={isToggled} toggle={toggle} />
+
+        {/* Desktop Navigation */}
+        <NavigationMenu className="hidden md:block">
           <NavigationMenuList className="flex gap-6">
             <NavigationMenuItem>
               <Link href="#">Home</Link>
@@ -168,3 +172,31 @@ const ListItem = React.forwardRef<
   );
 });
 ListItem.displayName = "ListItem";
+
+function AnimatedMenuIcon({ isOpen, toggle }) {
+  return (
+    <button
+      className="flex flex-col justify-center items-center w-8 h-8 gap-0.5 md:hidden"
+      onClick={toggle}
+    >
+      <span
+        className={cn(
+          "bg-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm",
+          {
+            "rotate-45 translate-y-0.5": isOpen,
+            "-translate-y-0.5": !isOpen,
+          }
+        )}
+      ></span>
+      <span
+        className={cn(
+          "bg-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm",
+          {
+            "-rotate-45 -translate-y-0.5": isOpen,
+            "translate-y-0.5": !isOpen,
+          }
+        )}
+      ></span>
+    </button>
+  );
+}
