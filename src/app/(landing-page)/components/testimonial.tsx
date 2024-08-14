@@ -13,7 +13,7 @@ export default function Testimonial({
   };
 }) {
   return (
-    <div className="pe-12">
+    <div className="lg:pe-12">
       <QuoteIcon className="rotate-180 text-primary-green size-10" />
       <p className="min-h-28">{testimonial}</p>
 

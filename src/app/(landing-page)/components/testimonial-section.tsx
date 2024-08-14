@@ -83,13 +83,13 @@ const testimonials = [
 export default function TestimonialSection() {
   return (
     <section className="bg-white">
-      <div className="py-28 px-24 max-w-screen-2xl mx-auto space-y-20">
-        <h2 className="font-[600] text-4xl leading-normal">
+      <div className="py-16 lg:py-28 px-8 lg:px-24 max-w-screen-2xl mx-auto space-y-20">
+        <h2 className="font-[600] text-3xl lg:text-4xl leading-normal">
           Innovator’s Success Stories, <br />
           Evidence of our impact.
         </h2>
 
-        <div>
+        <div className="px-8">
           <Carousel
             opts={{
               align: "start",
