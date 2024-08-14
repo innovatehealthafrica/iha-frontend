@@ -127,9 +127,9 @@ const more = [
 export default function Footer() {
   return (
     <footer className="bg-primary-green py-24">
-      <div className="grid grid-cols-3 w-full max-w-screen-xl mx-auto">
-        <div className="flex flex-col gap-8 row-span-2">
-          <h5 className="text-white font-[600] text-3xl leading-normal">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-8 lg:gap-y-0 w-full max-w-screen-xl px-8 lg:mx-auto">
+        <div className="flex flex-col gap-4 lg:gap-8 lg:row-span-2">
+          <h5 className="text-white font-[600] text-xl lg:text-3xl leading-normal">
             Resources
           </h5>
 
@@ -138,7 +138,7 @@ export default function Footer() {
               <li key={index}>
                 <Link
                   href={link}
-                  className="text-xl leading-9 text-primary-lemon-green hover:underline"
+                  className="text-sm lg:text-xl leading-7 lg:leading-9 text-primary-lemon-green hover:underline"
                 >
                   {label}
                 </Link>
@@ -147,8 +147,8 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-8">
-          <h5 className="text-white font-[600] text-3xl leading-normal">
+        <div className="flex flex-col gap-4 lg:gap-8">
+          <h5 className="text-white font-[600] text-xl lg:text-3xl leading-normal">
             Our Organization
           </h5>
 
@@ -157,7 +157,7 @@ export default function Footer() {
               <li key={index}>
                 <Link
                   href={link}
-                  className="text-xl leading-9 text-primary-lemon-green hover:underline"
+                  className="text-sm lg:text-xl leading-7 lg:leading-9 text-primary-lemon-green hover:underline"
                 >
                   {label}
                 </Link>
@@ -166,8 +166,8 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-8">
-          <h5 className="text-white font-[600] text-3xl leading-normal">
+        <div className="flex flex-col gap-4 lg:gap-8">
+          <h5 className="text-white font-[600] text-xl lg:text-3xl leading-normal">
             More
           </h5>
 
@@ -176,7 +176,7 @@ export default function Footer() {
               <li key={index}>
                 <Link
                   href={link}
-                  className="text-xl leading-9 text-primary-lemon-green hover:underline"
+                  className="text-sm lg:text-xl leading-7 lg:leading-9 text-primary-lemon-green hover:underline"
                 >
                   {label}
                 </Link>
@@ -185,7 +185,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="w-full max-w-lg relative mt-6 col-span-2 col-start-2">
+        <div className="w-full max-w-lg relative lg:mt-6 col-span-2 lg:col-start-2">
           <Input
             placeholder="Subscribe to our Newsletter (Email)"
             className="w-full rounded-none h-12"
@@ -204,26 +204,26 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="text-primary-lemon-green flex justify-between w-full max-w-screen-xl mx-auto pt-24">
-        <span className="text-lg">
+      <div className="text-primary-lemon-green flex flex-col lg:flex-row items-center lg:justify-between gap-8 lg:gap-0 w-full max-w-screen-xl mx-auto pt-24">
+        <span className="text-sm lg:text-lg">
           @2024 INNOVATEHEALTH AFRICA. ALL RIGHT RESERVED
         </span>
 
         <div className="flex">
           <Link
             href="#"
-            className="after:content-['|'] after:px-4 text-lg hover:underline"
+            className="after:content-['|'] after:px-4 text-sm lg:text-lg hover:underline"
           >
             Newsletter
           </Link>
           <Link
             href="#"
-            className="after:content-['|'] after:px-4 text-lg hover:underline"
+            className="after:content-['|'] after:px-4 text-sm lg:text-lg hover:underline"
           >
             {" "}
             Terms of Use
           </Link>
-          <Link href="#" className="text-lg hover:underline">
+          <Link href="#" className="text-sm lg:text-lg hover:underline">
             {" "}
             Privacy Policy
           </Link>
