@@ -29,7 +29,7 @@ export default function ContactUsSection() {
 
       <div className="w-full max-w-screen-xl mx-auto flex flex-col lg:flex-row ps-16 lg:ps-0 pe-8 lg:pe-0">
         <div className="flex flex-col justify-center items-end lg:items-start lg:px-12 lg:w-1/2">
-          <h3 className="font-[600] text-5xl mb-4">Get in Touch</h3>
+          <h3 className="font-[600] text-3xl lg:text-5xl mb-4">Get in Touch</h3>
           <p className="max-w-lg text-end lg:text-start">
             We’re open to answer your questions, discuss Partnerships, Services,
             and Collaborative Opportunities!
@@ -37,7 +37,7 @@ export default function ContactUsSection() {
         </div>
 
         <div className="border-l lg:px-20 w-full max-w-lg py-8 flex flex-col items-end lg:items-start">
-          <h2 className="mb-6 font-[600] text-4xl text-end lg:text-start">
+          <h2 className="mb-6 font-[600] text-2xl lg:text-4xl text-end lg:text-start">
             Let’s Talk
           </h2>
           <Button
