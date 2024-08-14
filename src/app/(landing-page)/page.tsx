@@ -111,10 +111,10 @@ export default function Home() {
       <PortfolioSection />
 
       {/* CTA */}
-      <section className="bg-white py-28">
-        <div className="flex py-8 pb-36 px-24 space-x-12 max-w-screen-2xl mx-auto">
-          <div className="flex flex-col justify-center w-full max-w-lg">
-            <h2 className="font-[600] text-[2.5rem] leading-normal">
+      <section className="bg-white py-16 lg:py-28">
+        <div className="flex flex-col lg:flex-row lg:py-8 pb-36 px-8 lg:px-24 lg:space-x-12 gap-8 lg:gap-0 max-w-screen-2xl mx-auto">
+          <div className="flex flex-col justify-center w-full max-w-lg order-1">
+            <h2 className="font-[600] text-3xl lg:text-[2.5rem] leading-tight lg:leading-normal">
               Join the largest community of healthcare innovators
             </h2>
 
@@ -125,7 +125,7 @@ export default function Home() {
             </p>
 
             <Button
-              className="w-fit mt-9 rounded-full bg-black text-white hover:bg-black/60"
+              className="w-fit mt-4 lg:mt-9 rounded-full bg-black text-white hover:bg-black/60"
               variant="secondary"
               size="lg"
             >
@@ -137,7 +137,8 @@ export default function Home() {
             <Image
               src={connectedImage}
               alt="Image of innovators connected by one goal"
-              className="min-w-[553px] w-[553px]"
+              width={553}
+              height={300}
             />
           </div>
         </div>
