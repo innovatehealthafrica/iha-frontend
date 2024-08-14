@@ -82,7 +82,7 @@ export default function Home() {
 
       {/* Programs and Initiatives Section */}
       <section className="bg-primary-green/85 bg-no-repeat bg-cover">
-        <div className="flex py-28 px-24 space-x-12 max-w-screen-2xl mx-auto">
+        <div className="flex flex-col lg:flex-row py-28 px-24 space-x-12 max-w-screen-2xl mx-auto">
           <div className="flex flex-col justify-center w-full">
             <h2 className="font-[500] text-5xl text-white">
               Our Programs & Initiatives

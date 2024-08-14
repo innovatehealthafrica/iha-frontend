@@ -46,18 +46,20 @@ const solutions = [
 
 export default function KeySolutionsSection() {
   return (
-    <section className="bg-white pt-32">
-      <div className="py-8 px-28 space-x-12 max-w-screen-2xl mx-auto flex">
+    <section className="bg-white pt-20 lg:pt-32">
+      <div className="py-8 px-8 lg:px-28 lg:space-x-12 max-w-screen-2xl mx-auto flex flex-col lg:flex-row">
         <div className="flex flex-col justify-center">
-          <h3 className="font-[600] text-4xl">Get started with us at IHA!</h3>
+          <h3 className="font-[600] text-3xl lg:text-4xl">
+            Get started with us at IHA!
+          </h3>
           <p className="font-light text-base mt-6">
             Explore Our Key Solutions empowering You with the Tools, Knowledge,
             Platform and Network to Drive Healthcare Innovation
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-x-8 px-12">
-          <div className="grid gap-y-11 pb-24">
+        <div className="grid lg:grid-cols-2 py-8 lg:py-0 gap-y-11 lg:gap-y-0 gap-x-8 lg:px-12">
+          <div className="grid gap-y-11 lg:pb-24">
             {solutions[0].map((solution, index) => (
               <div
                 className={cn(
@@ -87,7 +89,7 @@ export default function KeySolutionsSection() {
             ))}
           </div>
 
-          <div className="grid gap-y-11 pt-24">
+          <div className="grid gap-y-11 lg:pt-24">
             {solutions[1].map((solution, index) => (
               <div
                 className={cn(
