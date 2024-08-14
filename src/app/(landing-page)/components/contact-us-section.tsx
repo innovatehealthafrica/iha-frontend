@@ -36,7 +36,7 @@ export default function ContactUsSection() {
           </p>
         </div>
 
-        <div className="border-l lg:px-20 w-full max-w-lg py-8 flex flex-col items-end lg:items-start">
+        <div className="border-l lg:px-20 w-full lg:max-w-lg py-8 flex flex-col items-end lg:items-start">
           <h2 className="mb-6 font-[600] text-2xl lg:text-4xl text-end lg:text-start">
             Let’s Talk
           </h2>
@@ -66,17 +66,17 @@ export default function ContactUsSection() {
           >
             <Input
               placeholder="Your name"
-              className="h-12 rounded-lg px-6 mb-6"
+              className="h-12 rounded-lg px-6 mb-6 max-w-xs"
             />
 
             <Input
               placeholder="Your email"
-              className="h-12 rounded-lg px-6 mb-6"
+              className="h-12 rounded-lg px-6 mb-6 max-w-xs"
             />
 
             <Textarea
               placeholder="Leave your message here..."
-              className="rounded-lg px-6 mb-6"
+              className="rounded-lg px-6 mb-6 max-w-xs"
               rows={5}
             />
 

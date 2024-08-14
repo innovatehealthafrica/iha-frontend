@@ -61,8 +61,8 @@ export default function Home() {
       </section>
 
       {/* Statistics */}
-      <section className="-mt-[25%] lg:-mt-[5%] md:absolute w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 py-8 px-8 lg:px-24 gap-4 sm:gap-6 lg:gap-8 max-w-screen-2xl mx-auto">
+      <section className="-mt-[25%] sm:-mt-[12%] lg:-mt-[5%] lg:absolute w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 py-8 px-8 lg:px-24 gap-4 sm:gap-6 lg:gap-8 max-w-screen-2xl mx-auto">
           {statistics.map((stat, index) => (
             <div
               key={index}

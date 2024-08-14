@@ -46,13 +46,13 @@ const solutions = [
 
 export default function KeySolutionsSection() {
   return (
-    <section className="bg-white pt-20 lg:pt-32">
+    <section className="bg-white lg:pt-32">
       <div className="py-8 px-8 lg:px-28 lg:space-x-12 max-w-screen-2xl mx-auto flex flex-col lg:flex-row">
         <div className="flex flex-col justify-center">
           <h3 className="font-[600] text-3xl lg:text-4xl">
             Get started with us at IHA!
           </h3>
-          <p className="font-light text-base mt-6">
+          <p className="font-light text-sm mt-6">
             Explore Our Key Solutions empowering You with the Tools, Knowledge,
             Platform and Network to Drive Healthcare Innovation
           </p>
@@ -63,7 +63,7 @@ export default function KeySolutionsSection() {
             {solutions[0].map((solution, index) => (
               <div
                 className={cn(
-                  "shadow-[2px_2px_50px_7px_rgba(0,0,0,0.15)] py-7 px-8 h-96",
+                  "shadow-[2px_2px_50px_7px_rgba(0,0,0,0.15)] py-7 px-8 h-80",
                   "rounded-tl-[40px]"
                 )}
                 key={index}
@@ -77,12 +77,12 @@ export default function KeySolutionsSection() {
                   >
                     {solution.icon}
                   </span>
-                  <h4 className="font-bold text-xl ps-4">{solution.title}</h4>
+                  <h4 className="font-bold text-lg ps-4">{solution.title}</h4>
                 </div>
 
-                <p className="mt-14 text-base">{solution.description}</p>
+                <p className="mt-8 text-sm">{solution.description}</p>
 
-                <Button variant="outline" className="mt-10 rounded-full">
+                <Button variant="outline" className="mt-8 rounded-full">
                   {solution.cta} <ArrowRight />{" "}
                 </Button>
               </div>
@@ -93,7 +93,7 @@ export default function KeySolutionsSection() {
             {solutions[1].map((solution, index) => (
               <div
                 className={cn(
-                  "shadow-[2px_2px_50px_7px_rgba(0,0,0,0.15)] py-7 px-8 h-96",
+                  "shadow-[2px_2px_50px_7px_rgba(0,0,0,0.15)] py-7 px-8 h-80",
                   "rounded-tr-[40px]"
                 )}
                 key={index}
@@ -101,18 +101,18 @@ export default function KeySolutionsSection() {
                 <div className="flex items-center">
                   <span
                     className={cn(
-                      "size-12 flex justify-center items-center rounded-full",
+                      "flex-shrink-0 size-12 flex justify-center items-center rounded-full",
                       solution.color
                     )}
                   >
                     {solution.icon}
                   </span>
-                  <h4 className="font-bold text-xl ps-4">{solution.title}</h4>
+                  <h4 className="font-bold text-lg ps-4">{solution.title}</h4>
                 </div>
 
-                <p className="mt-14 text-base">{solution.description}</p>
+                <p className="mt-8 text-sm">{solution.description}</p>
 
-                <Button variant="outline" className="mt-10 rounded-full">
+                <Button variant="outline" className="mt-8 rounded-full">
                   {solution.cta} <ArrowRight />{" "}
                 </Button>
               </div>
