@@ -142,6 +142,8 @@ export default function Header() {
             </Button>
           </NavigationMenuList>
         </NavigationMenu>
+
+        {/* Mobile Navigation */}
       </div>
     </header>
   );

@@ -52,7 +52,7 @@ export default function PortfolioSection() {
               key={index}
               className="py-12 px-7 bg-white border border-primary-green/20 rounded-2xl flex flex-col gap-5"
             >
-              <div className="h-7 sm:h-12 w-48 relative">
+              <div className="h-7 sm:h-12 relative">
                 <Image
                   src={portfolio.logo}
                   alt={`${portfolio.name} logo`}
