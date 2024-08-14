@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ihaLogo from "@/assets/logo/iha-black.png";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -50,6 +50,14 @@ interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
 }
 
+const toggleBodyScroll = (disable: boolean) => {
+  if (disable) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+};
+
 const Link = ({ href, ...props }: LinkProps) => {
   const pathname = usePathname();
   const isActive = href === pathname;
@@ -68,12 +76,24 @@ const Link = ({ href, ...props }: LinkProps) => {
 export default function Header() {
   const [isToggled, toggle, setToggle] = useToggle();
 
+  // Use useEffect to toggle body scroll when isToggled changes
+  useEffect(() => {
+    toggleBodyScroll(isToggled);
+
+    // Cleanup function to ensure scroll is re-enabled when component unmounts
+    return () => toggleBodyScroll(false);
+  }, [isToggled]);
+
   return (
-    <header className="py-6">
-      <div className="w-full max-w-screen-xl px-8 md:px-8 xl:px-0 mx-auto flex justify-between items-center">
+    <header>
+      <div className="w-full max-w-screen-xl px-8 md:px-8 xl:px-0 mx-auto py-4 flex justify-between items-center">
         <div className="">
           <NextLink href={"/"}>
-            <Image src={ihaLogo} alt="IHA logo" className="h-14 w-auto" />
+            <Image
+              src={ihaLogo}
+              alt="IHA logo"
+              className="h-12 md:h-14 w-auto"
+            />
             <span className="sr-only">IHA logo</span>
           </NextLink>
         </div>
@@ -142,8 +162,52 @@ export default function Header() {
             </Button>
           </NavigationMenuList>
         </NavigationMenu>
+      </div>
 
-        {/* Mobile Navigation */}
+      {/* Mobile Navigation */}
+      <div
+        className={cn(
+          "fixed inset-0 top-[80px] border-t bg-white z-50 flex flex-col p-8 transition-transform duration-300 ease-in-out md:hidden",
+          {
+            "translate-x-0": isToggled,
+            "translate-x-full": !isToggled,
+          }
+        )}
+      >
+        <nav className="flex flex-col gap-6">
+          <NextLink href="#" className="text-xl font-semibold" onClick={toggle}>
+            Home
+          </NextLink>
+          <NextLink href="#" className="text-xl font-semibold" onClick={toggle}>
+            About Us
+          </NextLink>
+          <div className="flex flex-col gap-2">
+            <span className="text-xl font-semibold">Programs</span>
+            {programs.map((program) => (
+              <NextLink
+                key={program.title}
+                href={program.href}
+                className="text-lg pl-4"
+                onClick={toggle}
+              >
+                {program.title}
+              </NextLink>
+            ))}
+          </div>
+          <NextLink href="#" className="text-xl font-semibold" onClick={toggle}>
+            Portfolio
+          </NextLink>
+          <NextLink href="#" className="text-xl font-semibold" onClick={toggle}>
+            News
+          </NextLink>
+          <Button
+            className="rounded-full px-6 bg-primary-green hover:bg-primary-green/90 mt-4"
+            size="lg"
+            onClick={toggle}
+          >
+            Work with us
+          </Button>
+        </nav>
       </div>
     </header>
   );
