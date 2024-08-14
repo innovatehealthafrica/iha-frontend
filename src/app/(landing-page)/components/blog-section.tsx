@@ -34,20 +34,23 @@ const higlights = [
 export default function BlogSection() {
   return (
     <section className="bg-primary-green/5 py-20">
-      <div className="px-24 gap-x-12 max-w-screen-2xl mx-auto">
-        <div className="mb-10 flex justify-between items-end">
+      <div className="px-8 lg:px-24 gap-x-12 max-w-screen-2xl mx-auto">
+        <div className="mb-10 flex flex-col lg:flex-row justify-between lg:items-end gap-y-4 lg:gap-y-0">
           <h2 className="text-2xl">
             IHA news and <br />
-            <span className="font-[600] text-5xl leading-normal">
+            <span className="font-[600] text-5xl lg:leading-normal">
               highlights
             </span>
           </h2>
 
-          <Link href="#" className="block text-right ">
+          <Link
+            href="#"
+            className="block text-left lg:text-right hover:underline"
+          >
             View all
           </Link>
         </div>
-        <div className="w-full grid grid-cols-4 gap-6">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-6">
           {higlights.map(({ title, date, thumbnail }, index) => (
             <div key={index} className="flex flex-col gap-5">
               <Image src={thumbnail} alt={`${title} thumbnail`} />
