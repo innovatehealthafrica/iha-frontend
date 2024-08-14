@@ -127,7 +127,7 @@ const more = [
 export default function Footer() {
   return (
     <footer className="bg-primary-green py-24">
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-8 lg:gap-y-0 w-full max-w-screen-xl px-8 lg:mx-auto">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-8 lg:gap-y-0 w-full max-w-screen-2xl px-8 lg:mx-auto">
         <div className="flex flex-col gap-4 lg:gap-8 lg:row-span-2">
           <h5 className="text-white font-[600] text-xl lg:text-3xl leading-normal">
             Resources
@@ -204,7 +204,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="text-primary-lemon-green flex flex-col lg:flex-row items-center lg:justify-between gap-8 lg:gap-0 w-full max-w-screen-xl mx-auto pt-24">
+      <div className="text-primary-lemon-green flex flex-col lg:flex-row items-center lg:justify-between gap-8 lg:gap-0 w-full max-w-screen-xl mx-auto px-4 pt-24">
         <span className="text-sm lg:text-lg">
           @2024 INNOVATEHEALTH AFRICA. ALL RIGHT RESERVED
         </span>

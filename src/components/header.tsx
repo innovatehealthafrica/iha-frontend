@@ -70,7 +70,7 @@ export default function Header() {
 
   return (
     <header className="py-6">
-      <div className="w-full max-w-screen-xl px-4 md:px-8 xl:px-0 mx-auto flex justify-between items-center">
+      <div className="w-full max-w-screen-xl px-8 md:px-8 xl:px-0 mx-auto flex justify-between items-center">
         <div className="">
           <NextLink href={"/"}>
             <Image src={ihaLogo} alt="IHA logo" className="h-14 w-auto" />

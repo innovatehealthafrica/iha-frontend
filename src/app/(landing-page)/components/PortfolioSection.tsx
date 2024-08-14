@@ -50,13 +50,17 @@ export default function PortfolioSection() {
           {portfolioBrands.map((portfolio, index) => (
             <div
               key={index}
-              className="py-16 px-7 bg-white border border-primary-green/20 rounded-2xl flex flex-col gap-8"
+              className="py-12 px-7 bg-white border border-primary-green/20 rounded-2xl flex flex-col gap-5"
             >
-              <Image
-                src={portfolio.logo}
-                alt="Hex Lab"
-                className="h-12 w-fit"
-              />
+              <div className="h-7 sm:h-12 w-48 relative">
+                <Image
+                  src={portfolio.logo}
+                  alt={`${portfolio.name} logo`}
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="left"
+                />
+              </div>
               <Link href="#" className="flex gap-1 font-[500] group">
                 {portfolio.name}{" "}
                 <ArrowRight className="group-hover:translate-x-2 transition-all duration-500" />
