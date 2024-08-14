@@ -39,14 +39,14 @@ const portfolioBrands = [
 export default function PortfolioSection() {
   return (
     <section className="bg-primary-green/5">
-      <div className="flex flex-col gap-8 py-8 pb-36 px-24 max-w-screen-2xl mx-auto">
+      <div className="flex flex-col gap-8 py-12 lg:pb-36 px-8 lg:px-24 max-w-screen-2xl mx-auto">
         <div className="">
           <h1 className="font-[600] text-4xl leading-normal">Our Portfolio:</h1>
 
           <p className="">Startups we have incubated</p>
         </div>
 
-        <div className="grid grid-cols-3 gap-16">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
           {portfolioBrands.map((portfolio, index) => (
             <div
               key={index}
