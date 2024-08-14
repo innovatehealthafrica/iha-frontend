@@ -21,13 +21,13 @@ export default function ContactUsSection() {
     });
   };
   return (
-    <section className="bg-white py-6 lg:py-24 relative overflow-hidden">
-      <div className="absolute top-0 flex">
+    <section className="bg-white flex">
+      <div className="top-0 flex">
         <Image src={colourPrints} alt="africa prints" className="w-[42px]" />
         <Image src={greyPrints} alt="africa prints" className="w-20" />
       </div>
 
-      <div className="w-full max-w-screen-xl mx-auto flex flex-col lg:flex-row ps-16 lg:ps-0 pe-8 lg:pe-0">
+      <div className="w-full max-w-screen-xl mx-auto flex flex-col lg:flex-row ps-12 lg:ps-0 pe-8 lg:pe-0 py-8 lg:py-0">
         <div className="flex flex-col justify-center items-end lg:items-start lg:px-12 lg:w-1/2">
           <h3 className="font-[600] text-3xl lg:text-5xl mb-4">Get in Touch</h3>
           <p className="max-w-lg text-end lg:text-start">
@@ -36,7 +36,7 @@ export default function ContactUsSection() {
           </p>
         </div>
 
-        <div className="border-l lg:px-20 w-full lg:max-w-lg py-8 flex flex-col items-end lg:items-start">
+        <div className="lg:border-l lg:px-20 w-full lg:max-w-lg py-8 flex flex-col items-end lg:items-start">
           <h2 className="mb-6 font-[600] text-2xl lg:text-4xl text-end lg:text-start">
             Let’s Talk
           </h2>
