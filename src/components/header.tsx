@@ -239,7 +239,13 @@ const ListItem = React.forwardRef<
 });
 ListItem.displayName = "ListItem";
 
-function AnimatedMenuIcon({ isOpen, toggle }) {
+function AnimatedMenuIcon({
+  isOpen,
+  toggle,
+}: {
+  isOpen: boolean;
+  toggle: () => void;
+}) {
   return (
     <button
       className="flex flex-col justify-center items-center w-8 h-8 gap-0.5 md:hidden"
