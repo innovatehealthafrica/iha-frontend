@@ -21,25 +21,27 @@ export default function ContactUsSection() {
     });
   };
   return (
-    <section className="bg-white py-24 relative">
+    <section className="bg-white py-6 lg:py-24 relative overflow-hidden">
       <div className="absolute top-0 flex">
         <Image src={colourPrints} alt="africa prints" className="w-[42px]" />
         <Image src={greyPrints} alt="africa prints" className="w-20" />
       </div>
 
-      <div className="w-full max-w-screen-xl mx-auto flex">
-        <div className="flex flex-col justify-center px-12 w-1/2">
+      <div className="w-full max-w-screen-xl mx-auto flex flex-col lg:flex-row ps-16 lg:ps-0 pe-8 lg:pe-0">
+        <div className="flex flex-col justify-center items-end lg:items-start lg:px-12 lg:w-1/2">
           <h3 className="font-[600] text-5xl mb-4">Get in Touch</h3>
-          <p className="max-w-lg ">
+          <p className="max-w-lg text-end lg:text-start">
             We’re open to answer your questions, discuss Partnerships, Services,
             and Collaborative Opportunities!
           </p>
         </div>
 
-        <div className="border-l px-20 w-full max-w-lg py-8">
-          <h2 className="mb-6 font-[600] text-4xl">Let’s Talk</h2>
+        <div className="border-l lg:px-20 w-full max-w-lg py-8 flex flex-col items-end lg:items-start">
+          <h2 className="mb-6 font-[600] text-4xl text-end lg:text-start">
+            Let’s Talk
+          </h2>
           <Button
-            className="bg-black text-white hover:bg-black/80 hover:text-white rounded-lg"
+            className="bg-black text-white hover:bg-black/80 hover:text-white rounded-lg w-fit"
             size="lg"
             variant="secondary"
             onClick={() =>
@@ -58,7 +60,10 @@ export default function ContactUsSection() {
             <span className="w-full h-1 border-t"></span>
           </div>
 
-          <form onSubmit={handleSubmit} className="">
+          <form
+            onSubmit={handleSubmit}
+            className="w-full flex flex-col items-end lg:items-start"
+          >
             <Input
               placeholder="Your name"
               className="h-12 rounded-lg px-6 mb-6"
