@@ -29,8 +29,8 @@ export default function Home() {
           backgroundBlendMode: "darken",
         }}
       >
-        <div className="flex flex-col lg:flex-row py-8 pb-36 px-8 lg:px-24 space-x-12 max-w-screen-2xl mx-auto">
-          <div className="flex flex-col justify-center w-full max-w-xl">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0 pt-24 lg:pt-8 pb-36 px-8 lg:px-24 space-x-12 max-w-screen-2xl mx-auto">
+          <div className="flex flex-col justify-center w-full max-w-xl text-center lg:text-start items-center lg:items-start">
             <h1 className="font-bold text-2xl lg:text-[2.0rem]  leading-normal text-white">
               Building Tomorrow’s Healthcare{" "}
               <span className="text-primary-bright-orange">Solution</span>{" "}
@@ -49,7 +49,7 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="flex justify-center w-full">
+          <div className="flex justify-center w-full ">
             <Image
               src={heroImage}
               alt="Building Tomorrow’s Healthcare Solution Today, By Africans, for
