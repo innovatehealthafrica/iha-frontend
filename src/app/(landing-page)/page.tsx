@@ -112,7 +112,7 @@ export default function Home() {
 
       {/* CTA */}
       <section className="bg-white py-16 lg:py-28">
-        <div className="flex flex-col lg:flex-row lg:py-8 pb-36 px-8 lg:px-24 lg:space-x-12 gap-8 lg:gap-0 max-w-screen-2xl mx-auto">
+        <div className="flex flex-col lg:flex-row lg:py-8 lg:pb-36 px-8 lg:px-24 lg:space-x-12 gap-8 lg:gap-0 max-w-screen-2xl mx-auto">
           <div className="flex flex-col justify-center w-full max-w-lg order-1">
             <h2 className="font-[600] text-3xl lg:text-[2.5rem] leading-tight lg:leading-normal">
               Join the largest community of healthcare innovators
