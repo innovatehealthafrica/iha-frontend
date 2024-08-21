@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import ihaLogo from "@/assets/logo/iha-black.png";
 import Image from "next/image";
@@ -16,8 +15,10 @@ import {
 import { usePathname } from "next/navigation";
 import { Button } from "@/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
 import { useToggle } from "@/hooks/useToggle";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { CaretDownIcon } from "@radix-ui/react-icons";
+import { motion, AnimatePresence } from "framer-motion";
 
 const programs = [
   {
@@ -76,6 +77,8 @@ const Link = ({ href, ...props }: LinkProps) => {
 export default function Header() {
   const [isToggled, toggle, setToggle] = useToggle();
 
+  const isSmallScreen = useMediaQuery("(max-width: 600px)");
+
   // Use useEffect to toggle body scroll when isToggled changes
   useEffect(() => {
     toggleBodyScroll(isToggled);
@@ -83,6 +86,11 @@ export default function Header() {
     // Cleanup function to ensure scroll is re-enabled when component unmounts
     return () => toggleBodyScroll(false);
   }, [isToggled]);
+
+  // remove mobile navigation when the screen size is larger than 600px
+  useEffect(() => {
+    if (!isSmallScreen) setToggle(false);
+  }, [isSmallScreen, setToggle]);
 
   return (
     <header>
@@ -174,40 +182,55 @@ export default function Header() {
           }
         )}
       >
-        <nav className="flex flex-col gap-6">
-          <NextLink href="#" className="text-xl font-semibold" onClick={toggle}>
-            Home
-          </NextLink>
-          <NextLink href="#" className="text-xl font-semibold" onClick={toggle}>
-            About Us
-          </NextLink>
-          <div className="flex flex-col gap-2">
-            <span className="text-xl font-semibold">Programs</span>
-            {programs.map((program) => (
-              <NextLink
-                key={program.title}
-                href={program.href}
-                className="text-lg pl-4"
-                onClick={toggle}
-              >
-                {program.title}
-              </NextLink>
-            ))}
-          </div>
-          <NextLink href="#" className="text-xl font-semibold" onClick={toggle}>
-            Portfolio
-          </NextLink>
-          <NextLink href="#" className="text-xl font-semibold" onClick={toggle}>
-            News
-          </NextLink>
-          <Button
-            className="rounded-full px-6 bg-primary-green hover:bg-primary-green/90 mt-4"
-            size="lg"
-            onClick={toggle}
-          >
-            Work with us
-          </Button>
-        </nav>
+        <NavigationMenu className="w-full block max-w-full">
+          <NavigationMenuList className="flex flex-col items-start gap-8">
+            <Button
+              className="rounded-full px-6 bg-primary-green hover:bg-primary-green/90 w-full mb-8"
+              size="lg"
+              onClick={toggle}
+            >
+              Work with us
+            </Button>
+
+            <NextLink
+              href="/"
+              className="text-base font-[400] w-full"
+              onClick={toggle}
+            >
+              Home
+            </NextLink>
+
+            <NextLink
+              href="/about"
+              className="text-base font-[400] w-full"
+              onClick={toggle}
+            >
+              About Us
+            </NextLink>
+
+            <MobileNavigationDropdown
+              title="Programs"
+              items={programs}
+              className="w-full"
+              onClick={toggle}
+            />
+
+            <MobileNavigationDropdown
+              title="Portfolio"
+              items={programs}
+              className="w-full bg-red-300"
+              onClick={toggle}
+            />
+
+            <NextLink
+              href="/news"
+              className="text-base font-[400] w-full bg-white"
+              onClick={toggle}
+            >
+              News
+            </NextLink>
+          </NavigationMenuList>
+        </NavigationMenu>
       </div>
     </header>
   );
@@ -272,3 +295,47 @@ function AnimatedMenuIcon({
     </button>
   );
 }
+
+const MobileNavigationDropdown = ({ title, items, className, onClick }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className={cn(className, "bg-white")}>
+      <button
+        className="text-base font-[400] flex items-center justify-between w-full"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {title}
+        <span className={cn("transition-transform", { "rotate-180": isOpen })}>
+          <CaretDownIcon className="size-5" />
+        </span>
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0, overflow: "visible" }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{
+              height: 0,
+              opacity: 0,
+              overflow: "hidden",
+            }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            className=" space-y-4 ps-8"
+          >
+            {items.map((item) => (
+              <NextLink
+                key={item.title}
+                href={item.href}
+                className="text-base font-[400] block first-of-type:mt-4"
+                onClick={onClick}
+              >
+                {item.title}
+              </NextLink>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
