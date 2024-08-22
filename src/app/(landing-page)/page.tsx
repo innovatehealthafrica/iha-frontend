@@ -11,6 +11,7 @@ import connectedImage from "@/assets/images/connected.png";
 import PartnerSection from "./components/partners-section";
 import BlogSection from "./components/blog-section";
 import ContactUsSection from "./components/contact-us-section";
+import HeroImage from "./components/hero-image";
 
 const statistics = [
   { label: "Healthcare solution developed", value: 250 },
@@ -56,6 +57,8 @@ export default function Home() {
             Africa"
               className="w-full max-w-[553px] h-auto"
             />
+            {/* TODO: Animated Hero Section */}
+            {/* <HeroImage /> */}
           </div>
         </div>
       </section>
