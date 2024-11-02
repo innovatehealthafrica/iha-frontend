@@ -296,7 +296,17 @@ function AnimatedMenuIcon({
   );
 }
 
-const MobileNavigationDropdown = ({ title, items, className, onClick }) => {
+const MobileNavigationDropdown = ({
+  title,
+  items,
+  className,
+  onClick,
+}: {
+  title: string;
+  items: { title: string; href: string; description: string }[];
+  className: string;
+  onClick: () => void;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
