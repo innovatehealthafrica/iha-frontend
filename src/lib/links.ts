@@ -18,6 +18,10 @@ const LINKS = {
         title: 'News',
         href: '/news',
     },
+    Careers: {
+        title: 'Work with us',
+        href: '/careers',
+    },
     VentureLab: {
         title: 'Venture Lab',
         href: "/programs/venture-lab",

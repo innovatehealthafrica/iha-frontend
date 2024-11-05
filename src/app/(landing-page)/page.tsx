@@ -11,6 +11,8 @@ import connectedImage from "@/assets/images/connected.png";
 import PartnerSection from "./components/partners-section";
 import BlogSection from "./components/blog-section";
 import ContactUsSection from "@/components/contact-us-section";
+import Link from "next/link";
+import LINKS from "@/lib/links";
 
 const statistics = [
   { label: "Healthcare solution developed", value: 250 },
@@ -44,8 +46,11 @@ export default function Home() {
               real-world impacts.
             </p>
 
-            <Button className="w-fit mt-6 rounded-full bg-white text-primary-green">
-              Read More
+            <Button
+              asChild
+              className="w-fit mt-6 rounded-full bg-white text-primary-green"
+            >
+              <Link href={LINKS.About.href}>Read More</Link>
             </Button>
           </div>
 
