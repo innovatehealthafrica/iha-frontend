@@ -8,6 +8,92 @@ import coCreatingImg from "@/assets/images/about-page/1img.svg";
 import workChartImg from "@/assets/images/about-page/3img.svg";
 import partnershipImg from "@/assets/images/about-page/2img.svg";
 import LINKS from "@/lib/links";
+import ComingSoonTag from "@/ui/coming-soon-tag";
+import linkedinIcon from "@/assets/icons/linkedin.png";
+import member1 from "@/assets/images/team/oluwatobi.png";
+import member2 from "@/assets/images/team/Timeyin.png";
+import member3 from "@/assets/images/team/Faridat.png";
+import member4 from "@/assets/images/team/Joseph.png";
+import member5 from "@/assets/images/team/Ezinne.png";
+import member6 from "@/assets/images/team/ibironke.png";
+import member7 from "@/assets/images/team/Solome.png";
+import member8 from "@/assets/images/team/Raphael.png";
+
+const teamMembers = [
+  {
+    name: "Oluwatobi Adewumi",
+    title: "Executive Director",
+    image: member1,
+    funFact: "Loves to Dance but very bad at it. Brain of IHA",
+    linkedIn: "https://linkedin.com/in/josephajibodu",
+  },
+
+  {
+    name: "Timehin Arueyingho",
+    title: "Director of Training & Development",
+    image: member2,
+    funFact: "",
+    linkedIn: "https://linkedin.com/in/josephajibodu",
+  },
+
+  {
+    name: "Faridat Ibidun",
+    title: "Director of Programs",
+    image: member3,
+    funFact: "",
+    linkedIn: "https://linkedin.com/in/josephajibodu",
+  },
+
+  {
+    name: "Joseph Ajibodu",
+    title: "Director of Technology",
+    image: member4,
+    funFact: "",
+    linkedIn: "https://linkedin.com/in/josephajibodu",
+  },
+
+  {
+    name: "Ezinne Awah",
+    title: "Director of Communication",
+    image: member5,
+    funFact: "",
+    linkedIn: "https://linkedin.com/in/josephajibodu",
+  },
+
+  {
+    name: "Mary Ibironke",
+    title: "Community Manage",
+    image: member6,
+    funFact: "",
+    linkedIn: "https://linkedin.com/in/josephajibodu",
+  },
+
+  {
+    name: "Solome Nekahiwot",
+    title: "Program Manager, Ethiopia",
+    image: member7,
+    funFact: "",
+    linkedIn: "https://linkedin.com/in/josephajibodu",
+  },
+
+  {
+    name: "Raphael Oyeniji",
+    title: "Program Manager, Nigeria",
+    image: member8,
+    funFact: "",
+    linkedIn: "https://linkedin.com/in/josephajibodu",
+  },
+];
+
+const boardMembers = [
+  {
+    name: "Oluwatobi Adewumi",
+    title: "Executive Director",
+    image: member1,
+    funFact: "Loves to Dance but very bad at it. Brain of IHA",
+    linkedIn: "https://linkedin.com/in/josephajibodu",
+  },
+];
 
 export default function About() {
   return (
@@ -142,23 +228,79 @@ export default function About() {
           <div className="space-y-8 max-w-screen-xl mx-auto bg-white border px-8 py-12 text-center w-full">
             <h2 className="font-semibold text-xl">Join our Team</h2>
             <Button variant={"outline"} className="border-black" asChild>
-              <Link href={LINKS.Careers}>Careers</Link>
+              <Link href={LINKS.Careers.href}>Careers</Link>
             </Button>
           </div>
 
           <div className="space-y-8 max-w-screen-xl mx-auto bg-white border px-8 py-12 text-center w-full">
             <h2 className="font-semibold text-xl">Partner with us</h2>
-            <Button variant={"outline"} className="border-black" disabled>
+            <Button
+              variant={"outline"}
+              className="border-black relative"
+              disabled
+            >
               Partner
+              <ComingSoonTag />
             </Button>
           </div>
 
           <div className="space-y-8 max-w-screen-xl mx-auto bg-white border px-8 py-12 text-center w-full">
             <h2 className="font-semibold text-xl">Use our Tools</h2>
-            <Button variant={"outline"} className="border-black" disabled>
+            <Button
+              variant={"outline"}
+              className="border-black relative"
+              disabled
+            >
               Innovation Kits
+              <ComingSoonTag />
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="max-w-screen-xl mx-auto px-8 lg:px-0 py-16">
+        <h2 className="text-4xl font-semibold">The Team</h2>
+        <p className="font-light mb-12">Meet the people of IHA</p>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {teamMembers.map((member) => (
+            <div key={member.name} className="relative group overflow-hidden">
+              <Image
+                src={member.image}
+                alt={member.name}
+                className="w-full group-hover:scale-110 transition-all duration-500 ease-out"
+              />
+
+              <div className="absolute bottom-0 flex flex-col px-4 text-white pb-4">
+                <span className="font-medium">{member.name}</span>
+                <span className="text-sm">{member.title}</span>
+              </div>
+
+              <div className="absolute inset-0 bg-black hidden duration-1000 transition-all group-hover:flex flex-col items-center justify-center text-center gap-4 opacity-65 pointer-events-none"></div>
+
+              <div className="absolute inset-0 bg-transparent duration-1000 transition-all hidden group-hover:flex flex-col items-center justify-center text-white pb-4 px-8 text-center gap-4 pointer-events-none">
+                {member.funFact}
+                <Button variant={"secondary"} className="relative">
+                  Read More
+                  <ComingSoonTag />
+                </Button>
+              </div>
+
+              <a
+                target="_blank"
+                href={member.linkedIn}
+                className="absolute top-6 right-4 opacity-0"
+              >
+                <Image
+                  src={linkedinIcon}
+                  alt={member.name + "linkendin"}
+                  height={36}
+                  width={36}
+                />
+              </a>
+            </div>
+          ))}
         </div>
       </section>
 
