@@ -19,33 +19,8 @@ import { useToggle } from "@/hooks/useToggle";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { CaretDownIcon } from "@radix-ui/react-icons";
 import { motion, AnimatePresence } from "framer-motion";
-
-const programs = [
-  {
-    title: "Venture Lab",
-    href: "/programs/venture-lab",
-    description:
-      "Turn your Idea into a market ready product with the support of our expert teams and trusted partners.",
-  },
-  {
-    title: "Innovation Support",
-    href: "/programs/innovation-support",
-    description:
-      "Access support to smartly apply innovation and technology in solving your organization’s social and commercial problems.",
-  },
-  {
-    title: "School of Healthcare Innovation",
-    href: "/programs/healthcare-innovation",
-    description:
-      "Equip yourself with cutting-edge skills to lead healthcare innovation—join 1,200+ professionals who have transformed their careers with us.",
-  },
-  {
-    title: "Innovator’s Network",
-    href: "/programs/innovators-network",
-    description:
-      "Join our network of healthcare innovators, entrepreneurs and investors.",
-  },
-];
+import Navigation from "@/lib/navigations";
+import { LinkItem } from "@/lib/links";
 
 interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
@@ -112,55 +87,32 @@ export default function Header() {
         {/* Desktop Navigation */}
         <NavigationMenu className="hidden md:block">
           <NavigationMenuList className="flex gap-6">
-            <NavigationMenuItem>
-              <Link href="#">Home</Link>
-            </NavigationMenuItem>
+            {Navigation.main.map((item) => (
+              <NavigationMenuItem key={item.title}>
+                {item.href && <Link href={item.href}>{item.title}</Link>}
 
-            <NavigationMenuItem>
-              <Link href="#">About Us</Link>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="font-[400]">
-                Programs
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {programs.map((program) => (
-                    <ListItem
-                      key={program.title}
-                      title={program.title}
-                      href={program.href}
-                    >
-                      {program.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="font-[400]">
-                Portfolio
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {programs.map((program) => (
-                    <ListItem
-                      key={program.title}
-                      title={program.title}
-                      href={program.href}
-                    >
-                      {program.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <Link href="#">News</Link>
-            </NavigationMenuItem>
+                {item.menu && (
+                  <>
+                    <NavigationMenuTrigger className="font-[400]">
+                      {item.title}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                        {item.menu.map((subItem) => (
+                          <ListItem
+                            key={subItem.title}
+                            title={subItem.title}
+                            href={subItem.href}
+                          >
+                            {subItem.description}
+                          </ListItem>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </>
+                )}
+              </NavigationMenuItem>
+            ))}
 
             <Button
               className="rounded-full px-6 bg-primary-green hover:bg-primary-green/90"
@@ -192,35 +144,28 @@ export default function Header() {
               Work with us
             </Button>
 
-            <NextLink
-              href="/"
-              className="text-base font-[400] w-full"
-              onClick={toggle}
-            >
-              Home
-            </NextLink>
+            {Navigation.main.map((item) => (
+              <NavigationMenuItem key={item.title}>
+                {item.href && (
+                  <NextLink
+                    href={item.href}
+                    className="text-base font-[400] w-full"
+                    onClick={toggle}
+                  >
+                    {item.title}
+                  </NextLink>
+                )}
 
-            <NextLink
-              href="/about"
-              className="text-base font-[400] w-full"
-              onClick={toggle}
-            >
-              About Us
-            </NextLink>
-
-            <MobileNavigationDropdown
-              title="Programs"
-              items={programs}
-              className="w-full"
-              onClick={toggle}
-            />
-
-            <MobileNavigationDropdown
-              title="Portfolio"
-              items={programs}
-              className="w-full bg-red-300"
-              onClick={toggle}
-            />
+                {item.menu && (
+                  <MobileNavigationDropdown
+                    title="Programs"
+                    items={item.menu}
+                    className="w-full"
+                    onClick={toggle}
+                  />
+                )}
+              </NavigationMenuItem>
+            ))}
 
             <NextLink
               href="/news"
@@ -303,7 +248,7 @@ const MobileNavigationDropdown = ({
   onClick,
 }: {
   title: string;
-  items: { title: string; href: string; description: string }[];
+  items: LinkItem[];
   className: string;
   onClick: () => void;
 }) => {
@@ -336,7 +281,7 @@ const MobileNavigationDropdown = ({
             {items.map((item) => (
               <NextLink
                 key={item.title}
-                href={item.href}
+                href={item.href as string}
                 className="text-base font-[400] block first-of-type:mt-4"
                 onClick={onClick}
               >

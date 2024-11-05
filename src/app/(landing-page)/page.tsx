@@ -10,8 +10,7 @@ import PortfolioSection from "./components/PortfolioSection";
 import connectedImage from "@/assets/images/connected.png";
 import PartnerSection from "./components/partners-section";
 import BlogSection from "./components/blog-section";
-import ContactUsSection from "./components/contact-us-section";
-import HeroImage from "./components/hero-image";
+import ContactUsSection from "@/components/contact-us-section";
 
 const statistics = [
   { label: "Healthcare solution developed", value: 250 },
