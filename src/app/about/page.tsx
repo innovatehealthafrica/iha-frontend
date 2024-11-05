@@ -25,8 +25,9 @@ export default function About() {
             About Us
           </h1>
           <p className="mb-4 text-white font-light">
-            We're driving the co-creation of healthcare solutions with everyone
-            from developers to end users, turning ideas into real-world impacts.
+            We&apos;re driving the co-creation of healthcare solutions with
+            everyone from developers to end users, turning ideas into real-world
+            impacts.
           </p>
           <Button variant={"outline"} className="text-primary-green" asChild>
             <Link href="#who-we-are">Read More</Link>
