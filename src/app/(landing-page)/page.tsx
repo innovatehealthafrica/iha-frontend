@@ -2,7 +2,9 @@
 
 import { Button } from "@/ui/button";
 import Image from "next/image";
-import heroImage from "@/assets/images/hero-image.png";
+import heroSlide1 from "@/assets/images/hero/hero_slide_1.png";
+import heroSlide2 from "@/assets/images/hero/hero_slide_2.png";
+import heroSlide3 from "@/assets/images/hero/hero_slide_3.png";
 import KeySolutionsSection from "./components/key-solutions-section";
 import TestimonialSection from "./components/testimonial-section";
 import ConnectWithInnovatorSection from "./components/connect-with-innovators";
@@ -11,8 +13,13 @@ import connectedImage from "@/assets/images/connected.png";
 import PartnerSection from "./components/partners-section";
 import BlogSection from "./components/blog-section";
 import ContactUsSection from "@/components/contact-us-section";
-import Link from "next/link";
-import LINKS from "@/lib/links";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import Fade from "embla-carousel-fade";
 
 const statistics = [
   { label: "Healthcare solution developed", value: 250 },
@@ -24,61 +31,63 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section
-        className="bg-primary-green/85 bg-no-repeat bg-cover"
-        style={{
-          backgroundImage: 'url("/hero-bg.png")',
-          backgroundBlendMode: "darken",
-        }}
-      >
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0 pt-24 lg:pt-8 pb-36 px-8 lg:px-24 gap-x-12 max-w-screen-2xl mx-auto">
-          <div className="flex flex-col justify-center w-full max-w-xl text-center lg:text-start items-center lg:items-start">
-            <h1 className="font-bold text-2xl lg:text-[2.0rem]  leading-normal text-white">
-              Building Tomorrow’s Healthcare{" "}
-              <span className="text-primary-bright-orange">Solution</span>{" "}
-              Today, <br />
-              <span className="text-white/50">By Africans, for Africa</span>
-            </h1>
+      <section className="bg-primary-green/85 bg-no-repeat bg-cover relative">
+        <div className="absolute flex flex-col lg:flex-row items-center gap-8 lg:gap-0 pt-24 lg:pt-8 pb-36 px-8 lg:px-24 gap-x-12 max-w-screen-2xl mx-auto"></div>
 
-            <p className="mt-6 text-white text-lg">
-              We{"'"}re driving the co-creation of healthcare solutions with
-              everyone from developers to end users, turning ideas into
-              real-world impacts.
-            </p>
+        <Carousel
+          plugins={[
+            Autoplay({
+              delay: 3000,
+            }),
+            Fade(),
+          ]}
+          className="w-full"
+        >
+          <CarouselContent className="m-0">
+            <CarouselItem className="p-0">
+              <Image
+                src={heroSlide1}
+                alt="Image of healthcare professionals"
+                width={1440}
+                height={664}
+                className="w-full"
+              />
+            </CarouselItem>
 
-            <Button
-              asChild
-              className="w-fit mt-6 rounded-full bg-white text-primary-green"
-            >
-              <Link href={LINKS.About.href}>Read More</Link>
-            </Button>
-          </div>
+            <CarouselItem className="p-0">
+              <Image
+                src={heroSlide2}
+                alt="Image of healthcare professionals"
+                width={1440}
+                height={664}
+                className="w-full"
+              />
+            </CarouselItem>
 
-          <div className="flex justify-center w-full">
-            <Image
-              src={heroImage}
-              alt="Building Tomorrow’s Healthcare Solution Today, By Africans, for
-            Africa"
-              className="w-full max-w-[553px] h-auto"
-            />
-            {/* TODO: Animated Hero Section */}
-            {/* <HeroImage /> */}
-          </div>
-        </div>
+            <CarouselItem className="p-0">
+              <Image
+                src={heroSlide3}
+                alt="Image of healthcare professionals"
+                width={1440}
+                height={664}
+                className="w-full"
+              />
+            </CarouselItem>
+          </CarouselContent>
+        </Carousel>
       </section>
 
       {/* Statistics */}
       <section className="-mt-[25%] sm:-mt-[12%] lg:-mt-[5%] lg:absolute w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-3 py-8 px-8 lg:px-24 gap-4 sm:gap-6 lg:gap-8 max-w-screen-2xl mx-auto">
+        <div className="shadow-lg rounded-3xl grid grid-cols-1 lg:grid-cols-3 py-8 px-8 lg:px-24 gap-4 sm:gap-6 lg:gap-8 max-w-screen-xl mx-auto bg-white">
           {statistics.map((stat, index) => (
-            <div
-              key={index}
-              className="col-span-1 px-4 py-6 shadow-lg rounded-3xl space-y-2 sm:space-y-3 bg-white"
-            >
-              <h3 className="text-lg sm:text-xl text-center">{stat.label}</h3>
-              <p className="font-bold text-2xl sm:text-3xl lg:text-[2.5rem] text-center">
+            <div key={index} className="col-span-1 px-4 space-y-2 sm:space-y-3">
+              <p className="font-[400] text-2xl md:text-3xl lg:text-5xl text-center">
                 {stat.value}+
               </p>
+              <h3 className="font-[300] text-lg md:text-lg text-center">
+                {stat.label}
+              </h3>
             </div>
           ))}
         </div>
