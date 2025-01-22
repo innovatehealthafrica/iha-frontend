@@ -9,22 +9,6 @@ import { Info, Search } from "lucide-react";
 
 const resources = [
   {
-    label: "Design Thinking",
-    link: "#",
-  },
-  {
-    label: "Health Informatics",
-    link: "#",
-  },
-  {
-    label: "WHO Digital Health Guideline",
-    link: "#",
-  },
-  {
-    label: "One Health Policy Framework",
-    link: "#",
-  },
-  {
     label: "Bioinformatics",
     link: "#",
   },
@@ -33,7 +17,7 @@ const resources = [
     link: "#",
   },
   {
-    label: "Maturity Model for DH",
+    label: "Design Thinking",
     link: "#",
   },
   {
@@ -41,7 +25,11 @@ const resources = [
     link: "#",
   },
   {
-    label: "Lean Methodology",
+    label: "Digital Health Landscape in Africa",
+    link: "#",
+  },
+  {
+    label: "Health Informatics",
     link: "#",
   },
   {
@@ -49,12 +37,44 @@ const resources = [
     link: "#",
   },
   {
-    label: "Digital Health Landscape in Africa",
+    label: "Lean Methodology",
+    link: "#",
+  },
+  {
+    label: "Maturity Model for DH",
+    link: "#",
+  },
+  {
+    label: "One Health Policy Framework",
+    link: "#",
+  },
+  {
+    label: "WHO Digital Health Guideline",
     link: "#",
   },
 ];
 
 const organizations = [
+  {
+    label: "Innovators Network",
+    link: "#",
+  },
+  {
+    label: "School of Healthcare Innovation",
+    link: "#",
+  },
+  {
+    label: "Mission",
+    link: "#",
+  },
+  {
+    label: "Innovation Support",
+    link: "#",
+  },
+  {
+    label: "Strategic Objectives",
+    link: "#",
+  },
   {
     label: "Team",
     link: "#",
@@ -64,31 +84,11 @@ const organizations = [
     link: "#",
   },
   {
-    label: "Strategic Objectives",
-    link: "#",
-  },
-  {
-    label: "Mission",
-    link: "#",
-  },
-  {
-    label: "Vision",
-    link: "#",
-  },
-  {
     label: "Venture Studio",
     link: "#",
   },
   {
-    label: "School of Healthcare Innovation",
-    link: "#",
-  },
-  {
-    label: "Innovation Support",
-    link: "#",
-  },
-  {
-    label: "Innovators Network",
+    label: "Vision",
     link: "#",
   },
 ];
@@ -111,34 +111,34 @@ const more = [
     link: "#",
   },
   {
-    label: "Digital Health Germany",
-    link: "#",
-  },
-  {
-    label: "Investors Network",
+    label: "Digital Health London",
     link: "#",
   },
   {
     label: "Health Innovation Courses",
     link: "#",
   },
+  {
+    label: "Investors Network",
+    link: "#",
+  },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-green py-24">
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-8 lg:gap-y-0 w-full max-w-screen-2xl px-8 lg:mx-auto">
+    <footer className="bg-primary py-24">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 lg:gap-y-0 w-full max-w-screen-xl px-8 mx-auto">
         <div className="flex flex-col gap-4 lg:gap-8 lg:row-span-2">
-          <h5 className="text-white font-[600] text-xl lg:text-3xl leading-normal">
+          <h5 className="text-md md:text-2xl text-accent font-[500] leading-normal">
             Resources
           </h5>
 
-          <ul>
+          <ul className="space-y-1 md:space-y-3">
             {resources.map(({ label, link }, index) => (
               <li key={index}>
                 <Link
                   href={link}
-                  className="text-sm lg:text-xl leading-7 lg:leading-9 text-primary-lemon-green hover:underline"
+                  className="text-xs lg:text-base font-[300] text-white hover:underline"
                 >
                   {label}
                 </Link>
@@ -148,16 +148,16 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-4 lg:gap-8">
-          <h5 className="text-white font-[600] text-xl lg:text-3xl leading-normal">
+          <h5 className="text-md md:text-2xl text-accent font-[500] leading-normal">
             Our Organization
           </h5>
 
-          <ul>
+          <ul className="space-y-1 md:space-y-3">
             {organizations.map(({ label, link }, index) => (
               <li key={index}>
                 <Link
                   href={link}
-                  className="text-sm lg:text-xl leading-7 lg:leading-9 text-primary-lemon-green hover:underline"
+                  className="text-xs lg:text-base font-[300] text-white hover:underline"
                 >
                   {label}
                 </Link>
@@ -167,16 +167,16 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-4 lg:gap-8">
-          <h5 className="text-white font-[600] text-xl lg:text-3xl leading-normal">
+          <h5 className="text-md md:text-2xl text-accent font-[500] leading-normal">
             More
           </h5>
 
-          <ul>
+          <ul className="space-y-1 md:space-y-3">
             {more.map(({ label, link }, index) => (
               <li key={index}>
                 <Link
                   href={link}
-                  className="text-sm lg:text-xl leading-7 lg:leading-9 text-primary-lemon-green hover:underline"
+                  className="text-xs lg:text-base font-[300] text-white hover:underline"
                 >
                   {label}
                 </Link>
@@ -184,46 +184,22 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-
-        <div className="w-full max-w-lg relative lg:mt-6 col-span-2 lg:col-start-2">
-          <Input
-            placeholder="Subscribe to our Newsletter (Email)"
-            className="w-full rounded-none h-12"
-          />
-          <Button
-            onClick={() => {
-              toast.error("Feature coming soon.", {
-                icon: <Info />,
-                className: "border border-primary-green",
-              });
-            }}
-            className="absolute right-1 top-1 rounded-none bg-primary-green hover:bg-primary-green/90"
-          >
-            Subscribe
-          </Button>
-        </div>
       </div>
 
-      <div className="text-primary-lemon-green flex flex-col lg:flex-row items-center lg:justify-between gap-8 lg:gap-0 w-full max-w-screen-xl mx-auto px-4 pt-24">
-        <span className="text-sm lg:text-lg">
+      <div className="text-accent flex flex-col lg:flex-row items-center lg:justify-between gap-8 lg:gap-0 w-full max-w-screen-xl mx-auto px-4 pt-24">
+        <span className="text-xs lg:text-lg font-[300]">
           @2024 INNOVATEHEALTH AFRICA. ALL RIGHT RESERVED
         </span>
 
-        <div className="flex">
+        <div className="flex text-white">
           <Link
             href="#"
-            className="after:content-['|'] after:px-4 text-sm lg:text-lg hover:underline"
-          >
-            Newsletter
-          </Link>
-          <Link
-            href="#"
-            className="after:content-['|'] after:px-4 text-sm lg:text-lg hover:underline"
+            className="after:content-['|'] after:px-4 text-xs lg:text-base hover:underline"
           >
             {" "}
             Terms of Use
           </Link>
-          <Link href="#" className="text-sm lg:text-lg hover:underline">
+          <Link href="#" className="text-xs lg:text-base hover:underline">
             {" "}
             Privacy Policy
           </Link>
