@@ -18,6 +18,10 @@ const LINKS = {
         title: 'News',
         href: '/news',
     },
+    Portfolio: {
+        title: 'Portfolio',
+        href: '/portfolio',
+    },
     Careers: {
         title: 'Work with us',
         href: '/careers',

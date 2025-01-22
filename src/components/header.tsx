@@ -42,7 +42,7 @@ const Link = ({ href, ...props }: LinkProps) => {
     <NavigationMenuLink
       asChild
       active={isActive}
-      className={cn("font-[400] text-base", navigationMenuTriggerStyle())}
+      className={cn("text-lg", navigationMenuTriggerStyle())}
     >
       <NextLink href={href} className="NavigationMenuLinks" {...props} />
     </NavigationMenuLink>
@@ -69,7 +69,7 @@ export default function Header() {
 
   return (
     <header>
-      <div className="w-full max-w-screen-xl px-8 md:px-8 xl:px-0 mx-auto py-4 flex justify-between items-center">
+      <div className="w-full max-w-screen-xl px-8 md:px-8 xl:px-0 mx-auto py-6 flex justify-between items-center">
         <div className="">
           <NextLink href={"/"}>
             <Image
@@ -93,9 +93,12 @@ export default function Header() {
 
                 {item.menu && (
                   <>
-                    <NavigationMenuTrigger className="font-[400]">
+                    <NavigationMenuTrigger
+                      className={cn("", navigationMenuTriggerStyle())}
+                    >
                       {item.title}
                     </NavigationMenuTrigger>
+
                     <NavigationMenuContent>
                       <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                         {item.menu.map((subItem) => (
@@ -113,15 +116,12 @@ export default function Header() {
                 )}
               </NavigationMenuItem>
             ))}
-
-            <Button
-              className="rounded-full px-6 bg-primary-green hover:bg-primary-green/90"
-              size="lg"
-            >
-              Work with us
-            </Button>
           </NavigationMenuList>
         </NavigationMenu>
+
+        <Button className="px-6 text-base font-normal" size="lg">
+          Work with us
+        </Button>
       </div>
 
       {/* Mobile Navigation */}
