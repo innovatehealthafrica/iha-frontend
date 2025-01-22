@@ -119,7 +119,10 @@ export default function Header() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <Button className="px-6 text-base font-normal" size="lg">
+        <Button
+          className="px-6 text-base font-normal hidden md:inline-flex"
+          size="lg"
+        >
           Work with us
         </Button>
       </div>
@@ -136,11 +139,7 @@ export default function Header() {
       >
         <NavigationMenu className="w-full block max-w-full">
           <NavigationMenuList className="flex flex-col items-start gap-8">
-            <Button
-              className="rounded-full px-6 bg-primary-green hover:bg-primary-green/90 w-full mb-8"
-              size="lg"
-              onClick={toggle}
-            >
+            <Button className="px-6 w-full mb-8" size="lg" onClick={toggle}>
               Work with us
             </Button>
 
