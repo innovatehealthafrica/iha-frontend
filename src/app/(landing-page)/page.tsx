@@ -38,8 +38,12 @@ export default function Home() {
             across <br />
             Africa through Digital Innovation
           </h1>
-          <p className="py-3 px-4 rounded">By Africans, for Africa</p>
-          <Button>Learn More</Button>
+          <p className="py-2.5 px-8 mt-9 rounded-lg text-2xl font-[500] bg-primary/25 backdrop-blur text-white border border-white/25">
+            By Africans, for Africa
+          </p>
+          <Button className="mt-14 text-md" size="lg" variant="secondary">
+            Learn More
+          </Button>
         </div>
 
         <Carousel
@@ -90,7 +94,7 @@ export default function Home() {
         <div className="shadow-lg rounded-3xl grid grid-cols-1 lg:grid-cols-3 py-8 px-8 lg:px-24 gap-4 sm:gap-6 lg:gap-8 max-w-screen-xl mx-auto bg-white">
           {statistics.map((stat, index) => (
             <div key={index} className="col-span-1 px-4 space-y-2 sm:space-y-3">
-              <p className="font-[400] text-2xl md:text-3xl lg:text-5xl text-center">
+              <p className="font-[400] font-spaceGrotesk text-2xl md:text-3xl lg:text-5xl text-center">
                 {stat.value}+
               </p>
               <h3 className="font-[300] text-lg md:text-lg text-center">
