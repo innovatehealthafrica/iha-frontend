@@ -32,7 +32,15 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="bg-primary-green/85 bg-no-repeat bg-cover relative">
-        <div className="absolute flex flex-col lg:flex-row items-center gap-8 lg:gap-0 pt-24 lg:pt-8 pb-36 px-8 lg:px-24 gap-x-12 max-w-screen-2xl mx-auto"></div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center max-w-screen-2xl mx-auto z-10">
+          <h1 className="text-white font-bold text-center text-5xl lg:text-6xl lg:leading-tight">
+            Advancing <span className="text-accent">Equitable Healthcare</span>{" "}
+            across <br />
+            Africa through Digital Innovation
+          </h1>
+          <p className="py-3 px-4 rounded">By Africans, for Africa</p>
+          <Button>Learn More</Button>
+        </div>
 
         <Carousel
           plugins={[

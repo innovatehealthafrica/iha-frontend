@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -62,6 +63,9 @@
 @layer base {
   * {
     @apply border-border;
+  }
+  html {
+    font-family: var(--font-gilroy);
   }
   body {
     @apply bg-background text-foreground;
