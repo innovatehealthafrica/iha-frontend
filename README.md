@@ -29,17 +29,96 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - `/public`: Contains all the static assets for your application, such as images.
 - `/scripts`: Contains a seeding script that you'll use to populate your database and perform other critical functions.
 
-## Learn More
+## Contribution Guide
 
-To learn more about Next.js, take a look at the following resources:
+Thank you for your interest in contributing to the **Innovate Health Africa Web App**! We welcome contributions from everyone, whether you're a beginner or an experienced developer. To help you get started, here’s a step-by-step guide on how to contribute to the project.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Step 1: Clone the Repository
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Clone the repository to your local machine:
 
-## Deploy on Vercel
+```bash
+git clone https://github.com/innovatehealthafrica/iha-frontend.git
+cd iha-frontend
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Step 2: Create a New Branch
 
-Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Before you start working on any changes, checkout the develop branch and create a new branch for your work. This keeps your changes separate and organized while ensuring they are built off the latest version of the development code.
+
+```bash
+git checkout develop
+```
+
+```bash
+git pull origin develop
+```
+
+```bash
+git checkout -b my-feature-branch
+```
+
+Name the branch something descriptive based on the feature or fix you’re working on. For example:
+• If you’re fixing a bug in the user interface, name the branch `fix-ui-bug`.
+• If you’re working on the about page, name the branch `feat-about-page`.
+
+### Step 3: Make Your Changes
+
+Now, you can start working on your feature or bug fix. You can edit files, add new ones, and make whatever changes are necessary.
+
+### Step 4: Test Your Changes
+
+Once you’re done, it’s important to test your changes.
+
+ 1. Run the development server to see your changes in action:
+
+npm run dev
+
+ 1. Open `http://localhost:3000` in your browser and test your changes to make sure everything works as expected.
+
+### Step 5: Commit Your Changes
+
+Once you’re happy with your changes, commit them to your branch. Write a clear commit message describing what you changed.
+
+```bash
+git add .
+git commit -m "Add feature or fix description"
+```
+
+**You can add more commits as necessary as you work.**
+
+> **Note:** Don’t wait until the entire task is completed to push your work. After every meaningful commit, follow **Step 6** and push your changes to the remote repository. This ensures your progress is saved and can be easily reviewed.
+
+### Step 6: Push Your Changes
+
+After committing your changes, push them to online repository.
+
+```bash
+git push origin my-feature-branch
+```
+
+### Step 7: Create a Pull Request (PR)
+
+1. Go to the main repository on GitHub.
+2. Click on the Pull Requests tab.
+3. Click the New Pull Request button.
+4. Select the base branch (usually `main`) and compare it with your branch (the one you just worked on).
+5. Write a detailed description of your changes, explaining what you added, fixed, or improved, and why these changes are important.
+6. Click Create Pull Request to submit it for review.
+
+### Step 8: Code Review and Feedback
+
+Once you submit your PR, project maintainers will review your changes. They may provide feedback, suggest improvements, or request changes. Please be open to this feedback and update your PR as needed.
+
+### Step 9: Merge
+
+Once your PR is approved, it will be merged into the main codebase. Congratulations, you’ve contributed to the project!
+
+## Important Notes
+
+ • **Follow the coding style:** We aim for clean, readable code. Be sure to follow the existing style and conventions used throughout the project.
+ • **Keep PRs small:** Try to keep your PRs focused on a single feature or bug fix to make the review process easier.
+ • **Respect existing functionality:** If you’re adding new features, try not to break existing ones. Always check that everything works properly after your changes.
+ • **Write tests:** If you’re adding new features, please write tests to ensure your changes work as expected. **(You can ignore this for now)**
+
+Thank you again for contributing! We appreciate your help in making this project better. 🙌
