@@ -31,7 +31,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Contribution Guide
 
-Thank you for your interest in contributing to the **Innovate Health Africa Web App**! We welcome contributions from everyone, whether you're a beginner or an experienced developer. To help you get started, here’s a step-by-step guide on how to contribute to the project.
+> 🚨 **Attention**
+Please read every line carefully before you begin. Following these instructions will help ensure that your contributions are smooth and efficient. Skipping steps or misinterpreting them could cause issues that delay the process. Let’s get started!
 
 ### Step 1: Clone the Repository
 
