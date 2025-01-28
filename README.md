@@ -117,9 +117,9 @@ Once your PR is approved, it will be merged into the main codebase. Congratulati
 
 ## Important Notes
 
- • **Follow the coding style:** We aim for clean, readable code. Be sure to follow the existing style and conventions used throughout the project.
- • **Keep PRs small:** Try to keep your PRs focused on a single feature or bug fix to make the review process easier.
- • **Respect existing functionality:** If you’re adding new features, try not to break existing ones. Always check that everything works properly after your changes.
- • **Write tests:** If you’re adding new features, please write tests to ensure your changes work as expected. **(You can ignore this for now)**
+ 1. **Follow the coding style:** We aim for clean, readable code. Be sure to follow the existing style and conventions used throughout the project.
+ 1. **Keep PRs small:** Try to keep your PRs focused on a single feature or bug fix to make the review process easier.
+ 1. **Respect existing functionality:** If you’re adding new features, try not to break existing ones. Always check that everything works properly after your changes.
+ 1. **Write tests:** If you’re adding new features, please write tests to ensure your changes work as expected. **(You can ignore this for now)**
 
 Thank you again for contributing! We appreciate your help in making this project better. 🙌
