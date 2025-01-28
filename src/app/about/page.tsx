@@ -4,7 +4,9 @@ import ContactUsSection from "@/components/contact-us-section";
 import { Button } from "@/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import coCreatingImg from "@/assets/images/about-page/1img.svg";
+import Img1 from "@/assets/images/about-page/img1.png";
+import Img2 from "@/assets/images/about-page/img2.png";
+import Img3 from "@/assets/images/about-page/img3.png";
 import workChartImg from "@/assets/images/about-page/3img.svg";
 import partnershipImg from "@/assets/images/about-page/2img.svg";
 import LINKS from "@/lib/links";
@@ -18,6 +20,7 @@ import member5 from "@/assets/images/team/Ezinne.png";
 import member6 from "@/assets/images/team/ibironke.png";
 import member7 from "@/assets/images/team/Solome.png";
 import member8 from "@/assets/images/team/Raphael.png";
+import headerImg from "@/assets/images/about-page/about_image.png";
 
 const teamMembers = [
   {
@@ -100,23 +103,22 @@ export default function About() {
     <>
       {/* Header */}
       <section
-        className="bg-primary-green/85 bg-no-repeat bg-cover flex flex-col items-center py-[4rem] px-4"
+        className=" bg-no-repeat bg-cover aspect-3/2 h-96 flex flex-col items-center py-[4rem] px-4"
         style={{
-          backgroundImage: 'url("/hero-bg.png")',
+          backgroundImage: `url(${headerImg.src})`,
           backgroundBlendMode: "darken",
         }}
       >
-        <div className="text-center max-w-screen-lg">
-          <h1 className="text-primary-bright-orange font-semibold text-6xl lg:text-[6rem] mb-4">
-            About Us
+        <div className="text-center max-w-screen-lg mt-14">
+          <h1 className="text-primary-bright-orange font-normal text-xl lg:text-[3rem] mb-4">
+            About us{" "}
           </h1>
-          <p className="mb-4 text-white font-light">
-            We&apos;re driving the co-creation of healthcare solutions with
-            everyone from developers to end users, turning ideas into real-world
-            impacts.
+          <p className="mx-8 mb-4 text-white font-light text-xl text-center">
+            At Innovate Health Africa, we harness empathy, local expertise, and
+            bold thinking to transform healthcare access, quality, and outcomes.
           </p>
           <Button variant={"outline"} className="text-primary-green" asChild>
-            <Link href="#who-we-are">Read More</Link>
+            <Link href="#who-we-are">Work with Us</Link>
           </Button>
         </div>
       </section>
@@ -125,37 +127,23 @@ export default function About() {
       <section className="bg-white py-20 max-w-screen-xl mx-auto px-8 lg:px-0">
         <div className="text-center mb-12">
           <h3 className="text-3xl lg:text-4xl font-semibold mb-4">
-            Who we are
+            Who We Are
           </h3>
           <p className="max-w-screen-lg mx-auto font-light text-lg leading-relaxed">
-            We are an organization dedicated to transforming healthcare in
-            Africa by building a digitally proficient workforce and
-            collaborating with stakeholders, from end users to developers,
-            communities and organizations to co-create effective, locally
-            relevant solutions that improve healthcare access, quality and
-            outcomes across the continent.
+          Our mission is to accelerate the transformation of healthcare in Africa by building a future-ready workforce, fostering partnership for innovation, and working with communities to co-design solutions that enhance healthcare access, quality, and outcomes for everyone
           </p>
         </div>
 
         <div className="text-center mt-24">
           <h3 className="text-3xl lg:text-4xl font-semibold mb-4">
-            How we make impact
-          </h3>
-
+          How We Make Impact          </h3>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="text-center max-w-lg">
               <Image
                 className="mx-auto mb-4 lg:hidden"
                 height={150}
                 width={150}
-                src={coCreatingImg}
-                alt={"co-creating icon"}
-              />
-              <Image
-                className="mx-auto mb-4 hidden lg:block"
-                height={200}
-                width={200}
-                src={coCreatingImg}
+                src={Img1}
                 alt={"co-creating icon"}
               />
               <h4 className="font-semibold text-xl mb-2">
