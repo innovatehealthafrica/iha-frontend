@@ -6,7 +6,6 @@ import heroSlide1 from "@/assets/images/hero/hero_slide_1.png";
 import heroSlide2 from "@/assets/images/hero/hero_slide_2.png";
 import heroSlide3 from "@/assets/images/hero/hero_slide_3.png";
 import background from "@/assets/images/background.png";
-import KeySolutionsSection from "./components/key-solutions-section";
 import TestimonialSection from "./components/testimonial-section";
 import ConnectWithInnovatorSection from "./components/connect-with-innovators";
 import PortfolioSection from "./components/PortfolioSection";
@@ -124,27 +123,6 @@ export default function Home() {
         <div className="relative z-10">
           {/* Our Work Section */}
           <OurWorkSection />
-
-          {/* Programs and Initiatives Section */}
-          <section className="bg-primary-green/85 bg-no-repeat bg-cover">
-            <div className="flex flex-col lg:flex-row py-28 px-8 lg:px-24 space-x-12 max-w-screen-2xl mx-auto">
-              <div className="flex flex-col justify-center w-full">
-                <h2 className="font-[500] text-4xl lg:text-5xl text-white">
-                  Our Programs & Initiatives
-                </h2>
-
-                <p className="mt-12 text-white">
-                  Our programs and initiatives empower Africa healthcare
-                  innovators with the support, skills and resources to drive
-                  innovation, transform ideas into impactful products, and
-                  improve healthcare outcome—positively impacting millions of
-                  lives across the continent
-                </p>
-              </div>
-
-              <div className=""></div>
-            </div>
-          </section>
 
           {/* Testimonials */}
           <TestimonialSection />

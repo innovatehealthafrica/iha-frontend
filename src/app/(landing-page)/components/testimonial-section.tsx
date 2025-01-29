@@ -82,11 +82,10 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-white">
+    <section className="">
       <div className="py-16 lg:py-28 px-8 lg:px-24 max-w-screen-2xl mx-auto space-y-20">
-        <h2 className="font-[600] text-3xl lg:text-4xl leading-normal">
-          Innovator’s Success Stories, <br />
-          Evidence of our impact.
+        <h2 className="font-bold text-3xl lg:text-5xl leading-normal text-center text-primary">
+          Testimonials
         </h2>
 
         <div className="px-8">
@@ -103,8 +102,8 @@ export default function TestimonialSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="text-primary-green border-none" />
-            <CarouselNext className="text-primary-green border-none" />
+            <CarouselPrevious className="text-primary border-none bg-transparent hover:bg-transparent" />
+            <CarouselNext className="text-primary border-none bg-transparent hover:bg-transparent" />
           </Carousel>
         </div>
       </div>
