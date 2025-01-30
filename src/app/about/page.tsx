@@ -7,8 +7,7 @@ import Link from "next/link";
 import Img1 from "@/assets/images/about-page/img1.png";
 import Img2 from "@/assets/images/about-page/img2.png";
 import Img3 from "@/assets/images/about-page/img3.png";
-import workChartImg from "@/assets/images/about-page/3img.svg";
-import partnershipImg from "@/assets/images/about-page/2img.svg";
+import PartnerSection from "@/app/(landing-page)/components/partners-section";
 import LINKS from "@/lib/links";
 import ComingSoonTag from "@/ui/coming-soon-tag";
 import linkedinIcon from "@/assets/icons/linkedin.png";
@@ -103,14 +102,19 @@ export default function About() {
     <>
       {/* Header */}
       <section
-        className=" bg-no-repeat bg-cover aspect-3/2 h-96 flex flex-col items-center py-[4rem] px-4"
+        className=" bg-no-repeat bg-cover aspect-auto h-[68vh] flex flex-col items-center px-4"
         style={{
           backgroundImage: `url(${headerImg.src})`,
           backgroundBlendMode: "darken",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          minHeight: "300px",
+          maxHeight: "90vh",
         }}
       >
-        <div className="text-center max-w-screen-lg mt-14">
-          <h1 className="text-primary-bright-orange font-normal text-xl lg:text-[3rem] mb-4">
+        <div className="text-center max-w-screen-lg my-36">
+          <h1 className="text-primary-bright-orange text-center font-bold mb-12 text-5xl lg:text-[3rem]">
             About us{" "}
           </h1>
           <p className="mx-8 mb-4 text-white font-light text-xl text-center">
@@ -126,30 +130,35 @@ export default function About() {
       {/* Who we are */}
       <section className="bg-white py-20 max-w-screen-xl mx-auto px-8 lg:px-0">
         <div className="text-center mb-12">
-          <h3 className="text-3xl lg:text-4xl font-semibold mb-4">
+          <h3 className="text-5xl text-center font-bold mb-12 text-primary">
             Who We Are
           </h3>
           <p className="max-w-screen-lg mx-auto font-light text-lg leading-relaxed">
-          Our mission is to accelerate the transformation of healthcare in Africa by building a future-ready workforce, fostering partnership for innovation, and working with communities to co-design solutions that enhance healthcare access, quality, and outcomes for everyone
+            Our mission is to accelerate the transformation of healthcare in
+            Africa by building a future-ready workforce, fostering partnership
+            for innovation, and working with communities to co-design solutions
+            that enhance healthcare access, quality, and outcomes for everyone
           </p>
         </div>
 
+        {/* How We Make Impact */}
         <div className="text-center mt-24">
-          <h3 className="text-3xl lg:text-4xl font-semibold mb-4">
-          How We Make Impact          </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <h3 className="text-5xl text-center font-bold mb-12 text-primary">
+            How We Make Impact{" "}
+          </h3>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-3 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <div className="text-center max-w-lg">
               <Image
-                className="mx-auto mb-4 lg:hidden"
-                height={150}
-                width={150}
+                className="mx-auto mb-4"
+                height={350}
+                width={350}
                 src={Img1}
-                alt={"co-creating icon"}
+                alt={"co-creating image"}
               />
               <h4 className="font-semibold text-xl mb-2">
                 Co-creating with the people
               </h4>
-              <p className="font-light">
+              <p className="font-light p-4">
                 We collaborate directly with communities, healthcare workers,
                 and various stakeholders to design and implement solutions that
                 are deeply rooted in the realities and needs of the people we
@@ -159,56 +168,43 @@ export default function About() {
 
             <div className="text-center max-w-lg">
               <Image
-                className="mx-auto mb-4 lg:hidden"
-                src={workChartImg}
-                height={150}
-                width={150}
-                alt={"Workforce Capacity Development icon"}
-              />
-              <Image
-                className="mx-auto mb-4 hidden lg:block"
-                src={workChartImg}
-                height={200}
-                width={200}
-                alt={"Workforce Capacity Development icon"}
+                className="mx-auto mb-4"
+                src={Img2}
+                height={350}
+                width={350}
+                alt={"Workforce Capacity Development image"}
               />
               <h4 className="font-semibold text-xl mb-2">
-                Workforce Capacity Development
+                Workforce Capacity Development{" "}
               </h4>
               <p className="font-light">
-                We build tools and deliver programs that empowers healthcare
-                professionals to leverage digital technology to improve
-                healthcare delivery and outcome across the continent.
+                We provide digital solutions and training that help healthcare
+                workers use technology to deliver better patient care across
+                Africa.
               </p>
             </div>
 
             <div className="text-center max-w-lg">
               <Image
-                className="mx-auto mb-4 lg:hidden"
-                src={partnershipImg}
-                height={150}
-                width={150}
-                alt={"co-creating icon"}
-              />
-              <Image
-                className="mx-auto mb-4 hidden lg:block"
-                src={partnershipImg}
-                height={200}
-                width={200}
+                className="mx-auto mb-4"
+                src={Img3}
+                height={350}
+                width={350}
                 alt={"co-creating icon"}
               />
               <h4 className="font-semibold text-xl mb-2">
-                Strategic Partnership
+                Strategic Partnership{" "}
               </h4>
               <p className="font-light">
-                We work with organizations to pioneer new approaches for
-                improving healthcare in Africa leveraging innovation principles
-                and digital technology.
+                We partner with organizations to develop innovative digital
+                solutions that advance healthcare in Africa.
               </p>
             </div>
           </div>
         </div>
       </section>
+      {/* Partners */}
+      <PartnerSection />
 
       {/* CTA */}
       <section className="bg-primary-green py-36">
