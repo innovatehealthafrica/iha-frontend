@@ -14,8 +14,8 @@ export default function Testimonial({
 }) {
   return (
     <div className="lg:pe-12">
-      <div className="h-44 ">
-        <div className="relative h-32 border border-primary text-primary bg-white rounded-md px-6 py-5">
+      <div className="h-48">
+        <div className="relative h-36 border border-primary text-primary bg-white rounded-md px-6 py-5">
           {testimonial}
 
           {/* Chat Bubble Tip - The curved tip below the chat bubble */}
@@ -49,7 +49,7 @@ export default function Testimonial({
       </div>
 
       <div className="flex items-center gap-4 ">
-        <Avatar className="bg-primary-green ms-3 size-16">
+        <Avatar className="bg-primary-green ms-3 size-14">
           <AvatarImage src={avatarUrl} />
           <AvatarFallback>{getInitials(name)}</AvatarFallback>
         </Avatar>

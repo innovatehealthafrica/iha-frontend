@@ -6,9 +6,9 @@ import heroSlide1 from "@/assets/images/hero/hero_slide_1.png";
 import heroSlide2 from "@/assets/images/hero/hero_slide_2.png";
 import heroSlide3 from "@/assets/images/hero/hero_slide_3.png";
 import background from "@/assets/images/background.png";
+import communityImage from "@/assets/images/community.png";
 import TestimonialSection from "./components/testimonial-section";
 import ConnectWithInnovatorSection from "./components/connect-with-innovators";
-import PortfolioSection from "./components/PortfolioSection";
 import connectedImage from "@/assets/images/connected.png";
 import PartnerSection from "./components/partners-section";
 import BlogSection from "./components/blog-section";
@@ -132,38 +132,35 @@ export default function Home() {
       {/* Connect With Innovators */}
       <ConnectWithInnovatorSection />
 
-      {/* Portfolios */}
-      <PortfolioSection />
-
       {/* CTA */}
-      <section className="bg-white py-16 lg:py-28">
-        <div className="flex flex-col lg:flex-row lg:py-8 lg:pb-36 px-8 lg:px-24 lg:space-x-12 gap-8 lg:gap-0 max-w-screen-2xl mx-auto">
-          <div className="flex flex-col justify-center w-full max-w-lg order-1 lg:order-2">
-            <h2 className="font-[600] text-3xl lg:text-[2.5rem] leading-tight lg:leading-normal">
+      <section className="bg-white py-6 lg:py-9">
+        <div className="flex flex-col lg:flex-row lg:py-8 lg:pb-36 px-8 lg:px-0 lg:space-x-12 gap-8 lg:gap-0 max-w-screen-xl mx-auto">
+          <div className="flex flex-col justify-center w-full max-w-lg">
+            <h2 className="font-[600] text-3xl lg:text-[2.5rem] leading-tight lg:leading-10 text-primary">
               Join the largest community of healthcare innovators
             </h2>
 
-            <p className="mt-4">
+            <p className="mt-4 text-lg">
               Join the largest community of innovators, encompassing product
               developers, data scientists, engineers, healthcare professionals,
               AI developers, cloud engineers, and more.
             </p>
 
             <Button
-              className="w-fit mt-4 lg:mt-9 rounded-full bg-black text-white hover:bg-black/60"
-              variant="secondary"
+              className="w-fit mt-4 lg:mt-9 text-white text-base"
               size="lg"
             >
               Join Community
             </Button>
           </div>
 
-          <div className="w-full flex justify-center order-2 lg:order-1 ">
+          <div className="w-full flex justify-center">
             <Image
-              src={connectedImage}
+              src={communityImage}
               alt="Image of innovators connected by one goal"
               width={553}
               height={300}
+              className="rounded-3xl overflow-hidden"
             />
           </div>
         </div>

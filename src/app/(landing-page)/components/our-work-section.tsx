@@ -60,7 +60,7 @@ export default function OurWorkSection() {
                 <h4 className="text-3xl font-[500] text-primary mb-6">
                   {item.title}
                 </h4>
-                <p className="leading-8 mb-7">{item.description}</p>
+                <p className="leading-8 mb-7 text-lg">{item.description}</p>
                 <div className="flex gap-2">
                   {item.tags.map((tag) => (
                     <span
