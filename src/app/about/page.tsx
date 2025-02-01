@@ -9,16 +9,12 @@ import Img2 from "@/assets/images/about-page/img2.png";
 import Img3 from "@/assets/images/about-page/img3.png";
 import PartnerSection from "@/app/(landing-page)/components/partners-section";
 import LINKS from "@/lib/links";
-import ComingSoonTag from "@/ui/coming-soon-tag";
-import linkedinIcon from "@/assets/icons/linkedin.png";
+import linkedinIcon from "@/assets/images/about-page/Vector.png";
 import member1 from "@/assets/images/team/oluwatobi.png";
 import member2 from "@/assets/images/team/Timeyin.png";
 import member3 from "@/assets/images/team/Faridat.png";
 import member4 from "@/assets/images/team/Joseph.png";
 import member5 from "@/assets/images/team/Ezinne.png";
-import member6 from "@/assets/images/team/ibironke.png";
-import member7 from "@/assets/images/team/Solome.png";
-import member8 from "@/assets/images/team/Raphael.png";
 import headerImg from "@/assets/images/about-page/about_image.png";
 
 const teamMembers = [
@@ -61,30 +57,6 @@ const teamMembers = [
     funFact: "",
     linkedIn: "https://linkedin.com/in/josephajibodu",
   },
-
-  {
-    name: "Mary Ibironke",
-    title: "Community Manage",
-    image: member6,
-    funFact: "",
-    linkedIn: "https://linkedin.com/in/josephajibodu",
-  },
-
-  {
-    name: "Solome Nekahiwot",
-    title: "Program Manager, Ethiopia",
-    image: member7,
-    funFact: "",
-    linkedIn: "https://linkedin.com/in/josephajibodu",
-  },
-
-  {
-    name: "Raphael Oyeniji",
-    title: "Program Manager, Nigeria",
-    image: member8,
-    funFact: "",
-    linkedIn: "https://linkedin.com/in/josephajibodu",
-  },
 ];
 
 const boardMembers = [
@@ -102,7 +74,7 @@ export default function About() {
     <>
       {/* Header */}
       <section
-        className=" bg-no-repeat bg-cover aspect-auto h-[68vh] flex flex-col items-center px-4"
+        className=" bg-no-repeat bg-cover aspect-auto h-[664px] flex flex-col items-center px-4"
         style={{
           backgroundImage: `url(${headerImg.src})`,
           backgroundBlendMode: "darken",
@@ -206,84 +178,75 @@ export default function About() {
       {/* Partners */}
       <PartnerSection />
 
-      {/* CTA */}
-      <section className="bg-primary-green py-36">
-        <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-8 lg:px-0">
-          <div className="space-y-8 max-w-screen-xl mx-auto bg-white border px-8 py-12 text-center w-full">
-            <h2 className="font-semibold text-xl">Join our Team</h2>
-            <Button variant={"outline"} className="border-black" asChild>
-              <Link href={LINKS.Careers.href}>Careers</Link>
-            </Button>
-          </div>
-
-          <div className="space-y-8 max-w-screen-xl mx-auto bg-white border px-8 py-12 text-center w-full">
-            <h2 className="font-semibold text-xl">Partner with us</h2>
-            <Button
-              variant={"outline"}
-              className="border-black relative"
-              disabled
-            >
-              Partner
-              <ComingSoonTag />
-            </Button>
-          </div>
-
-          <div className="space-y-8 max-w-screen-xl mx-auto bg-white border px-8 py-12 text-center w-full">
-            <h2 className="font-semibold text-xl">Use our Tools</h2>
-            <Button
-              variant={"outline"}
-              className="border-black relative"
-              disabled
-            >
-              Innovation Kits
-              <ComingSoonTag />
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Team */}
       <section className="max-w-screen-xl mx-auto px-8 lg:px-0 py-16">
-        <h2 className="text-4xl font-semibold">The Team</h2>
-        <p className="font-light mb-12">Meet the people of IHA</p>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <h3 className="text-5xl text-center font-bold mb-12 text-primary">
+          Meet The <span className="text-primary-bright-orange">Team</span> at
+          IHA
+        </h3>
+        <div className="flex gap-4 mx-4 items-center justify-center align-middle mb-6">
+          <span className="border border-slate-600 p-1 cursor-pointer rounded-sm bg-primary-bright-orange">
+            Leadership
+          </span>
+          <span className="border border-slate-600 p-1 rounded-sm cursor-pointer">
+            Design & Innovation
+          </span>
+          <span className="border border-slate-600 p-1 rounded-sm cursor-pointer">
+            Partnership & Grants
+          </span>
+          <span className="border border-slate-600 p-1 rounded-sm cursor-pointer">
+            Research & Development
+          </span>
+          <span className="border border-slate-600 p-1 rounded-sm cursor-pointer">
+            Communications
+          </span>
+          <span className="border border-slate-600 p-1 rounded-sm cursor-pointer">
+            Consultations
+          </span>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 m-[1.5rem] ">
           {teamMembers.map((member) => (
-            <div key={member.name} className="relative group overflow-hidden">
-              <Image
-                src={member.image}
-                alt={member.name}
-                className="w-full group-hover:scale-110 transition-all duration-500 ease-out"
-              />
-
-              <div className="absolute bottom-0 flex flex-col px-4 text-white pb-4">
+            <div key={member.name} className="relative ">
+              <div className="flex flex-col items-center p-6 bg-[#AEB6B1] rounded-xl shadow-lg w-60 mt-20">
+                <div className="relative -top-28 z-20 left-4">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    className="clip-path-mypolygon w-5/6 object-cover"
+                  />
+                </div>
+              </div>
+              <div className="absolute bottom-0 flex flex-col items-center justify-center text-center px-[2.5rem] text-white pb-4 mb-12 mx-auto">
                 <span className="font-medium">{member.name}</span>
                 <span className="text-sm">{member.title}</span>
               </div>
-
-              <div className="absolute inset-0 bg-black hidden duration-1000 transition-all group-hover:flex flex-col items-center justify-center text-center gap-4 opacity-65 pointer-events-none"></div>
-
-              <div className="absolute inset-0 bg-transparent duration-1000 transition-all hidden group-hover:flex flex-col items-center justify-center text-white pb-4 px-8 text-center gap-4 pointer-events-none">
+              {/* <div className="absolute inset-0 bg-black hidden duration-1000 transition-all group-hover:flex flex-col items-center justify-center text-center gap-4 opacity-65 pointer-events-none"></div> */}
+              {/* <div className="absolute inset-0 bg-transparent duration-1000 transition-all hidden group-hover:flex flex-col items-center justify-center text-white pb-4 px-8 text-center gap-4 pointer-events-none">
                 {member.funFact}
                 <Button variant={"secondary"} className="relative">
                   Read More
                   <ComingSoonTag />
                 </Button>
-              </div>
-
+              </div> */}
               <a
                 target="_blank"
                 href={member.linkedIn}
-                className="absolute top-6 right-4 opacity-0"
+                className="absolute bottom-6 right-28"
               >
                 <Image
                   src={linkedinIcon}
                   alt={member.name + "linkendin"}
-                  height={36}
-                  width={36}
+                  height={26}
+                  width={26}
+                  className="rounded-full  bg-[#5E6D62] p-[2px]" 
                 />
               </a>
+              {/* width: 20px;
+    background: #5E6D62;
+    border-radius: 50%;
+    padding: 2px; */}
             </div>
+
           ))}
         </div>
       </section>
