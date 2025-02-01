@@ -220,14 +220,6 @@ export default function About() {
                 <span className="font-medium">{member.name}</span>
                 <span className="text-sm">{member.title}</span>
               </div>
-              {/* <div className="absolute inset-0 bg-black hidden duration-1000 transition-all group-hover:flex flex-col items-center justify-center text-center gap-4 opacity-65 pointer-events-none"></div> */}
-              {/* <div className="absolute inset-0 bg-transparent duration-1000 transition-all hidden group-hover:flex flex-col items-center justify-center text-white pb-4 px-8 text-center gap-4 pointer-events-none">
-                {member.funFact}
-                <Button variant={"secondary"} className="relative">
-                  Read More
-                  <ComingSoonTag />
-                </Button>
-              </div> */}
               <a
                 target="_blank"
                 href={member.linkedIn}
@@ -241,10 +233,6 @@ export default function About() {
                   className="rounded-full  bg-[#5E6D62] p-[2px]" 
                 />
               </a>
-              {/* width: 20px;
-    background: #5E6D62;
-    border-radius: 50%;
-    padding: 2px; */}
             </div>
 
           ))}
