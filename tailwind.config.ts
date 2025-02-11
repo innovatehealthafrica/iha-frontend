@@ -49,8 +49,6 @@ const config = {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
-<<<<<<< Updated upstream
-=======
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -71,7 +69,6 @@ const config = {
           800: "hsl(var(--accent-800))",
           900: "hsl(var(--accent-900))",
           950: "hsl(var(--accent-950))",
->>>>>>> Stashed changes
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
