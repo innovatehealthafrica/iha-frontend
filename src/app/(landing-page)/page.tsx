@@ -21,6 +21,7 @@ import Fade from "embla-carousel-fade";
 import OurWorkSection from "./components/our-work-section";
 import { Button } from "@/components/ui/button";
 import ContactUsSection from "@/components/contact-us-section";
+import NewsletterSubscriptionSection from "./components/newsletter-subscription-section";
 
 const statistics = [
   { label: "Healthcare solution developed", value: 250 },
@@ -164,14 +165,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Partners */}
       <PartnerSection />
 
-      {/* Contact us */}
       <ContactUsSection />
 
-      {/* News and Highlights */}
       <BlogSection />
+
+      <NewsletterSubscriptionSection />
     </>
   );
 }
