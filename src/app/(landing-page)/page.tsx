@@ -9,7 +9,7 @@ import KeySolutionsSection from "./components/key-solutions-section";
 import TestimonialSection from "./components/testimonial-section";
 import ConnectWithInnovatorSection from "./components/connect-with-innovators";
 import PortfolioSection from "./components/PortfolioSection";
-import connectedImage from "@/assets/images/connected.png";
+import connectedImage from "@/assets/images/connected.png"
 import PartnerSection from "./components/partners-section";
 import BlogSection from "./components/blog-section";
 import ContactUsSection from "@/components/contact-us-section";
