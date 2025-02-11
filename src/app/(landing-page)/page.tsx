@@ -167,11 +167,11 @@ export default function Home() {
       {/* Partners */}
       <PartnerSection />
 
-      {/* News and Highlights */}
-      <BlogSection />
-
       {/* Contact us */}
       <ContactUsSection />
+
+      {/* News and Highlights */}
+      <BlogSection />
     </>
   );
 }

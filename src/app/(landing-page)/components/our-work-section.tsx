@@ -42,7 +42,7 @@ export default function OurWorkSection() {
   return (
     <section className="max-w-screen-xl mx-auto py-20 pb-0">
       <div className="px-8 lg:px-0 py-20 pb-0 gap-x-12 max-w-screen-2xl mx-auto">
-        <h3 className="text-5xl text-center text-primary font-bold mb-12">
+        <h3 className="text-3xl lg:text-5xl text-center text-primary font-bold mb-12">
           Our Work
         </h3>
 
