@@ -17,6 +17,7 @@ export default function PartnerSection() {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
 
   return (
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     <section className="bg-white">
       <div className="flex flex-col items-center py-8 pb-36 px-8 lg:px-24 lg:space-x-12 max-w-screen-2xl mx-auto">
@@ -24,6 +25,10 @@ export default function PartnerSection() {
     <section className="bg-accent-100">
       <div className="flex flex-col items-center py-12 px-8 lg:px-24 lg:space-x-12 max-w-screen-2xl mx-auto">
 >>>>>>> Stashed changes
+=======
+    <section className="bg-accent/10">
+      <div className="flex flex-col items-center py-12 px-8 lg:px-24 lg:space-x-12 max-w-screen-2xl mx-auto">
+>>>>>>> feat/landing-page
         <h4 className="font-[600] text-[1.5rem] leading-normal text-center lg:text-start">
           We don’t work alone! 30+ trusted partners in 6+ countries
         </h4>

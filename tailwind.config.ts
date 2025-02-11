@@ -31,13 +31,25 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "hsl(var(--primary))", // same as 500
           foreground: "hsl(var(--primary-foreground))",
 
-          "dark-green": "#0D241D",
-          green: "#008629",
-          "lemon-green": "#2DFF17",
-          "bright-orange": "#FFC332",
+          50: "hsl(var(--primary-50))",
+          100: "hsl(var(--primary-100))",
+          200: "hsl(var(--primary-200))",
+          300: "hsl(var(--primary-300))",
+          400: "hsl(var(--primary-400))",
+          500: "hsl(var(--primary-500))",
+          600: "hsl(var(--primary-600))",
+          700: "hsl(var(--primary-700))",
+          800: "hsl(var(--primary-800))",
+          900: "hsl(var(--primary-900))",
+          950: "hsl(var(--primary-950))",
+
+          'dark-green': '#0D241D',
+          'green': '#008629',
+          'lemon-green': '#2DFF17',
+          'bright-orange': '#FFC332',
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -47,8 +59,20 @@ const config = {
           "sky-blue": "#E1FFF4",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
+          DEFAULT: "hsl(var(--destructive))", // same as 500
           foreground: "hsl(var(--destructive-foreground))",
+
+          50: "hsl(var(--accent-50))",
+          100: "hsl(var(--accent-100))",
+          200: "hsl(var(--accent-200))",
+          300: "hsl(var(--accent-300))",
+          400: "hsl(var(--accent-400))",
+          500: "hsl(var(--accent-500))",
+          600: "hsl(var(--accent-600))",
+          700: "hsl(var(--accent-700))",
+          800: "hsl(var(--accent-800))",
+          900: "hsl(var(--accent-900))",
+          950: "hsl(var(--accent-950))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
