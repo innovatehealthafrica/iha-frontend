@@ -49,14 +49,29 @@ const config = {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+<<<<<<< Updated upstream
+=======
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "hsl(var(--accent))", // same as 500
           foreground: "hsl(var(--accent-foreground))",
+
+          50: "hsl(var(--accent-50))",
+          100: "hsl(var(--accent-100))",
+          200: "hsl(var(--accent-200))",
+          300: "hsl(var(--accent-300))",
+          400: "hsl(var(--accent-400))",
+          500: "hsl(var(--accent-500))",
+          600: "hsl(var(--accent-600))",
+          700: "hsl(var(--accent-700))",
+          800: "hsl(var(--accent-800))",
+          900: "hsl(var(--accent-900))",
+          950: "hsl(var(--accent-950))",
+>>>>>>> Stashed changes
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
