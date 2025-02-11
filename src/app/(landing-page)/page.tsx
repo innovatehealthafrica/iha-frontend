@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/ui/button";
 import Image from "next/image";
 import heroSlide1 from "@/assets/images/hero/hero_slide_1.png";
 import heroSlide2 from "@/assets/images/hero/hero_slide_2.png";
@@ -9,15 +8,9 @@ import background from "@/assets/images/background.png";
 import communityImage from "@/assets/images/community.png";
 import TestimonialSection from "./components/testimonial-section";
 import ConnectWithInnovatorSection from "./components/connect-with-innovators";
-<<<<<<< HEAD
-import PortfolioSection from "./components/PortfolioSection";
-import connectedImage from "@/assets/images/connected.png"
-=======
 import connectedImage from "@/assets/images/connected.png";
->>>>>>> feat/landing-page
 import PartnerSection from "./components/partners-section";
 import BlogSection from "./components/blog-section";
-import ContactUsSection from "@/components/contact-us-section";
 import {
   Carousel,
   CarouselContent,
@@ -26,6 +19,8 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
 import OurWorkSection from "./components/our-work-section";
+import { Button } from "@/components/ui/button";
+import ContactUsSection from "@/components/contact-us-section";
 
 const statistics = [
   { label: "Healthcare solution developed", value: 250 },
@@ -126,10 +121,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-white opacity-85"></div>
 
         <div className="relative z-10">
-          {/* Our Work Section */}
           <OurWorkSection />
 
-          {/* Testimonials */}
           <TestimonialSection />
         </div>
       </section>
@@ -138,8 +131,8 @@ export default function Home() {
       <ConnectWithInnovatorSection />
 
       {/* CTA */}
-      <section className="bg-white py-6 lg:py-9">
-        <div className="flex flex-col lg:flex-row lg:py-8 lg:pb-36 px-8 lg:px-0 lg:space-x-12 gap-8 lg:gap-0 max-w-screen-xl mx-auto">
+      <section className="bg-white py-6 lg:py-20">
+        <div className="flex flex-col lg:flex-row px-8 lg:px-0 lg:space-x-12 gap-8 lg:gap-0 max-w-screen-xl mx-auto">
           <div className="flex flex-col justify-center w-full max-w-lg">
             <h2 className="font-[600] text-3xl lg:text-[2.5rem] leading-tight lg:leading-10 text-primary">
               Join the largest community of healthcare innovators

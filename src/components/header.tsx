@@ -13,7 +13,6 @@ import {
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
 import { usePathname } from "next/navigation";
-import { Button } from "@/ui/button";
 import { cn } from "@/lib/utils";
 import { useToggle } from "@/hooks/useToggle";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
@@ -21,6 +20,7 @@ import { CaretDownIcon } from "@radix-ui/react-icons";
 import { motion, AnimatePresence } from "framer-motion";
 import Navigation from "@/lib/navigations";
 import { LinkItem } from "@/lib/links";
+import { Button } from "./ui/button";
 
 interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;

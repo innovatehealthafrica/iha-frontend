@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/ui/button";
 import { FormEventHandler } from "react";
 
 import colourPrints from "@/assets/images/africa-print.png";
@@ -10,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import toast from "react-hot-toast";
 import { Info } from "lucide-react";
+import { Button } from "./ui/button";
 
 export default function ContactUsSection() {
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
