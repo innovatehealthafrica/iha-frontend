@@ -1,13 +1,13 @@
-const { fontFamily } = require("tailwindcss/defaultTheme")
-import type { Config } from "tailwindcss"
+const { fontFamily } = require("tailwindcss/defaultTheme");
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -34,17 +34,17 @@ const config = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
 
-          'dark-green': '#0D241D',
-          'green': '#008629',
-          'lemon-green': '#2DFF17',
-          'bright-orange': '#FFC332',
+          "dark-green": "#0D241D",
+          green: "#008629",
+          "lemon-green": "#2DFF17",
+          "bright-orange": "#FFC332",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
 
-          'cyan': '#91FFE6',
-          'sky-blue': '#E1FFF4',
+          cyan: "#91FFE6",
+          "sky-blue": "#E1FFF4",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -68,8 +68,8 @@ const config = {
         },
 
         // Additional colors
-        'light-pink': '#FFA3FB',
-        'sea-green': '#A7FF91',
+        "light-pink": "#FFA3FB",
+        "sea-green": "#A7FF91",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -91,8 +91,14 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    clipPath: {
+      mypolygon:
+        "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+      WebkitMaskImage:
+        "radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
+    },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [require("tailwindcss-animate"), require("tailwind-clip-path")],
+} satisfies Config;
 
-export default config
+export default config;
