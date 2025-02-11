@@ -29,9 +29,9 @@ export default function ContactUsSection() {
       </div>
 
       <div className="w-full max-w-screen-xl mx-auto flex flex-col lg:flex-row ps-12 lg:ps-0 pe-8 lg:pe-0 py-8 lg:py-24">
-        <div className="flex flex-col justify-center items-end lg:items-start lg:px-12 lg:w-1/2">
+        <div className="flex flex-col justify-center items-center lg:items-start lg:px-12 lg:w-1/2">
           <h3 className="font-[600] text-3xl lg:text-5xl mb-4">Get in Touch</h3>
-          <p className="max-w-lg text-end lg:text-start italic font-light">
+          <p className="max-w-lg text-center lg:text-start mb-4 italic font-light">
             We’re open to answer your questions, discuss Partnerships, Services,
             and Collaborative Opportunities!
           </p>
@@ -81,7 +81,9 @@ export default function ContactUsSection() {
                 rows={10}
               />
 
-              <Button size="lg">Send Message</Button>
+              <Button className="w-full sm:w-fit" size="lg">
+                Send Message
+              </Button>
             </form>
           </div>
         </div>

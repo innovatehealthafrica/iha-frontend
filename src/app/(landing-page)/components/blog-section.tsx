@@ -37,9 +37,9 @@ export default function BlogSection() {
     <section className="bg-primary-green/5 py-20">
       <div className="px-8 lg:px-24 gap-x-12 max-w-screen-xl mx-auto">
         <div className="mb-10 flex flex-col lg:flex-row justify-between lg:items-end gap-y-4 lg:gap-y-0">
-          <h2 className="text-2xl">
+          <h2 className="text-xl sm:text-2xl">
             IHA news and <br />
-            <span className="font-[600] text-5xl lg:leading-normal">
+            <span className="font-[600] text-3xl sm:text-5xl lg:leading-normal">
               highlights
             </span>
           </h2>
@@ -53,7 +53,9 @@ export default function BlogSection() {
                 className="rounded-md"
               />
               <div>
-                <h4 className="font-medium text-lg leading-7">{title}</h4>
+                <h4 className="font-medium text-lg leading-7 line-clamp-2 sm:line-clamp-3 h-[56px] sm:h-[84px]">
+                  {title}
+                </h4>
                 <span className="text-base font-light">{date}</span>
               </div>
             </div>

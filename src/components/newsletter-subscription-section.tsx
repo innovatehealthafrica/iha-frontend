@@ -9,22 +9,22 @@ import NewspaperMonotoneIcon from "@/components/icons/newspaper-monotone";
 
 export default function NewsletterSubscriptionSection() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-20 px-8">
       <div className="px-8 lg:px-24 py-14 gap-x-12 max-w-screen-lg mx-auto bg-accent-100 rounded-[44px] border border-primary relative overflow-hidden">
         {/* Background Scribbles: Start */}
         <Image
           src={ihaLogo}
           alt="IHA logo"
-          className="h-full w-auto absolute -top-6 left-2 opacity-5 "
+          className="h-full w-auto absolute -top-6 left-2 opacity-5 object-contain"
         />
         <NewspaperMonotoneIcon className="text-red-300 absolute right-0 bottom-0" />
         {/* Background Scribbles: End */}
 
-        <h3 className="text-3xl text-center text-primary font-medium mb-3">
+        <h3 className="text-xl sm:text-3xl text-center text-primary font-medium sm:mb-3">
           Subscribe to Our Newsletter
         </h3>
 
-        <p className="text-center text-lg text-primary font-light">
+        <p className="text-center sm:text-lg text-primary font-light mb-4">
           Keep up with our latest news and events by subscribing to our weekly
           newsletter
         </p>

@@ -40,33 +40,33 @@ const workItems = [
 ];
 export default function OurWorkSection() {
   return (
-    <section className="max-w-screen-xl mx-auto py-20 pb-0">
+    <section className="max-w-screen-xl mx-auto mt-20 py-20 pb-0">
       <div className="px-8 lg:px-0 py-20 pb-0 gap-x-12">
-        <h3 className="text-3xl lg:text-5xl text-center text-primary font-bold mb-12">
+        <h3 className="text-3xl lg:text-5xl text-center text-primary font-bold mb-4 sm:mb-12">
           Our Work
         </h3>
 
-        <div className="space-y-12">
+        <div className="space-y-14">
           {workItems.map((item, index) => (
             <div
               key={item.title}
               className={cn(
-                "flex flex-col lg:flex-row items-center gap-x-12 bg-white p-8 rounded-lg shadow-[0_0_8px_8px_rgba(0,0,0,0.05)]",
+                "flex flex-col-reverse lg:flex-row items-center gap-x-12 bg-white p-4 sm:p-8 rounded-lg shadow-[0_0_8px_8px_rgba(0,0,0,0.05)]",
                 {
                   "lg:flex-row-reverse": item.reverse,
                 }
               )}
             >
               <div>
-                <h4 className="text-3xl font-[500] text-primary mb-6">
+                <h4 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">
                   {item.title}
                 </h4>
                 <p className="leading-8 mb-7 text-lg">{item.description}</p>
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                   {item.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="bg-[#CFD3D0] text-[#0D2414] rounded-lg p-2 text-xs"
+                      className="bg-[#CFD3D0] text-[#0D2414] rounded-md px-3 py-2 text-xs"
                     >
                       {tag}
                     </span>
@@ -78,7 +78,7 @@ export default function OurWorkSection() {
                 width={1408}
                 height={768}
                 alt="Fellowship"
-                className="rounded-lg w-1/2"
+                className="rounded-lg aspect-video w-full sm:w-1/2 mb-4 sm:mb-0"
               />
             </div>
           ))}

@@ -6,6 +6,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Testimonial from "./testimonial";
+import Autoplay from "embla-carousel-autoplay";
 
 const testimonials = [
   {
@@ -83,7 +84,7 @@ const testimonials = [
 export default function TestimonialSection() {
   return (
     <section className="">
-      <div className="py-16 lg:py-28 px-8 lg:px-24 max-w-screen-2xl mx-auto space-y-20">
+      <div className="py-8 sm:py-28 px-8 lg:px-24 max-w-screen-2xl mx-auto space-y-8 sm:space-y-20">
         <h2 className="font-bold text-3xl lg:text-5xl leading-normal text-center text-primary">
           Testimonials
         </h2>
@@ -92,8 +93,10 @@ export default function TestimonialSection() {
           <Carousel
             opts={{
               align: "start",
+              loop: true,
             }}
             className="w-full"
+            plugins={[Autoplay({ delay: 5000 })]}
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
