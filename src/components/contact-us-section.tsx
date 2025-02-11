@@ -41,7 +41,7 @@ export default function ContactUsSection() {
             Let’s Talk
           </h2>
           <Button
-            className="bg-[#0D2414] text-white hover:bg-black/80 hover:text-white rounded-lg w-fit"
+            className="bg-black text-white hover:bg-black/80 hover:text-white rounded-lg w-fit"
             size="lg"
             variant="secondary"
             onClick={() =>
@@ -55,9 +55,9 @@ export default function ContactUsSection() {
           </Button>
 
           <div className="flex items-center gap-4 py-6">
-            <hr className="border-black border w-full" />
+            <span className="w-full h-1 border-t"></span>
             <span>OR</span>
-            <hr className="border-black" />
+            <span className="w-full h-1 border-t"></span>
           </div>
 
           <form
@@ -81,7 +81,7 @@ export default function ContactUsSection() {
             />
 
             <Button
-              className="bg-[#0D2414] text-white hover:bg-black/80 hover:text-white rounded-lg"
+              className="bg-black text-white hover:bg-black/80 hover:text-white rounded-lg"
               size="lg"
               variant="secondary"
             >
