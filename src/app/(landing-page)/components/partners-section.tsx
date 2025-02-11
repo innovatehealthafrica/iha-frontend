@@ -34,7 +34,12 @@ export default function PartnerSection() {
         </h4>
 
         <div className="w-full mt-12">
-          <Marquee speed={50} gradient={false} pauseOnHover>
+          <Marquee
+            speed={50}
+            gradient={true}
+            gradientColor="hsl(var(--accent-100))"
+            pauseOnHover
+          >
             {partnerLogos.map((logo, index) => (
               <div key={index} className="mx-8">
                 <Image
