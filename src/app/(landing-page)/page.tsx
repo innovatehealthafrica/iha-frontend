@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import heroSlide1 from "@/assets/images/hero/hero_slide_1.png";
-import heroSlide2 from "@/assets/images/hero/hero_slide_2.png";
-import heroSlide3 from "@/assets/images/hero/hero_slide_3.png";
+import heroSlide1 from "@/assets/images/hero/slide1.png";
+import heroSlide2 from "@/assets/images/hero/slide2.png";
+import heroSlide3 from "@/assets/images/hero/slide3.png";
 import background from "@/assets/images/background.png";
 import communityImage from "@/assets/images/community.png";
 import TestimonialSection from "./components/testimonial-section";
@@ -61,7 +61,6 @@ export default function Home() {
             Autoplay({
               delay: 3000,
             }),
-            Fade(),
           ]}
           className="w-full"
         >
@@ -140,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* Connect With Innovators */}
-      <ConnectWithInnovatorSection />
+      {/* <ConnectWithInnovatorSection /> */}
 
       {/* CTA */}
       <section className="bg-white py-14 lg:py-20">
