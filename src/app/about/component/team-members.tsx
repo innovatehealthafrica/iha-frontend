@@ -4,7 +4,6 @@ import member2 from "@/assets/images/team/Timeyin.png";
 import member3 from "@/assets/images/team/Faridat.png";
 import member4 from "@/assets/images/team/Joseph.png";
 import member5 from "@/assets/images/team/Ezinne.png";
-import linkedin from "@/assets/images/about-page/linkedin.svg";
 import Image from "next/image";
 import { Linkedin } from "lucide-react";
 
@@ -69,7 +68,7 @@ export default function TeamMembers() {
               <Image
                 src={member.image}
                 alt={member.name}
-                className="clip-path-mypolygon object-cover rounded-2xl"
+                className="clip-path-mypolygon w-5/6 object-cover rounded-2xl"
               />
             </div>
 

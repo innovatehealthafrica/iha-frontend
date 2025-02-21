@@ -127,8 +127,14 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    clipPath: {
+      mypolygon:
+        "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+      WebkitMaskImage:
+        "radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
+    },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-clip-path")],
 } satisfies Config
 
 export default config

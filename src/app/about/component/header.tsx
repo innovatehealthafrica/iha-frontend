@@ -13,7 +13,7 @@ export default function Header() {
         alt="About Us"
       />
       <div className="absolute inset-0 bg-primary/50 z-0" />
-      <div className="text-center max-w-screen-lg my-36 px-4 z-10">
+      <div className="text-center max-w-screen-lg my-36 px-4 z-[2]">
         <h1 className="text-primary-bright-orange text-center font-bold mb-12 text-5xl lg:text-5xl">
           About Us
         </h1>
