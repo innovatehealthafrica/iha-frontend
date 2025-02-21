@@ -1,29 +1,21 @@
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
-import asgardiaLogo from "@/assets/images/partners/Asgardia.png";
-import aticaLogo from "@/assets/images/partners/Atica.png";
-import avenLogo from "@/assets/images/partners/Aven.png";
-import circleLogo from "@/assets/images/partners/Circle.png";
-import codeLabLogo from "@/assets/images/partners/Code-Lab.png";
-import earthLogo from "@/assets/images/partners/Earth.png";
-import lightingLogo from "@/assets/images/partners/Lighting.png";
-import livaLogo from "@/assets/images/partners/Liva.png";
-import niraLogo from "@/assets/images/partners/Nira.png";
-import utosiaLogo from "@/assets/images/partners/Utosia.png";
+import africaCDCLogo from "@/assets/images/partners/africaCDC_Logo.png";
+import ahaLogo from "@/assets/images/partners/aha-logo.svg";
+import dhaLogo from "@/assets/images/partners/dha_logo.png";
+import ethioHealthLogo from "@/assets/images/partners/Ethio-Health-Logo-.png";
+import healthlyticLogo from "@/assets/images/partners/healthlytic.webp";
+import pranaEventsLogo from "@/assets/images/partners/prana_events.svg";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const partnerLogos = [
-  earthLogo,
-  lightingLogo,
-  avenLogo,
-  niraLogo,
-  circleLogo,
-  livaLogo,
-  utosiaLogo,
-  aticaLogo,
-  codeLabLogo,
-  asgardiaLogo,
+  africaCDCLogo,
+  ahaLogo,
+  dhaLogo,
+  ethioHealthLogo,
+  healthlyticLogo,
+  pranaEventsLogo,
 ];
 
 export default function PartnerSection() {
