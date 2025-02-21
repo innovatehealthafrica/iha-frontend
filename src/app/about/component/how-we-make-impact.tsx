@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Img1 from "@/assets/images/about-page/img1.png";
-import Img2 from "@/assets/images/about-page/img2.png";
-import Img3 from "@/assets/images/about-page/img3.png";
+import Img1 from "@/assets/images/about-page/co-creating.png";
+import Img2 from "@/assets/images/about-page/workforce.png";
+import Img3 from "@/assets/images/about-page/partnership.png";
 
 export default function HowWeMakeImpact() {
   return (
