@@ -1,11 +1,5 @@
 "use client";
-
 import Link from "next/link";
-import React from "react";
-import { Input } from "./ui/input";
-import { Button } from "@/ui/button";
-import toast from "react-hot-toast";
-import { Info, Search } from "lucide-react";
 
 const resources = [
   {
