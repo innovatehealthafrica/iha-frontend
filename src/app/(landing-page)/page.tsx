@@ -64,7 +64,7 @@ export default function Home() {
           ]}
           className="w-full"
         >
-          <CarouselContent className="m-0 h-[664px] sm:h-[768px] lg:h-[800px]">
+          <CarouselContent className="m-0 h-[70vh] sm:h-[664px]">
             <CarouselItem className="p-0">
               <Image
                 src={heroSlide1}

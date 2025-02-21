@@ -2,7 +2,6 @@
 
 import ContactUsSection from "@/components/contact-us-section";
 import PartnerSection from "@/app/(landing-page)/components/partners-section";
-import linkedinIcon from "@/assets/images/about-page/Vector.png";
 import Header from "./component/header";
 import WhoWeAre from "./component/who-we-are";
 import HowWeMakeImpact from "./component/how-we-make-impact";
@@ -12,16 +11,12 @@ import TeamMembers from "./component/team-members";
 export default function About() {
   return (
     <>
-      {/* Header */}
-
       <Header />
-      {/* Who we are */}
 
       <WhoWeAre />
 
-      {/* How We Make Impact */}
       <HowWeMakeImpact />
-      {/* Partners */}
+
       <PartnerSection />
 
       {/* Team */}
@@ -33,10 +28,10 @@ export default function About() {
         <div className="flex gap-4 mx-4 items-center justify-center align-middle mb-6">
           <ScrollableTags />
         </div>
+
         <TeamMembers />
       </section>
 
-      {/* Contact us */}
       <ContactUsSection />
     </>
   );

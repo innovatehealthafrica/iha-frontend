@@ -29,7 +29,7 @@ export default function ScrollableTags() {
             className={`border border-slate-600 px-4 py-2 rounded-sm cursor-pointer text-center text-nowrap 
               ${
                 activeTag === tag
-                  ? "bg-primary-bright-orange text-white" // Active class
+                  ? "bg-primary-bright-orange" // Active class
                   : "bg-white"
               }`}
           >
