@@ -22,6 +22,7 @@ import OurWorkSection from "./components/our-work-section";
 import { Button } from "@/components/ui/button";
 import ContactUsSection from "@/components/contact-us-section";
 import NewsletterSubscriptionSection from "@/components/newsletter-subscription-section";
+import CountUp from "react-countup";
 
 const statistics = [
   { label: "Healthcare solution developed", value: 250 },
@@ -104,7 +105,13 @@ export default function Home() {
           {statistics.map((stat, index) => (
             <div key={index} className="col-span-1 px-4 space-y-2 sm:space-y-3">
               <p className="font-[400] font-spaceGrotesk text-2xl md:text-3xl lg:text-5xl text-center">
-                {stat.value}+
+                <CountUp
+                  start={0}
+                  end={stat.value}
+                  duration={2.5}
+                  separator=","
+                />
+                +
               </p>
               <h3 className="font-[300] text-lg md:text-lg text-center">
                 {stat.label}
