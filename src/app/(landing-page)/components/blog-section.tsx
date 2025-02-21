@@ -6,6 +6,7 @@ import post1Image from "@/assets/images/blogs/post-1.png";
 import post2Image from "@/assets/images/blogs/post-2.png";
 import post3Image from "@/assets/images/blogs/post-3.png";
 import post4Image from "@/assets/images/blogs/post-4.png";
+import { Button } from "@/components/ui/button";
 
 const higlights = [
   {
@@ -34,32 +35,37 @@ const higlights = [
 export default function BlogSection() {
   return (
     <section className="bg-primary-green/5 py-20">
-      <div className="px-8 lg:px-24 gap-x-12 max-w-screen-2xl mx-auto">
+      <div className="px-8 lg:px-24 gap-x-12 max-w-screen-xl mx-auto">
         <div className="mb-10 flex flex-col lg:flex-row justify-between lg:items-end gap-y-4 lg:gap-y-0">
-          <h2 className="text-2xl">
+          <h2 className="text-xl sm:text-2xl">
             IHA news and <br />
-            <span className="font-[600] text-5xl lg:leading-normal">
+            <span className="font-[600] text-3xl sm:text-5xl lg:leading-normal">
               highlights
             </span>
           </h2>
-
-          <Link
-            href="#"
-            className="block text-left lg:text-right hover:underline"
-          >
-            View all
-          </Link>
         </div>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {higlights.map(({ title, date, thumbnail }, index) => (
             <div key={index} className="flex flex-col gap-5">
-              <Image src={thumbnail} alt={`${title} thumbnail`} />
+              <Image
+                src={thumbnail}
+                alt={`${title} thumbnail`}
+                className="rounded-md"
+              />
               <div>
-                <h4 className="font-[600] text-xl leading-8">{title}</h4>
-                <span className="text-sm">{date}</span>
+                <h4 className="font-medium text-lg leading-7 line-clamp-2 sm:line-clamp-3 h-[56px] sm:h-[84px]">
+                  {title}
+                </h4>
+                <span className="text-base font-light">{date}</span>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-end">
+          <Button className="mt-12" size="lg">
+            View More
+          </Button>
         </div>
       </div>
     </section>

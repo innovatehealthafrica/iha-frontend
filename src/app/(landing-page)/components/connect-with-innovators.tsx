@@ -2,9 +2,9 @@ import React from "react";
 import mapImage from "@/assets/images/the-map.png";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/ui/button";
 import { Info, Search } from "lucide-react";
 import toast from "react-hot-toast";
+import { Button } from "@/components/ui/button";
 
 export default function ConnectWithInnovatorSection() {
   return (
