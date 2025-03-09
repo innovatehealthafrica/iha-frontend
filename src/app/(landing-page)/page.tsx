@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import heroSlide1 from "@/assets/images/hero/slide1.png";
 import heroSlide2 from "@/assets/images/hero/slide2.png";
@@ -7,8 +6,6 @@ import heroSlide3 from "@/assets/images/hero/slide3.png";
 import background from "@/assets/images/background.png";
 import communityImage from "@/assets/images/community.png";
 import TestimonialSection from "./components/testimonial-section";
-import ConnectWithInnovatorSection from "./components/connect-with-innovators";
-import connectedImage from "@/assets/images/connected.png";
 import PartnerSection from "./components/partners-section";
 import BlogSection from "./components/blog-section";
 import {
@@ -17,7 +14,6 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import Fade from "embla-carousel-fade";
 import OurWorkSection from "./components/our-work-section";
 import { Button } from "@/components/ui/button";
 import ContactUsSection from "@/components/contact-us-section";
@@ -35,6 +31,8 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="bg-primary bg-no-repeat bg-cover relative">
+        <div className="absolute inset-0 bg-primary/50 z-10" />
+
         <div className="absolute inset-0 z-10">
           <div className="flex flex-col items-center justify-center max-w-screen-xl mx-auto h-full">
             <h1 className="text-white font-bold text-center text-4xl lg:text-6xl lg:leading-tight">
@@ -64,7 +62,7 @@ export default function Home() {
           ]}
           className="w-full"
         >
-          <CarouselContent className="m-0 h-[70vh] sm:h-[664px]">
+          <CarouselContent className="m-0 h-[80vh] sm:h-[664px]">
             <CarouselItem className="p-0">
               <Image
                 src={heroSlide1}

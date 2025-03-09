@@ -60,7 +60,7 @@ const boardMembers = [
 ];
 export default function TeamMembers() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 m-[1.5rem] items-center justify-center">
+    <div className="flex flex-wrap justify-center gap-6 m-[1.5rem]">
       {teamMembers.map((member) => (
         <div key={member.name} className="h-[340px] flex items-end">
           <div className="flex flex-col items-center justify-center text-center px-[2.5rem] text-white pb-4 h-[230px] bg-primary/40 rounded-xl shadow-lg">
@@ -68,14 +68,14 @@ export default function TeamMembers() {
               <Image
                 src={member.image}
                 alt={member.name}
-                className="clip-path-mypolygon w-5/6 object-cover rounded-2xl"
+                className="clip-path-mypolygon w-full object-cover rounded-2xl"
               />
             </div>
 
-            <h4 className="font-medium mb-1 mt-3 text-primary">
+            <h4 className="font-bold mb-1 mt-3 text-primary text-xl sm:text-2xl">
               {member.name}
             </h4>
-            <span className="text-xs mb-2 text-primary">{member.title}</span>
+            <span className="text-sm mb-2 text-primary">{member.title}</span>
             <a
               target="_blank"
               href={member.linkedIn}

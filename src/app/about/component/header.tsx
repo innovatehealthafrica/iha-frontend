@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <section className="relative bg-no-repeat bg-cover aspect-auto h-[70vh] sm:h-[664px] flex flex-col items-center">
+    <section className="relative bg-no-repeat bg-cover aspect-auto h-[80vh] sm:h-[664px] flex flex-col items-center">
       <Image
         src={headerImg}
         className="w-full object-cover h-full absolute"

@@ -44,9 +44,9 @@ export default function BlogSection() {
             </span>
           </h2>
         </div>
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {higlights.map(({ title, date, thumbnail }, index) => (
-            <div key={index} className="flex flex-col gap-5">
+            <div key={index} className="flex flex-col gap-4">
               <Image
                 src={thumbnail}
                 alt={`${title} thumbnail`}

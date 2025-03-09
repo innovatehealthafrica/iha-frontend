@@ -40,7 +40,7 @@ const workItems = [
 ];
 export default function OurWorkSection() {
   return (
-    <section className="max-w-screen-xl mx-auto mt-20 sm:mt-0 py-20 pb-0">
+    <section className="max-w-screen-xl mx-auto mt-36 sm:28 lg:mt-20 py-20 pb-0">
       <div className="px-8 lg:px-0 py-20 pb-0 gap-x-12">
         <h3 className="text-3xl lg:text-5xl text-center text-primary font-bold mb-4 sm:mb-12">
           Our Work

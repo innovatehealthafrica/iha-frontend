@@ -15,28 +15,21 @@ export default function ScrollableTags() {
   ];
 
   return (
-    <div className="mx-4 mb-6 overflow-hidden">
-      <motion.div
-        className="flex gap-4 items-center whitespace-nowrap cursor-grab"
-        drag="x"
-        dragConstraints={{ left: -300, right: 0 }}
-        whileTap={{ cursor: "grabbing" }}
-      >
-        {tags.map((tag, index) => (
-          <span
-            key={index}
-            onClick={() => setActiveTag(tag)}
-            className={`border border-slate-600 px-4 py-2 rounded-sm cursor-pointer text-center text-nowrap 
+    <div className="flex gap-4 overflow-x-auto py-0">
+      {tags.map((tag, index) => (
+        <span
+          key={index}
+          onClick={() => setActiveTag(tag)}
+          className={`block border border-slate-600 px-4 py-2 text-sm md:text-base rounded-sm cursor-pointer text-center text-nowrap 
               ${
                 activeTag === tag
                   ? "bg-primary-bright-orange" // Active class
                   : "bg-white"
               }`}
-          >
-            {tag}
-          </span>
-        ))}
-      </motion.div>
+        >
+          {tag}
+        </span>
+      ))}
     </div>
   );
 }
