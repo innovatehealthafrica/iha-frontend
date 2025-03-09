@@ -1,7 +1,5 @@
 "use client";
 
-import ContactUsSection from "@/components/contact-us-section";
-import PartnerSection from "@/app/(landing-page)/components/partners-section";
 import Header from "./component/header";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -12,6 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useState, useEffect } from "react";
 
 const modules = [
   {
@@ -46,72 +45,148 @@ const modules = [
 ];
 
 export default function About() {
+  const [activeSection, setActiveSection] = useState("overview");
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.6,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    // Observe all sections
+    const sections = document.querySelectorAll("section[id]");
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
   return (
     <>
       <Header />
 
       {/* Introduction */}
-      <section className="bg-white py-14 lg:py-20">
+      <section id="overview" className="bg-white py-14 lg:py-20">
         <div className="px-8 lg:px-0 space-y-8 max-w-screen-xl mx-auto">
-          <div className="flex border-b pb-4 w-full gap-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
+            Overview
+          </h2>
+
+          <div className="flex flex-wrap border-b pb-4 w-full gap-4 mb-8">
             <Link
               className={cn(
-                "text-primary font-bold py-4 px-4 text-primary-green rounded-md",
+                "text-primary font-medium py-3 px-5 rounded-md transition-colors",
                 {
-                  "bg-primary-green/10  hover:bg-primary-green/10": true,
+                  "bg-primary-green/10 hover:bg-primary-green/20 text-primary-green":
+                    true,
+                  "bg-primary-green text-white": activeSection === "overview",
                 }
               )}
-              href="/fellowship-application-2025"
+              href="#overview"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("overview")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Overview
             </Link>
             <Link
               className={cn(
-                "text-primary font-bold py-4 px-4 text-primary-green rounded-md",
+                "text-primary font-medium py-3 px-5 rounded-md transition-colors",
                 {
-                  "bg-primary-green/10  hover:bg-primary-green/10": true,
+                  "bg-primary-green/10 hover:bg-primary-green/20 text-primary-green":
+                    activeSection !== "structure",
+                  "bg-primary-green text-white": activeSection === "structure",
                 }
               )}
-              href="/fellowship-application-2025"
+              href="#structure"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("structure")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Structure
             </Link>
             <Link
               className={cn(
-                "text-primary font-bold py-4 px-4 text-primary-green rounded-md",
+                "text-primary font-medium py-3 px-5 rounded-md transition-colors",
                 {
-                  "bg-primary-green/10  hover:bg-primary-green/10": true,
+                  "bg-primary-green/10 hover:bg-primary-green/20 text-primary-green":
+                    activeSection !== "core-modules",
+                  "bg-primary-green text-white":
+                    activeSection === "core-modules",
                 }
               )}
-              href="/fellowship-application-2025"
+              href="#core-modules"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("core-modules")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Core Module
             </Link>
             <Link
               className={cn(
-                "text-primary font-bold py-4 px-4 text-primary-green rounded-md",
+                "text-primary font-medium py-3 px-5 rounded-md transition-colors",
                 {
-                  "bg-primary-green/10  hover:bg-primary-green/10": true,
+                  "bg-primary-green/10 hover:bg-primary-green/20 text-primary-green":
+                    activeSection !== "why-apply",
+                  "bg-primary-green text-white": activeSection === "why-apply",
                 }
               )}
-              href="/fellowship-application-2025"
+              href="#why-apply"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("why-apply")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Why Apply
             </Link>
             <Link
               className={cn(
-                "text-primary font-bold py-4 px-4 text-primary-green rounded-md",
+                "text-primary font-medium py-3 px-5 rounded-md transition-colors",
                 {
-                  "bg-primary-green/10  hover:bg-primary-green/10": true,
+                  "bg-primary-green/10 hover:bg-primary-green/20 text-primary-green":
+                    activeSection !== "eligibility",
+                  "bg-primary-green text-white":
+                    activeSection === "eligibility",
                 }
               )}
-              href="/fellowship-application-2025"
+              href="#eligibility"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("eligibility")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Eligibility
             </Link>
           </div>
 
-          <p>
+          <p className="text-lg leading-relaxed text-gray-800 mb-6">
             AHIF is a capacity strengthening initiative of InnovateHealth Africa
             (IHA) dedicated to fostering innovation in healthcare by empowering
             young professionals with the required skills, knowledge, resources
@@ -120,10 +195,10 @@ export default function About() {
             need and critical demand for professionals who are not only skilled
             in utilising digital solutions, but are also competent at
             co-creating innovative solutions specifically tailored to the unique
-            challenges and contexts of the African landscape. 
+            challenges and contexts of the African landscape.
           </p>
 
-          <p>
+          <p className="text-lg leading-relaxed text-gray-800">
             It addresses the pressing need to equip these professionals with the
             knowledge, tools, capabilities and network to lead and innovate in a
             sector that is increasingly reliant on context-aware health
@@ -135,13 +210,13 @@ export default function About() {
       </section>
 
       {/* Structure */}
-      <section className="py-14 lg:py-20 bg-primary-green/10">
+      <section id="structure" className="py-14 lg:py-20 bg-primary-green/10">
         <div className="px-8 lg:px-0 space-y-8 max-w-screen-xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
             Structure
           </h2>
 
-          <p>
+          <p className="text-lg leading-relaxed text-gray-800 mb-8">
             The Africa Healthcare Innovation Fellowship (AHIF) 2025 is designed
             as a high-impact, hands-on program that equips fellows with
             practical skills, real-world experience, and direct access to
@@ -149,13 +224,13 @@ export default function About() {
             phases, each tailored to provide progressive learning.
           </p>
 
-          <Accordion type="single" collapsible className="space-y-8">
-            <AccordionItem value="phase-1">
-              <AccordionTrigger className="border border-black px-4 font-bold text-lg">
+          <Accordion type="single" collapsible className="space-y-6">
+            <AccordionItem value="phase-1" className="border-0">
+              <AccordionTrigger className="border border-black/70 px-6 py-4 rounded-md font-bold text-lg hover:bg-primary-green/5 transition-colors">
                 Phase 1: The Bootcamp (8 Weeks, Online)
               </AccordionTrigger>
-              <AccordionContent className="py-4 text-base">
-                <p>
+              <AccordionContent className="py-6 px-4 text-base">
+                <p className="text-gray-800 leading-relaxed mb-6">
                   The journey begins with an intensive bootcamp, where fellows
                   dive deep into the key focus areas highlighted in earlier
                   sections. This phase is packed with expert-led training,
@@ -163,88 +238,105 @@ export default function About() {
                   foundation in digital health & innovation.
                 </p>
 
-                <h3 className="text-2xl font-bold text-primary mt-8">
+                <h3 className="text-xl font-bold text-primary mt-8 mb-4">
                   What to Expect:
                 </h3>
 
-                <ul className="list-disc pl-4">
-                  <li>
-                    Live Faculty-Led Sessions: Learn from leading digital health
-                    experts through interactive masterclasses and Q&A sessions.
+                <ul className="list-disc pl-6 space-y-2 text-gray-800">
+                  <li className="leading-relaxed">
+                    <span className="font-semibold">
+                      Live Faculty-Led Sessions:
+                    </span>{" "}
+                    Learn from leading digital health experts through
+                    interactive masterclasses and Q&A sessions.
                   </li>
-                  <li>
-                    Case Studies & Real-World Applications: Work on real
-                    healthcare challenges, analysing successful health-tech
-                    solutions from across Africa and beyond.
+                  <li className="leading-relaxed">
+                    <span className="font-semibold">
+                      Case Studies & Real-World Applications:
+                    </span>{" "}
+                    Work on real healthcare challenges, analysing successful
+                    health-tech solutions from across Africa and beyond.
                   </li>
-                  <li>
-                    Hands-On Assignments & Projects: Develop practical digital
-                    health solutions based on the curriculum focus areas.
+                  <li className="leading-relaxed">
+                    <span className="font-semibold">
+                      Hands-On Assignments & Projects:
+                    </span>{" "}
+                    Develop practical digital health solutions based on the
+                    curriculum focus areas.
                   </li>
                 </ul>
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="phase-2">
-              <AccordionTrigger className="border border-black px-4 font-bold text-lg">
+            <AccordionItem value="phase-2" className="border-0">
+              <AccordionTrigger className="border border-black/70 px-6 py-4 rounded-md font-bold text-lg hover:bg-primary-green/5 transition-colors">
                 Phase 2: The Lab & Demo Day (4 Weeks, Hybrid)
               </AccordionTrigger>
-              <AccordionContent className="py-4 text-base">
-                <p>
+              <AccordionContent className="py-6 px-4 text-base">
+                <p className="text-gray-800 leading-relaxed mb-6">
                   In this phase, fellows will work in collaborative teams to
                   develop and refine their digital health solutions. This phase
                   culminates in a Demo Day where teams present their projects to
                   a panel of experts.
                 </p>
 
-                <h3 className="text-2xl font-bold text-primary mt-8">
+                <h3 className="text-xl font-bold text-primary mt-8 mb-4">
                   What to Expect:
                 </h3>
 
-                <ul className="list-disc pl-4">
-                  <li>
-                    Collaborative Team Projects: Work with peers to develop
-                    innovative solutions to real-world healthcare challenges.
+                <ul className="list-disc pl-6 space-y-2 text-gray-800">
+                  <li className="leading-relaxed">
+                    <span className="font-semibold">
+                      Collaborative Team Projects:
+                    </span>{" "}
+                    Work with peers to develop innovative solutions to
+                    real-world healthcare challenges.
                   </li>
-                  <li>
-                    Mentorship: Receive guidance and feedback from experienced
-                    mentors in the digital health field.
+                  <li className="leading-relaxed">
+                    <span className="font-semibold">Mentorship:</span> Receive
+                    guidance and feedback from experienced mentors in the
+                    digital health field.
                   </li>
-                  <li>
-                    Demo Day: Present your projects to a panel of industry
-                    experts and receive valuable feedback.
+                  <li className="leading-relaxed">
+                    <span className="font-semibold">Demo Day:</span> Present
+                    your projects to a panel of industry experts and receive
+                    valuable feedback.
                   </li>
                 </ul>
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="phase-3">
-              <AccordionTrigger className="border border-black px-4 font-bold text-lg">
+            <AccordionItem value="phase-3" className="border-0">
+              <AccordionTrigger className="border border-black/70 px-6 py-4 rounded-md font-bold text-lg hover:bg-primary-green/5 transition-colors">
                 Phase 3: Post-Fellowship Support
               </AccordionTrigger>
-              <AccordionContent className="py-4 text-base">
-                <p>
+              <AccordionContent className="py-6 px-4 text-base">
+                <p className="text-gray-800 leading-relaxed mb-6">
                   After the fellowship, participants will receive ongoing
                   support to help them implement their projects and continue
                   their professional development.
                 </p>
 
-                <h3 className="text-2xl font-bold text-primary mt-8">
+                <h3 className="text-xl font-bold text-primary mt-8 mb-4">
                   What to Expect:
                 </h3>
 
-                <ul className="list-disc pl-4">
-                  <li>
-                    Continued Mentorship: Access to a network of mentors for
-                    ongoing guidance and support.
+                <ul className="list-disc pl-6 space-y-2 text-gray-800">
+                  <li className="leading-relaxed">
+                    <span className="font-semibold">Continued Mentorship:</span>{" "}
+                    Access to a network of mentors for ongoing guidance and
+                    support.
                   </li>
-                  <li>
-                    Networking Opportunities: Connect with industry leaders and
-                    potential collaborators.
+                  <li className="leading-relaxed">
+                    <span className="font-semibold">
+                      Networking Opportunities:
+                    </span>{" "}
+                    Connect with industry leaders and potential collaborators.
                   </li>
-                  <li>
-                    Resources & Tools: Access to resources and tools to help
-                    implement and scale your projects.
+                  <li className="leading-relaxed">
+                    <span className="font-semibold">Resources & Tools:</span>{" "}
+                    Access to resources and tools to help implement and scale
+                    your projects.
                   </li>
                 </ul>
               </AccordionContent>
@@ -254,39 +346,41 @@ export default function About() {
       </section>
 
       {/* Core Modules */}
-      <section className="bg-white py-14 lg:py-20">
+      <section id="core-modules" className="bg-white py-14 lg:py-20">
         <div className="px-8 lg:px-0 space-y-8 max-w-screen-xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
             Core Modules
           </h2>
 
-          <p className="">The Fellowship’s core areas of focus include:</p>
+          <p className="text-lg leading-relaxed text-gray-800 mb-8">
+            The Fellowship's core areas of focus include:
+          </p>
 
-          <div className="border border-black rounded-lg px-12 py-8">
+          <div className="border rounded-lg px-8 py-10 shadow-sm">
             {modules.map((module, index) => (
               <div
                 key={index}
-                className={cn("mb-8 pb-4", {
-                  "border-b": index !== modules.length - 1,
+                className={cn("mb-8 pb-6", {
+                  "border-b border-gray-200": index !== modules.length - 1,
                 })}
               >
-                <h3 className="text-xl font-bold text-primary">
+                <h3 className="text-xl font-bold text-primary mb-2">
                   {module.title}
                 </h3>
-                <p>{module.description}</p>
+                <p className="text-gray-700">{module.description}</p>
               </div>
             ))}
 
-            <div className="flex justify-between items-center">
-              <p>
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-6 pt-4 border-t border-gray-200">
+              <p className="text-gray-800">
                 Download the{" "}
                 <span className="font-bold italic">fellowship Brochure</span>{" "}
-                here for full module
+                here for full module details
               </p>
               <Button
                 asChild
                 variant="outline"
-                className="mt-8 h-14 px-8 text-base"
+                className="h-12 px-8 text-base font-medium"
               >
                 <Link target="_blank" href="#">
                   Download
@@ -298,74 +392,134 @@ export default function About() {
       </section>
 
       {/* Why Apply */}
-      <section className="py-14 lg:py-20 bg-primary-green/10">
+      <section id="why-apply" className="py-14 lg:py-20 bg-primary-green/10">
         <div className="px-8 lg:px-0 space-y-8 max-w-screen-xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-8">
             Why Apply?
           </h2>
 
-          <ul className="list-disc pl-4">
-            <li>
-              Master cutting-edge innovation tools and methodologies through
-              practical workshops, interactive labs, and hands-on projects that
-              address Africa’s most pressing healthcare needs.
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3">
+              <div className="rounded-full bg-primary-green w-6 h-6 flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+              <p className="text-lg leading-relaxed text-gray-800">
+                Master cutting-edge innovation tools and methodologies through
+                practical workshops, interactive labs, and hands-on projects
+                that address Africa's most pressing healthcare needs.
+              </p>
             </li>
-            <li>
-              Engage in field experiences and case studies that allow you to
-              pilot tangible solutions, create impact in diverse communities,
-              and refine your innovations based on direct feedback.
+            <li className="flex items-start gap-3">
+              <div className="rounded-full bg-primary-green w-6 h-6 flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+              <p className="text-lg leading-relaxed text-gray-800">
+                Engage in field experiences and case studies that allow you to
+                pilot tangible solutions, create impact in diverse communities,
+                and refine your innovations based on direct feedback.
+              </p>
             </li>
-            <li>
-              Receive guidance from renowned digital health professionals and
-              seasoned entrepreneurs who will support your growth, help navigate
-              challenges, and shape you into an influential leader in Africa’s
-              healthcare space.
+            <li className="flex items-start gap-3">
+              <div className="rounded-full bg-primary-green w-6 h-6 flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+              <p className="text-lg leading-relaxed text-gray-800">
+                Receive guidance from renowned digital health professionals and
+                seasoned entrepreneurs who will support your growth, help
+                navigate challenges, and shape you into an influential leader in
+                Africa's healthcare space.
+              </p>
             </li>
-            <li>
-              Join a high-impact community of innovators and foster invaluable
-              partnerships that can accelerate your projects and open doors to
-              future collaborations.
+            <li className="flex items-start gap-3">
+              <div className="rounded-full bg-primary-green w-6 h-6 flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+              <p className="text-lg leading-relaxed text-gray-800">
+                Join a high-impact community of innovators and foster invaluable
+                partnerships that can accelerate your projects and open doors to
+                future collaborations.
+              </p>
             </li>
-            <li>
-              Receive an official certification validating your newly acquired
-              expertise in digital health innovation, recognized by institutions
-              and employers across the continent.
+            <li className="flex items-start gap-3">
+              <div className="rounded-full bg-primary-green w-6 h-6 flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+              <p className="text-lg leading-relaxed text-gray-800">
+                Receive an official certification validating your newly acquired
+                expertise in digital health innovation, recognized by
+                institutions and employers across the continent.
+              </p>
             </li>
           </ul>
         </div>
       </section>
 
       {/* Eligibility */}
-      <section className="bg-white py-14 lg:py-20">
+      <section id="eligibility" className="bg-white py-14 lg:py-20">
         <div className="px-8 lg:px-0 space-y-8 max-w-screen-xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-8">
             Eligibility
           </h2>
 
-          <ul className="list-disc pl-4">
-            <li>Young professionals aged 17–35 years from across Africa.</li>
-            <li>
-              Healthcare professionals, tech innovators, entrepreneurs,
-              policymakers, researchers, government officials.
+          <ul className="space-y-4 mb-10">
+            <li className="flex items-start gap-3">
+              <div className="rounded-full bg-primary-green w-6 h-6 flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+              <p className="text-lg leading-relaxed text-gray-800">
+                Young professionals aged 17–35 years from across Africa.
+              </p>
             </li>
-            <li>
-              Individuals or teams with ideas, startups, or research interests
-              focused on digital health and healthcare transformation.
+            <li className="flex items-start gap-3">
+              <div className="rounded-full bg-primary-green w-6 h-6 flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+              <p className="text-lg leading-relaxed text-gray-800">
+                Healthcare professionals, tech innovators, entrepreneurs,
+                policymakers, researchers, government officials.
+              </p>
             </li>
-            <li>Must be available for the full 4 months hybrid program.</li>
-            <li>
-              Prepared to learn, collaborate, and solve problems in healthcare.
+            <li className="flex items-start gap-3">
+              <div className="rounded-full bg-primary-green w-6 h-6 flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+              <p className="text-lg leading-relaxed text-gray-800">
+                Individuals or teams with ideas, startups, or research interests
+                focused on digital health and healthcare transformation.
+              </p>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="rounded-full bg-primary-green w-6 h-6 flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+              <p className="text-lg leading-relaxed text-gray-800">
+                Must be available for the full 4 months hybrid program.
+              </p>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="rounded-full bg-primary-green w-6 h-6 flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+              <p className="text-lg leading-relaxed text-gray-800">
+                Prepared to learn, collaborate, and solve problems in
+                healthcare.
+              </p>
             </li>
           </ul>
 
-          <Button asChild className="mt-8 h-14 px-8 text-base">
-            <Link
-              target="_blank"
-              href="https://form.jotform.com/250440880751051"
+          <div className="flex justify-center">
+            <Button
+              asChild
+              className="h-14 px-10 text-lg font-medium transition-transform hover:scale-105"
             >
-              Apply Now
-            </Link>
-          </Button>
+              <Link
+                target="_blank"
+                href="https://form.jotform.com/250440880751051"
+              >
+                Apply Now
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
     </>
