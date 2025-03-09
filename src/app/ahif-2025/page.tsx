@@ -386,7 +386,7 @@ export default function AHIF2025() {
           </h2>
 
           <p className="text-lg leading-relaxed text-gray-800 mb-8">
-            The Fellowship's core areas of focus include:
+            The Fellowship&apos;s core areas of focus include:
           </p>
 
           <div className="border rounded-lg px-4 sm:px-8 py-10 shadow-sm">
@@ -439,7 +439,7 @@ export default function AHIF2025() {
               <p className="text-lg leading-relaxed text-gray-800">
                 Master cutting-edge innovation tools and methodologies through
                 practical workshops, interactive labs, and hands-on projects
-                that address Africa's most pressing healthcare needs.
+                that address Africa&apos;s most pressing healthcare needs.
               </p>
             </li>
             <li className="flex items-start gap-3">
@@ -460,7 +460,7 @@ export default function AHIF2025() {
                 Receive guidance from renowned digital health professionals and
                 seasoned entrepreneurs who will support your growth, help
                 navigate challenges, and shape you into an influential leader in
-                Africa's healthcare space.
+                Africa&apos;s healthcare space.
               </p>
             </li>
             <li className="flex items-start gap-3">
