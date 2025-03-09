@@ -6,6 +6,12 @@ import Header from "./component/header";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const modules = [
   {
@@ -129,7 +135,7 @@ export default function About() {
       </section>
 
       {/* Structure */}
-      <section className="bg-white py-14 lg:py-20 bg-primary-green/10">
+      <section className="py-14 lg:py-20 bg-primary-green/10">
         <div className="px-8 lg:px-0 space-y-8 max-w-screen-xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary">
             Structure
@@ -142,6 +148,108 @@ export default function About() {
             industry leaders. The fellowship is structured into three key
             phases, each tailored to provide progressive learning.
           </p>
+
+          <Accordion type="single" collapsible className="space-y-8">
+            <AccordionItem value="phase-1">
+              <AccordionTrigger className="border border-black px-4 font-bold text-lg">
+                Phase 1: The Bootcamp (8 Weeks, Online)
+              </AccordionTrigger>
+              <AccordionContent className="py-4 text-base">
+                <p>
+                  The journey begins with an intensive bootcamp, where fellows
+                  dive deep into the key focus areas highlighted in earlier
+                  sections. This phase is packed with expert-led training,
+                  interactive learning, and practical exercises to build a solid
+                  foundation in digital health & innovation.
+                </p>
+
+                <h3 className="text-2xl font-bold text-primary mt-8">
+                  What to Expect:
+                </h3>
+
+                <ul className="list-disc pl-4">
+                  <li>
+                    Live Faculty-Led Sessions: Learn from leading digital health
+                    experts through interactive masterclasses and Q&A sessions.
+                  </li>
+                  <li>
+                    Case Studies & Real-World Applications: Work on real
+                    healthcare challenges, analysing successful health-tech
+                    solutions from across Africa and beyond.
+                  </li>
+                  <li>
+                    Hands-On Assignments & Projects: Develop practical digital
+                    health solutions based on the curriculum focus areas.
+                  </li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="phase-2">
+              <AccordionTrigger className="border border-black px-4 font-bold text-lg">
+                Phase 2: The Lab & Demo Day (4 Weeks, Hybrid)
+              </AccordionTrigger>
+              <AccordionContent className="py-4 text-base">
+                <p>
+                  In this phase, fellows will work in collaborative teams to
+                  develop and refine their digital health solutions. This phase
+                  culminates in a Demo Day where teams present their projects to
+                  a panel of experts.
+                </p>
+
+                <h3 className="text-2xl font-bold text-primary mt-8">
+                  What to Expect:
+                </h3>
+
+                <ul className="list-disc pl-4">
+                  <li>
+                    Collaborative Team Projects: Work with peers to develop
+                    innovative solutions to real-world healthcare challenges.
+                  </li>
+                  <li>
+                    Mentorship: Receive guidance and feedback from experienced
+                    mentors in the digital health field.
+                  </li>
+                  <li>
+                    Demo Day: Present your projects to a panel of industry
+                    experts and receive valuable feedback.
+                  </li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="phase-3">
+              <AccordionTrigger className="border border-black px-4 font-bold text-lg">
+                Phase 3: Post-Fellowship Support
+              </AccordionTrigger>
+              <AccordionContent className="py-4 text-base">
+                <p>
+                  After the fellowship, participants will receive ongoing
+                  support to help them implement their projects and continue
+                  their professional development.
+                </p>
+
+                <h3 className="text-2xl font-bold text-primary mt-8">
+                  What to Expect:
+                </h3>
+
+                <ul className="list-disc pl-4">
+                  <li>
+                    Continued Mentorship: Access to a network of mentors for
+                    ongoing guidance and support.
+                  </li>
+                  <li>
+                    Networking Opportunities: Connect with industry leaders and
+                    potential collaborators.
+                  </li>
+                  <li>
+                    Resources & Tools: Access to resources and tools to help
+                    implement and scale your projects.
+                  </li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
@@ -190,7 +298,7 @@ export default function About() {
       </section>
 
       {/* Why Apply */}
-      <section className="bg-white py-14 lg:py-20 bg-primary-green/10">
+      <section className="py-14 lg:py-20 bg-primary-green/10">
         <div className="px-8 lg:px-0 space-y-8 max-w-screen-xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary">
             Why Apply?
