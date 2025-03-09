@@ -262,7 +262,7 @@ export default function About() {
 
           <p className="">The Fellowship’s core areas of focus include:</p>
 
-          <div className="border rounded-lg px-12 py-8">
+          <div className="border border-black rounded-lg px-12 py-8">
             {modules.map((module, index) => (
               <div
                 key={index}
@@ -270,7 +270,7 @@ export default function About() {
                   "border-b": index !== modules.length - 1,
                 })}
               >
-                <h3 className="text-2xl font-bold text-primary">
+                <h3 className="text-xl font-bold text-primary">
                   {module.title}
                 </h3>
                 <p>{module.description}</p>
@@ -286,7 +286,7 @@ export default function About() {
               <Button
                 asChild
                 variant="outline"
-                className="mt-8 h-12 px-8 text-base"
+                className="mt-8 h-14 px-8 text-base"
               >
                 <Link target="_blank" href="#">
                   Download
@@ -358,7 +358,7 @@ export default function About() {
             </li>
           </ul>
 
-          <Button asChild className="mt-8 h-12 px-8 text-base">
+          <Button asChild className="mt-8 h-14 px-8 text-base">
             <Link
               target="_blank"
               href="https://form.jotform.com/250440880751051"
