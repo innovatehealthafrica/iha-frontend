@@ -1,5 +1,4 @@
 "use client";
-import Header from "./component/header";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -10,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useState, useEffect } from "react";
+import Header from "./components/header";
 
 const modules = [
   {
