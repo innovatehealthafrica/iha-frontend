@@ -13,7 +13,8 @@ const navigation: { main: LinkItem[] } = {
                 LINKS.InnovatorsNetwork,
             ]
         },
-        LINKS.Portfolio,
+        LINKS.AHIF2025,
+        // LINKS.Portfolio,
         LINKS.News,
     ]
 }

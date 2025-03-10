@@ -19,7 +19,7 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { CaretDownIcon } from "@radix-ui/react-icons";
 import { motion, AnimatePresence } from "framer-motion";
 import Navigation from "@/lib/navigations";
-import { LinkItem } from "@/lib/links";
+import LINKS, { LinkItem } from "@/lib/links";
 import { Button } from "./ui/button";
 
 interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -122,8 +122,9 @@ export default function Header() {
         <Button
           className="px-6 text-base font-normal hidden md:inline-flex"
           size="lg"
+          asChild
         >
-          Work with us
+          <NextLink href={LINKS.AHIF2025.href}>AHIF 2025</NextLink>
         </Button>
       </div>
 
@@ -139,8 +140,13 @@ export default function Header() {
       >
         <NavigationMenu className="w-full block max-w-full">
           <NavigationMenuList className="flex flex-col items-start gap-8">
-            <Button className="px-6 w-full mb-8" size="lg" onClick={toggle}>
-              Work with us
+            <Button
+              className="px-6 w-full mb-8"
+              size="lg"
+              onClick={toggle}
+              asChild
+            >
+              <NextLink href={LINKS.AHIF2025.href}>AHIF 2025</NextLink>
             </Button>
 
             {Navigation.main.map((item) => (

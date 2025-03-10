@@ -1,3 +1,5 @@
+import AHIF2025 from "@/app/ahif-2025/page";
+
 export interface LinkItem {
     title: string;
     href?: string;
@@ -13,6 +15,10 @@ const LINKS = {
     About: {
         title: 'About',
         href: '/about',
+    },
+    AHIF2025: {
+        title: 'AHIF 2025',
+        href: '/ahif-2025',
     },
     News: {
         title: 'News',
