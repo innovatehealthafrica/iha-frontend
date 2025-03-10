@@ -54,7 +54,7 @@ export default function AHIF2025() {
       threshold: 0.6,
     };
 
-    const observerCallback = (entries) => {
+    const observerCallback = (entries: any[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
@@ -89,7 +89,7 @@ export default function AHIF2025() {
     };
   }, []);
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     const navHeight = document.getElementById("sticky-nav")?.offsetHeight || 0;
 
