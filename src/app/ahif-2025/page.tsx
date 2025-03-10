@@ -10,7 +10,7 @@ import {
 import Header from "./components/header";
 import { Metadata } from "next";
 import AHIFNavigation from "./components/navigation";
-import AHIFHeroImage from "@/assets/images/ahif/ahif-hero-image.png";
+import AHIFSocialCard from "@/assets/images/ahif/ahif-socail-card.png";
 
 const modules = [
   {
@@ -415,7 +415,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: AHIFHeroImage.src,
+        url: AHIFSocialCard.src,
         width: 1200,
         height: 630,
         alt: "AHIF 2025 Banner",
@@ -427,6 +427,6 @@ export const metadata: Metadata = {
     title: "Africa Healthcare Innovation Fellowship 2025",
     description:
       "Empowering innovators to transform healthcare in Africa through digital solutions.",
-    images: [AHIFHeroImage.src],
+    images: [AHIFSocialCard.src],
   },
 };
