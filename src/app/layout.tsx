@@ -113,7 +113,7 @@ export const metadata: Metadata = {
     title: "Innovate Health Africa - Transforming Healthcare in Africa",
     description:
       "Discover how Innovate Health Africa is reshaping healthcare with innovative, Africa-centered solutions.",
-    url: "https://innovatehealth.africa", // Replace with actual URL
+    url: "https://innovatehealth.africa",
     type: "website",
     images: [
       {
@@ -148,7 +148,7 @@ export default function RootLayout({
       )}
     >
       <body
-        className={cn("min-h-screen bg-background fonst-gilroy antialiased")}
+        className={cn("min-h-screen bg-background font-gilroy antialiased")}
       >
         <Header />
         {children}
