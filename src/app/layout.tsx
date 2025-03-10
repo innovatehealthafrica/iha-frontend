@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "react-hot-toast";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import OGImage from "@/assets/images/ahif/ahif-socail-card.webp";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -96,9 +97,40 @@ const fontGilroy = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Innovate Health Africa",
+  title: "Innovate Health Africa - Transforming Healthcare in Africa",
   description:
-    "Building Tomorrow’s Healthcare  Solution Today - By Africans, for Africa",
+    "Innovate Health Africa is revolutionizing healthcare across the continent by leveraging cutting-edge solutions designed by Africans, for Africa. Join us in building a healthier future.",
+  keywords: [
+    "Innovate Health Africa",
+    "Healthcare Innovation",
+    "African Healthcare",
+    "Medical Technology",
+    "Health Solutions",
+    "Digital Health Africa",
+    "Healthcare Startups Africa",
+  ],
+  openGraph: {
+    title: "Innovate Health Africa - Transforming Healthcare in Africa",
+    description:
+      "Discover how Innovate Health Africa is reshaping healthcare with innovative, Africa-centered solutions.",
+    url: "https://innovatehealth.africa", // Replace with actual URL
+    type: "website",
+    images: [
+      {
+        url: OGImage.src,
+        width: 1200,
+        height: 600,
+        alt: "Innovate Health Africa - Transforming Healthcare in Africa",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Innovate Health Africa - Transforming Healthcare in Africa",
+    description:
+      "Building tomorrow’s healthcare solutions today—designed by Africans, for Africa.",
+    images: [OGImage.src],
+  },
 };
 
 export default function RootLayout({

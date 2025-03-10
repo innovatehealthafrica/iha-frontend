@@ -10,7 +10,7 @@ import {
 import Header from "./components/header";
 import { Metadata } from "next";
 import AHIFNavigation from "./components/navigation";
-import AHIFSocialCard from "@/assets/images/ahif/ahif-socail-card.png";
+import AHIFSocialCard from "@/assets/images/ahif/ahif-socail-card.webp";
 
 const modules = [
   {
@@ -147,33 +147,37 @@ export default function AHIF2025Page() {
               </AccordionTrigger>
               <AccordionContent className="py-6 px-4 text-base">
                 <p className="text-gray-800 leading-relaxed mb-6">
-                  In this phase, fellows will work in collaborative teams to
-                  develop and refine their digital health solutions. This phase
-                  culminates in a Demo Day where teams present their projects to
-                  a panel of experts.
+                  This is where learning meets action! Fellows who successfully
+                  complete the bootcamp will have the opportunity to move into
+                  the Lab Phase, where they refine, test, and validate their
+                  digital health solutions under expert mentorship.
                 </p>
 
                 <h3 className="text-xl font-bold text-primary mt-8 mb-4">
-                  What to Expect:
+                  What Happens in This Phase?
                 </h3>
 
                 <ul className="list-disc pl-6 space-y-2 text-gray-800">
                   <li className="leading-relaxed">
                     <span className="font-semibold">
-                      Collaborative Team Projects:
+                      Collaborative Innovation:
                     </span>{" "}
-                    Work with peers to develop innovative solutions to
-                    real-world healthcare challenges.
+                    Fellows work in teams to build and refine their healthtech
+                    solutions.
                   </li>
                   <li className="leading-relaxed">
-                    <span className="font-semibold">Mentorship:</span> Receive
-                    guidance and feedback from experienced mentors in the
-                    digital health field.
+                    <span className="font-semibold">
+                      Hands-On Experimentation:
+                    </span>{" "}
+                    Receive technical guidance, feedback, and iterative support
+                    from industry mentors.
                   </li>
                   <li className="leading-relaxed">
-                    <span className="font-semibold">Demo Day:</span> Present
-                    your projects to a panel of industry experts and receive
-                    valuable feedback.
+                    <span className="font-semibold">Demo Day:</span> Fellows
+                    will present their solutions to a panel of experts,
+                    policymakers, health organizations, and funding bodies. Top
+                    solutions will potentially have access to incubation, and
+                    acceleration opportunities.
                   </li>
                 </ul>
               </AccordionContent>
@@ -247,7 +251,14 @@ export default function AHIF2025Page() {
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-6 pt-4 border-t border-gray-200">
               <p className="text-gray-800">
                 Download the{" "}
-                <span className="font-bold italic">fellowship Brochure</span>{" "}
+                <a
+                  className="font-bold italic"
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1LmrVYJnNMDSXfx4X7qGid8ihtpUIKvcv/view?usp=drive_link"
+                  download
+                >
+                  fellowship Brochure
+                </a>{" "}
                 here for full module details
               </p>
               <Button
@@ -255,9 +266,13 @@ export default function AHIF2025Page() {
                 variant="outline"
                 className="h-12 px-8 text-base font-medium"
               >
-                <Link target="_blank" href="#">
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/file/d/1LmrVYJnNMDSXfx4X7qGid8ihtpUIKvcv/view?usp=drive_link"
+                  download
+                >
                   Download
-                </Link>
+                </a>
               </Button>
             </div>
           </div>
@@ -379,6 +394,15 @@ export default function AHIF2025Page() {
               </p>
             </li>
           </ul>
+          <p className="text-lg leading-relaxed text-gray-800 mt-8">
+            For enquiries or questions, send us an email at{" "}
+            <a
+              href="mailto:info@innovatehealthafrica.org"
+              className="text-primary-green underline"
+            >
+              info@innovatehealthafrica.org
+            </a>
+          </p>
 
           <div className="flex justify-center">
             <Button
