@@ -1,16 +1,15 @@
-import React from "react";
-import headerImg from "@/assets/images/about-page/about-header.png";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import AHIFHeroImage from "@/assets/images/ahif/ahif-hero-image.png";
 
 export default function Header() {
   return (
     <section className="relative bg-no-repeat bg-cover aspect-auto h-[80vh] sm:h-[664px] flex flex-col items-center">
       <Image
-        src={headerImg}
+        src={AHIFHeroImage}
         className="w-full object-cover h-full absolute"
-        alt="About Us"
+        alt="AHIF 2025"
       />
       <div className="absolute inset-0 bg-primary/70 z-0" />
       <div className="text-start max-w-screen-lg my-36 px-4 z-[2]">
