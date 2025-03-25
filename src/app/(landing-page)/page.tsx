@@ -31,9 +31,9 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="bg-primary bg-no-repeat bg-cover relative">
-        <div className="absolute inset-0 bg-primary/50 z-10" />
+        <div className="absolute inset-0 bg-primary/50 z-[4]" />
 
-        <div className="absolute inset-0 z-10">
+        <div className="absolute inset-0 z-[5]">
           <div className="flex flex-col items-center justify-center max-w-screen-xl mx-auto h-full">
             <h1 className="text-white font-bold text-center text-4xl lg:text-6xl lg:leading-tight">
               Advancing{" "}

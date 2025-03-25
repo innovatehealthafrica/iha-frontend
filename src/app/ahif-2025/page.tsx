@@ -11,6 +11,7 @@ import Header from "./components/header";
 import { Metadata } from "next";
 import AHIFNavigation from "./components/navigation";
 import AHIFSocialCard from "@/assets/images/ahif/ahif-socail-card.webp";
+import { LockClosedIcon } from "@radix-ui/react-icons";
 
 const modules = [
   {
@@ -406,14 +407,16 @@ export default function AHIF2025Page() {
 
           <div className="flex justify-center">
             <Button
-              asChild
-              className="h-14 px-10 text-lg font-medium transition-transform hover:scale-105"
+              disabled
+              className="h-14 px-10 text-lg font-medium transition-transform hover:scale-105 disabled:opacity-30"
             >
               <Link
                 target="_blank"
-                href="https://form.jotform.com/250440880751051"
+                className="flex items-center"
+                href="javascript:void(0)"
               >
-                Apply Now
+                <LockClosedIcon className="me-2" />
+                <span>Application Closed</span>
               </Link>
             </Button>
           </div>

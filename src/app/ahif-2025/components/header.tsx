@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import AHIFHeroImage from "@/assets/images/ahif/ahif-hero-image.png";
+import { LockClosedIcon } from "@radix-ui/react-icons";
 
 export default function Header() {
   return (
@@ -24,12 +25,18 @@ export default function Header() {
           network to build and accelerate your impact.
         </p>
         <Button
+          disabled
           className="mt-14 text-md h-14 bg-white text-primary-green font-medium hover:bg-primary-green hover:text-white"
           size="lg"
           variant="secondary"
         >
-          <Link href="https://form.jotform.com/250440880751051" target="_blank">
-            Apply Now
+          <Link
+            target="_blank"
+            className="flex items-center"
+            href="javascript:void(0)"
+          >
+            <LockClosedIcon className="me-2" />
+            <span>Application Closed</span>
           </Link>
         </Button>
         <span className="block text-white text-sm mt-2">

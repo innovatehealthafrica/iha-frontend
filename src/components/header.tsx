@@ -69,7 +69,7 @@ export default function Header() {
 
   return (
     <header>
-      <div className="w-full max-w-screen-xl px-8 md:px-8 xl:px-0 mx-auto py-6 flex justify-between items-center">
+      <div className="w-full max-w-screen-xl px-8 md:px-8 xl:px-0 mx-auto py-6 flex justify-between items-center z-20">
         <div className="">
           <NextLink href={"/"}>
             <Image
@@ -99,7 +99,7 @@ export default function Header() {
                       {item.title}
                     </NavigationMenuTrigger>
 
-                    <NavigationMenuContent>
+                    <NavigationMenuContent className="z-index-99999">
                       <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                         {item.menu.map((subItem) => (
                           <ListItem
