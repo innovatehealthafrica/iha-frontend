@@ -5,7 +5,6 @@ import PartnerSection from "@/app/(landing-page)/components/partners-section";
 import Header from "./component/header";
 import WhoWeAre from "./component/who-we-are";
 import HowWeMakeImpact from "./component/how-we-make-impact";
-import ScrollableTags from "./component/scrollable-tags";
 import TeamMembers from "./component/team-members";
 
 export default function About() {
@@ -25,10 +24,6 @@ export default function About() {
           Meet The <span className="text-primary-bright-orange">Team</span> at
           IHA
         </h3>
-
-        <div className="px-4 max-w-screen-xl mx-auto flex justify-center mb-12">
-          <ScrollableTags />
-        </div>
 
         <div className="max-w-screen-xl mx-auto px-8 lg:px-0">
           <TeamMembers />
