@@ -1,38 +1,24 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
+
 import React from "react";
-
-import post1Image from "@/assets/images/blogs/post-1.png";
-import post2Image from "@/assets/images/blogs/post-2.png";
-import post3Image from "@/assets/images/blogs/post-3.png";
-import post4Image from "@/assets/images/blogs/post-4.png";
+import { SanityTypes } from "@/@types";
 import { Button } from "@/components/ui/button";
+import { BlogCard } from "@/components/blog/blogCard";
+import { useRouter } from "next/navigation";
 
-const higlights = [
-  {
-    title: "Innovate Health Africa Launches New Accelerator Program",
-    date: "4th June, 2001",
-    thumbnail: post1Image,
-  },
-  {
-    title:
-      "IHA Partners with Leading Tech Firm to Enhance Digital Health Solutions",
-    date: "22th August, 2023",
-    thumbnail: post2Image,
-  },
-  {
-    title: "IHA Hosts Annual African Health Innovation Summit",
-    date: "14th Dec, 2024",
-    thumbnail: post3Image,
-  },
-  {
-    title: "Innovate Health Africa Receives Grant for Rural Health Initiative",
-    date: "4th May, 2007",
-    thumbnail: post4Image,
-  },
-];
+interface BlogGridProps {
+  posts: SanityTypes.BlogPost[]
+}
 
-export default function BlogSection() {
+export default function BlogSection({ posts }: BlogGridProps) {
+  const router = useRouter();
+
+  const regularPosts = (posts ?? []).slice(0, 4);
+
+  const handleViewMore = () => {
+    router.push("/blog")
+  }
+
   return (
     <section className="bg-primary-green/5 py-20">
       <div className="px-8 lg:px-24 gap-x-12 max-w-screen-xl mx-auto">
@@ -44,26 +30,14 @@ export default function BlogSection() {
             </span>
           </h2>
         </div>
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {higlights.map(({ title, date, thumbnail }, index) => (
-            <div key={index} className="flex flex-col gap-4">
-              <Image
-                src={thumbnail}
-                alt={`${title} thumbnail`}
-                className="rounded-md"
-              />
-              <div>
-                <h4 className="font-medium text-lg leading-7 line-clamp-2 sm:line-clamp-3 h-[56px] sm:h-[84px]">
-                  {title}
-                </h4>
-                <span className="text-base font-light">{date}</span>
-              </div>
-            </div>
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 relative">
+          {regularPosts.map((post) => (
+            <BlogCard key={post._id} post={post} />
           ))}
         </div>
 
         <div className="flex justify-end">
-          <Button className="mt-12" size="lg">
+          <Button className="mt-12" size="lg" onClick={handleViewMore}>
             View More
           </Button>
         </div>
