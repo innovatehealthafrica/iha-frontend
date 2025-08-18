@@ -51,7 +51,7 @@ export default function ProgramsWorkSection() {
       showViewMoreButton={true}
       viewMoreButtonText="View All Programs"
       viewMoreButtonLink="/programs"
-      className="mt-24 py-20"
+      className="py-20"
     />
   );
 }

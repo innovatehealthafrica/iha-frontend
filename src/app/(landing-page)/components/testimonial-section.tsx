@@ -103,7 +103,7 @@ export default function TestimonialSection({
   if (embedded) {
     return (
       <div className={cn("w-full space-y-6", className)}>
-        <h4 className="text-lg font-semibold text-primary text-center">{title}</h4>
+        <h4 className="text-lg lg:text-[24px] font-semibold text-primary text-center">{title}</h4>
         <div>
           <Carousel
             opts={{ align: "start", loop: true }}

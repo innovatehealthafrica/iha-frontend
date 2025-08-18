@@ -33,7 +33,7 @@ export default function ReusableWorkSection({
 }: ReusableWorkSectionProps) {
   return (
     <section className={cn("max-w-screen-xl mx-auto sm:28 pb-0", className)}>
-      <div className="px-8 lg:px-0 pb-0 gap-x-12">
+      <div className="px-4 lg:px-0 pb-0 gap-x-12">
         <h3 className="text-3xl lg:text-5xl text-center text-primary font-bold mb-4 sm:mb-12">
           {title}
         </h3>
@@ -49,7 +49,7 @@ export default function ReusableWorkSection({
                 }
               )}
             >
-              <div>
+              <div className="w-full lg:w-1/2">
                 <h4 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">
                   {item.title}
                 </h4>
@@ -82,7 +82,7 @@ export default function ReusableWorkSection({
                 width={1408}
                 height={768}
                 alt={item.title}
-                className="rounded-lg aspect-video w-full sm:w-1/2 mb-4 sm:mb-0"
+                className="rounded-lg aspect-video w-full lg:w-1/2 mb-4 sm:mb-0"
               />
             </div>
           ))}

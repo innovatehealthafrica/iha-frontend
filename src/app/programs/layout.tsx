@@ -7,7 +7,9 @@ import NewsletterSubscriptionSection from '@/components/newsletter-subscription-
 const layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <ProjectHeader />
+      <ProjectHeader
+
+      />
       {children}
       <ContactUsSection />
       <NewsletterSubscriptionSection />

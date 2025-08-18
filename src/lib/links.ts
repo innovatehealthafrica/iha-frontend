@@ -1,57 +1,59 @@
-import AHIF2025 from "@/app/ahif-2025/page";
-
 export interface LinkItem {
-    title: string;
-    href?: string;
-    description?: string;
-    menu?: LinkItem[];
+  title: string;
+  href?: string;
+  description?: string;
+  menu?: LinkItem[];
 }
 
 const LINKS = {
-    Home: {
-        title: 'Home',
-        href: '/'
-    },
-    About: {
-        title: 'About',
-        href: '/about',
-    },
-    AHIF2025: {
-        title: 'AHIF 2025',
-        href: '/ahif-2025',
-    },
-    News: {
-        title: 'News',
-        href: '/news',
-    },
-    Portfolio: {
-        title: 'Portfolio',
-        href: '/portfolio',
-    },
-    Careers: {
-        title: 'Work with us',
-        href: '/careers',
-    },
-    VentureLab: {
-        title: 'Venture Lab',
-        href: "/programs/venture-lab",
-        description: "Turn your Idea into a market ready product with the support of our expert teams and trusted partners."
-    },
-    InnovationSupport: {
-        title: 'Innovation Support',
-        href: "/programs/innovation-support",
-        description: "Access support to smartly apply innovation and technology in solving your organization's social and commercial problems."
-    },
-    SchoolOfHealthcareInnovation: {
-        title: 'School of Healthcare Innovation',
-        href: "/programs/healthcare-innovation",
-        description: "Equip yourself with cutting-edge skills to lead healthcare innovation—join 1,200+ professionals who have transformed their careers with us."
-    },
-    InnovatorsNetwork: {
-        title: "Innovator's Network",
-        href: "/programs/innovators-network",
-        description: "Join our network of healthcare innovators, entrepreneurs and investors."
-    }
-}
+  Home: {
+    title: "Home",
+    href: "/",
+  },
+  About: {
+    title: "About",
+    href: "/about",
+  },
+  AHIF2025: {
+    title: "AHIF 2025",
+    href: "/ahif-2025",
+  },
+  News: {
+    title: "News",
+    href: "/news",
+  },
+  Portfolio: {
+    title: "Portfolio",
+    href: "/portfolio",
+  },
+  Careers: {
+    title: "Work with us",
+    href: "/careers",
+  },
+  VentureLab: {
+    title: "Programs & Projects",
+    href: "/programs",
+    description:
+      "At Innovate Health Africa, we drive impactful programs and projects aimed.",
+  },
+  InnovationSupport: {
+    title: "Research",
+    href: "#",
+    description:
+      "Our research initiatives explore critical health issues, assess emerging trends,...",
+  },
+  SchoolOfHealthcareInnovation: {
+    title: "Partnership",
+    href: "/partnership",
+    description:
+      "We build strong partnerships with governments, non-profits, private sector.",
+  },
+  InnovatorsNetwork: {
+    title: "Proucts & Tools",
+    href: "#",
+    description:
+      "Innovate Health Africa develops and deploys cutting-edge digital health.",
+  },
+};
 
 export default LINKS;

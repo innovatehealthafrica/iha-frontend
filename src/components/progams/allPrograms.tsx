@@ -104,8 +104,8 @@ const programsWorkItems: WorkItem[] = [
       },
     ],
     testimonials: true,
-    link: "",
-    linkText: "Register Now",
+    link: "#",
+    linkText: "Join Next Cohort",
   },
 ]
 
@@ -113,17 +113,8 @@ export function AllPrograms() {
   return (
     <ReusableProgramSection
       workItems={programsWorkItems}
-      className="mt-24"
+      className="py-20"
     />
   )
 }
 
-
-const ImpactFigure = () => {
-  return (
-    <div className="grid grid-cols-3 gap-6">
-
-
-    </div>
-  )
-}
