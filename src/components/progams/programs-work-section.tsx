@@ -4,7 +4,8 @@ import workshopImage from "@/assets/images/workshop.png";
 import innovationLabsImage from "@/assets/images/innovation_lab.png";
 import ReusableWorkSection, { WorkItem } from "@/components/reusable-work-section";
 
-const workItems: WorkItem[] = [
+// Example of using the main reusable work section for programs
+const programsWorkItems: WorkItem[] = [
   {
     title: "Africa Health Innovation Fellowship",
     description:
@@ -18,7 +19,8 @@ const workItems: WorkItem[] = [
       "Networking",
       "Mentorship",
     ],
-    link: "/programs/projects"
+    link: "/programs/ahif",
+    linkText: "Apply Now",
   },
   {
     title: "Healthcare Innovation Workshop",
@@ -27,7 +29,8 @@ const workItems: WorkItem[] = [
     image: workshopImage,
     tags: ["Design Thinking", "Prototyping", "Testing", "Business Model"],
     reverse: true,
-    link: "/programs/workshop"
+    link: "/programs/workshop",
+    linkText: "Register Now",
   },
   {
     title: "Open Innovation Lab",
@@ -35,18 +38,21 @@ const workItems: WorkItem[] = [
       "At the Open Innovation Lab, we combine frontline, grassroots perspectives with advanced technologies and global best practices to design solutions that meet real, local healthcare needs",
     image: innovationLabsImage,
     tags: ["Design Thinking", "Co-creation", "Prototyping", "Testing"],
-    link: "/programs/lab"
+    link: "/programs/innovation-lab",
+    linkText: "Join Lab",
   },
 ];
 
-export default function OurWorkSection() {
+export default function ProgramsWorkSection() {
   return (
     <ReusableWorkSection
-      title="Our Work"
-      workItems={workItems}
+      title="Our Programs"
+      workItems={programsWorkItems}
       showViewMoreButton={true}
-      viewMoreButtonText="View More"
-      className="mt-36 py-20 "
+      viewMoreButtonText="View All Programs"
+      viewMoreButtonLink="/programs"
+      className="mt-24 py-20"
     />
   );
 }
+

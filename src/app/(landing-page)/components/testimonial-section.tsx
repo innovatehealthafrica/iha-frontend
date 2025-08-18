@@ -7,8 +7,16 @@ import {
 } from "@/components/ui/carousel";
 import Testimonial from "./testimonial";
 import Autoplay from "embla-carousel-autoplay";
+import { cn } from "@/lib/utils";
 
-const testimonials = [
+type TestimonialItem = {
+  testimonial: string;
+  name: string;
+  jobTitle: string;
+  avatarUrl: string;
+};
+
+const defaultTestimonials: TestimonialItem[] = [
   {
     testimonial:
       "Thanks to IHA, my healthcare app is now used by thousands, transforming patient care across multiple regions.",
@@ -81,12 +89,47 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialSection() {
+export default function TestimonialSection({
+  testimonials = defaultTestimonials,
+  title = "Testimonials",
+  embedded = false,
+  className,
+}: {
+  testimonials?: TestimonialItem[];
+  title?: string;
+  embedded?: boolean;
+  className?: string;
+}) {
+  if (embedded) {
+    return (
+      <div className={cn("w-full space-y-6", className)}>
+        <h4 className="text-lg font-semibold text-primary text-center">{title}</h4>
+        <div>
+          <Carousel
+            opts={{ align: "start", loop: true }}
+            className="w-full px-8"
+            plugins={[Autoplay({ delay: 5000 })]}
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="!pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Testimonial testimonial={testimonial} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="-left-4 top-1/2 -translate-y-1/2 z-10 text-primary border-none bg-white/80 hover:bg-white shadow" />
+            <CarouselNext className="right-4 top-1/2 -translate-y-1/2 z-10 text-primary border-none bg-white/80 hover:bg-white shadow" />
+          </Carousel>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <section className="">
       <div className="py-8 sm:py-28 px-8 lg:px-24 max-w-screen-2xl mx-auto space-y-8 sm:space-y-20">
         <h2 className="font-bold text-3xl lg:text-5xl leading-normal text-center text-primary">
-          Testimonials
+          {title}
         </h2>
 
         <div className="px-8">
@@ -105,8 +148,8 @@ export default function TestimonialSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="text-primary border-none bg-transparent hover:bg-transparent" />
-            <CarouselNext className="text-primary border-none bg-transparent hover:bg-transparent" />
+            <CarouselPrevious className="-left-12 top-1/2 -translate-y-1/2 z-10 text-primary border-none bg-white/80 hover:bg-white shadow" />
+            <CarouselNext className="-right-12 top-1/2 -translate-y-1/2 z-10 text-primary border-none bg-white/80 hover:bg-white shadow" />
           </Carousel>
         </div>
       </div>
