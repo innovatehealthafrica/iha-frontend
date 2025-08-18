@@ -1,6 +1,5 @@
 "use clients";
 
-import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { SanityTypes } from "@/@types"
 import { Calendar } from "lucide-react"
@@ -41,7 +40,7 @@ export function FeaturedBlogCard({ post }: FeaturedBlogCardProps) {
             <h2 className="text-3xl font-bold mb-4 leading-tight">{post.title}</h2>
             <p className="text-black mb-6 text-lg">{post.description}</p>
 
-            <Link href={`/blog/${post.slug.current}`} className="bg-primary-bright-orange text-black px-6 py-2 rounded-lg font-semibold
+            <Link href={`/news/${post.slug.current}`} className="bg-primary-bright-orange text-black px-6 py-2 rounded-lg font-semibold
              hover:bg-gray-100 transition-colors">
               Read More
             </Link>

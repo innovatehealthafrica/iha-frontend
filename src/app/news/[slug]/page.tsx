@@ -1,11 +1,11 @@
 import React from "react";
-import SinglePost from "@/components/blog/singlePostPage";
+import SinglePost from "@/components/news/singlePostPage";
 import { client } from "@/sanity/lib/client";
 import { SanityTypes } from "@/@types";
 import { Metadata } from "next";
 import { urlFor } from "@/sanity/lib/image";
 import { BlogPosting, WithContext } from "schema-dts"
-import { StructuredData } from "@/components/blog/structuredData";
+import { StructuredData } from "@/components/news/structuredData";
 
 
 const site = {
@@ -13,7 +13,7 @@ const site = {
 };
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export const revalidate = 60;
@@ -33,7 +33,8 @@ async function fetchPost(slug: string): Promise<SanityTypes.BlogPost | null> {
 
 // ✅ Generate metadata for each single post
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = await fetchPost(params.slug);
+  const { slug } = await params;
+  const post = await fetchPost(slug);
 
   if (!post) {
     return {
@@ -55,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ? [urlFor(post.mainImage).width(1200).height(630).url()]
         : [],
       type: "article",
-      url: `${site.url}/blog/${params.slug}`,
+      url: `${site.url}/news/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -68,7 +69,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function Page({ params: { slug } }: Props) {
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
   const post = await fetchPost(slug);
 
   if (!post) {
@@ -88,7 +90,7 @@ export default async function Page({ params: { slug } }: Props) {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${site.url}/blog/${slug}`,
+      "@id": `${site.url}/news/${slug}`,
     },
     publisher: {
       "@type": "Organization",

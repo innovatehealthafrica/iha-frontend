@@ -20,7 +20,7 @@ export function BlogCard({ post }: BlogCardProps) {
 
   return (
     <Card className="overflow-hidden cursor-pointer bg-transparent border-none shadow-none">
-      <Link href={`/blog/${post.slug.current}`} className="flex flex-col gap-4">
+      <Link href={`/news/${post.slug.current}`} className="flex flex-col gap-4">
         {/* Image wrapper ensures fill works */}
         <div className="relative w-full h-64">
           <Image

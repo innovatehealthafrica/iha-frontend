@@ -1,8 +1,8 @@
 import React from 'react'
 import { client } from '@/sanity/lib/client';
 import { SanityTypes } from '@/@types';
-import { BlogArchiveGrid } from '@/components/blog/blogArchiveView';
-import { BlogHeader } from '@/components/blog/blogHero';
+import { BlogArchiveGrid } from '@/components/news/blogArchiveView';
+import { BlogHeader } from '@/components/news/blogHero';
 
 
 export const revalidate = 60; // recall API every 60secs

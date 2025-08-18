@@ -3,7 +3,7 @@
 import React from "react";
 import { SanityTypes } from "@/@types";
 import { Button } from "@/components/ui/button";
-import { BlogCard } from "@/components/blog/blogCard";
+import { BlogCard } from "@/components/news/blogCard";
 import { useRouter } from "next/navigation";
 
 interface BlogGridProps {
@@ -16,7 +16,7 @@ export default function BlogSection({ posts }: BlogGridProps) {
   const regularPosts = (posts ?? []).slice(0, 4);
 
   const handleViewMore = () => {
-    router.push("/blog")
+    router.push("/news")
   }
 
   return (
