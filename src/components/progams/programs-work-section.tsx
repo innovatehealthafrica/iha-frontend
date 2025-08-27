@@ -3,6 +3,9 @@ import fellowshipImage from "@/assets/images/fellowship.png";
 import workshopImage from "@/assets/images/workshop.png";
 import innovationLabsImage from "@/assets/images/innovation_lab.png";
 import ReusableWorkSection, { WorkItem } from "@/components/reusable-work-section";
+import { AhifPrograms } from "./ahifComponent";
+import { InnovationPrograms } from "./innovationWorkshop";
+import { OpenLabPrograms } from "./openLab";
 
 // Example of using the main reusable work section for programs
 const programsWorkItems: WorkItem[] = [
@@ -19,8 +22,8 @@ const programsWorkItems: WorkItem[] = [
       "Networking",
       "Mentorship",
     ],
-    link: "/programs/ahif",
-    linkText: "Apply Now",
+    moreText: "View More",
+    moreComponent: <AhifPrograms />
   },
   {
     title: "Healthcare Innovation Workshop",
@@ -29,8 +32,8 @@ const programsWorkItems: WorkItem[] = [
     image: workshopImage,
     tags: ["Design Thinking", "Prototyping", "Testing", "Business Model"],
     reverse: true,
-    link: "/programs/workshop",
-    linkText: "Register Now",
+    moreText: "View More",
+    moreComponent: <InnovationPrograms />
   },
   {
     title: "Open Innovation Lab",
@@ -38,8 +41,8 @@ const programsWorkItems: WorkItem[] = [
       "At the Open Innovation Lab, we combine frontline, grassroots perspectives with advanced technologies and global best practices to design solutions that meet real, local healthcare needs",
     image: innovationLabsImage,
     tags: ["Design Thinking", "Co-creation", "Prototyping", "Testing"],
-    link: "/programs/innovation-lab",
-    linkText: "Join Lab",
+    moreText: "View More",
+    moreComponent: <OpenLabPrograms />
   },
 ];
 
@@ -50,7 +53,6 @@ export default function ProgramsWorkSection() {
       workItems={programsWorkItems}
       showViewMoreButton={true}
       viewMoreButtonText="View All Programs"
-      viewMoreButtonLink="/programs"
       className="py-20"
     />
   );
