@@ -34,9 +34,6 @@ export default function ReusableProgramSection({
   return (
     <section className={cn("max-w-screen-xl mx-auto pb-16 lg:pb-16 px-4 lg:px-16", className)}>
       <div className="space-y-24">
-        <h1 className="text-[#0D2414] text-center font-bold text-4xl lg:text-5xl">
-          Our Programs
-        </h1>
         {workItems.map((item, i) => (
           <div
             key={i}
