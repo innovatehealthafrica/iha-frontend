@@ -1,0 +1,268 @@
+[
+  {
+    "name": "Oluwatobi Adewumi",
+    "title": "Executive Director",
+    "image": "/team/oluwatobi.png",
+    "funFact": "Loves to Dance but very bad at it. Brain of IHA",
+    "linkedIn": "https://linkedin.com/in/josephajibodu",
+    "tag": "Leadership"
+  },
+  {
+    "name": "Timehin Arueyingho",
+    "title": "Director of Training & Development",
+    "image": "/team/Timeyin.png",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Leadership"
+  },
+  {
+    "name": "Faridat Ibidun",
+    "title": "Director of Programs",
+    "image": "/team/Faridat.png",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Leadership"
+  },
+  {
+    "name": "Joseph Ajibodu",
+    "title": "Director of Technology",
+    "image": "/team/Joseph.png",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Leadership"
+  },
+  {
+    "name": "Ezinne Awah",
+    "title": "Director of Communication",
+    "image": "/team/Ezinne.png",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Communications"
+  },
+  {
+    "name": "Araromi Sulaimon Olawale",
+    "title": "Research Associate (R&D)",
+    "image": "/team/Sulaimon-Araromi.jpg",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/sulaimon-araromi-395573151/",
+    "tag": "Research & Development"
+  },
+  {
+    "name": "Shamsuddeen Yusuf Ma'aruf",
+    "title": "Lead (R&D)",
+    "image": "/team/Shamsuddeen-Yusuf.jpg",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/maarufshamsuddeenyusuf",
+    "tag": "Research & Development"
+  },
+  {
+    "name": "Raheema Saadan",
+    "title": "Program Manager",
+    "image": "/team/Rehema-Saadan.png",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/rehema-saadan-3a415214a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "tag": "Programs"
+  },
+  {
+    "name": "Omojolaade Zainab Omotosho",
+    "title": "Creative Designer",
+    "image": "/team/Omotosho-Omojolaade.jpg",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/omotosho-omojolaade",
+    "tag": "Communications"
+  },
+  {
+    "name": "Olayiwola Olaitan Hafiz",
+    "title": "Product Designer",
+    "image": "/team/Olayiwola-Olaitan.jpg",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Nelson Kamanda",
+    "title": "Grants Manager",
+    "image": "/team/Nelson-Kamanda.jpg",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Partnership & Grants"
+  },
+  {
+    "name": "Micheal Oluwafemi Adeniyi",
+    "title": "Research Associate",
+    "image": "",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/michealadeniyi",
+    "tag": "Research & Development"
+  },
+  {
+    "name": "Marvelous Olawale",
+    "title": "Product Manager",
+    "image": "/team/Marvelous-Olawole.png",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/marvelous-olawole-9634b11b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Khalil Mekni",
+    "title": "AI Engineer",
+    "image": "/team/Khalil-Mekni.jpeg",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/khalil-mekni-603803197?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Irene Mutio Martha",
+    "title": "Product Manager ",
+    "image": "/team/Irene-Maitha.JPG",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/ms-irene-m-maitha-aa4a2389?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Heeba Hazzan Ahmed",
+    "title": "Product Designer",
+    "image": "/team/Heeba-Hassan.png",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Ermiyas Neway",
+    "title": "AI Engineer",
+    "image": "/team/Ermiyas-Neway.jfif",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/ermiyas-neway/",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Dr. Saravanan Thangarajan",
+    "title": "R&D Consultant",
+    "image": "/team/Saravanan-Thangarajan.jpg",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/saravanan-thangarajan/",
+    "tag": "Research & Development"
+  },
+  {
+    "name": "Agbonkonkon Blessing",
+    "title": "Data Analyst",
+    "image": "/team/Agbonkonkon-Blessing.jpg",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/blessing-fausta-pharmd-mpsgh-mpsn-50422618a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Dr. Melissa Okiemen",
+    "title": "Product Manager",
+    "image": "",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Dr. Nasirat Ibukun Akinlade",
+    "title": "Data Analyst",
+    "image": "",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/nasirat-akinlade-a89705250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Adeola Abdulramon",
+    "title": "Frontend Developer",
+    "image": "/team/adeola-abdulramon.png",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Izhar Mahjoub",
+    "title": "Digital Health Consultant",
+    "image": "",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
+    "tag": "Consultations"
+  },
+  {
+    "name": "Rebatho Madiba",
+    "title": "Digital Transformation Strategist",
+    "image": "",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Fausat Abiola",
+    "title": "Product Manager",
+    "image": "",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Tadeo Wandera",
+    "title": "Partnership Manager",
+    "image": "",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
+    "tag": "Partnership & Grants"
+  },
+  {
+    "name": "Maryflorence Akinyi Omollo ",
+    "title": "Communications Specialist",
+    "image": "",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
+    "tag": "Communications"
+  },
+  {
+    "name": "Emmanuella Mawuse Donani",
+    "title": "Communications Manager",
+    "image": "",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
+    "tag": "Communications"
+  },
+  {
+    "name": "Joan Lusanji",
+    "title": "Research Associate (R&D)",
+    "image": "",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
+    "tag": "Research & Development"
+  },
+  {
+    "name": "Ibironke Taiwo Mary",
+    "title": "Program Associate",
+    "image": "/team/ibironke.png",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/ibironke-taiwo-mary/",
+    "tag": "Programs"
+  },
+  {
+    "name": "Lazarus M. Nthusi, CPA",
+    "title": "Financial Advisor",
+    "image": "/team/Lazarus-Nthusi.jpg",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/lazarus-m-nthusi-cpa-a8782a162?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BhP2P5yniTmyM79TBKaJvtQ%3D%3D",
+    "tag": "Partnership & Grants"
+  },
+  {
+    "name": "Faith Keru",
+    "title": "Program Coordinator",
+    "image": "",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/faith-keru-a0b087219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "tag": "Programs"
+  },
+  {
+    "name": "Ajomewo Okeoghene Hezekiah",
+    "title": "Technical Lead",
+    "image": "",
+    "funFact": "",
+    "linkedIn": "http://www.linkedin.com/in/hezekiah-ajomewo",
+    "tag": "Design & Innovation"
+  }
+  
+]
+

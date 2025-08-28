@@ -21,11 +21,10 @@ export default function ScrollableTags() {
           key={index}
           onClick={() => setActiveTag(tag)}
           className={`block border border-slate-600 px-4 py-2 text-sm md:text-base rounded-sm cursor-pointer text-center text-nowrap 
-              ${
-                activeTag === tag
-                  ? "bg-primary-bright-orange" // Active class
-                  : "bg-white"
-              }`}
+              ${activeTag === tag
+              ? "bg-primary-bright-orange"
+              : "bg-white"
+            }`}
         >
           {tag}
         </span>
