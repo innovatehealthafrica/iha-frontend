@@ -18,7 +18,6 @@ const workItems: WorkItem[] = [
       "Networking",
       "Mentorship",
     ],
-    link: "/programs/projects"
   },
   {
     title: "Healthcare Innovation Workshop",
@@ -27,7 +26,6 @@ const workItems: WorkItem[] = [
     image: workshopImage,
     tags: ["Design Thinking", "Prototyping", "Testing", "Business Model"],
     reverse: true,
-    link: "/programs/workshop"
   },
   {
     title: "Open Innovation Lab",
@@ -35,7 +33,6 @@ const workItems: WorkItem[] = [
       "At the Open Innovation Lab, we combine frontline, grassroots perspectives with advanced technologies and global best practices to design solutions that meet real, local healthcare needs",
     image: innovationLabsImage,
     tags: ["Design Thinking", "Co-creation", "Prototyping", "Testing"],
-    link: "/programs/lab"
   },
 ];
 

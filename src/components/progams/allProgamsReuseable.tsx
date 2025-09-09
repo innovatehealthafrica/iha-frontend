@@ -4,8 +4,8 @@ import React from "react"
 import { StaticImageData } from "next/image"
 import { cn } from "@/lib/utils"
 import TestimonialSection from "@/app/(landing-page)/components/testimonial-section"
-import { ArrowRight, Play } from "lucide-react"
 import { Button } from "../ui/button"
+import { Play } from "lucide-react"
 
 export interface WorkItem {
   title: string
