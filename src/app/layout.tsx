@@ -97,6 +97,7 @@ const fontGilroy = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://innovatehealth.africa"),
   title: "Innovate Health Africa - Transforming Healthcare in Africa",
   description:
     "Innovate Health Africa is revolutionizing healthcare across the continent by leveraging cutting-edge solutions designed by Africans, for Africa. Join us in building a healthier future.",
@@ -113,7 +114,7 @@ export const metadata: Metadata = {
     title: "Innovate Health Africa - Transforming Healthcare in Africa",
     description:
       "Discover how Innovate Health Africa is reshaping healthcare with innovative, Africa-centered solutions.",
-    url: "https://innovatehealth.africa",
+    url: "/",
     type: "website",
     images: [
       {
@@ -128,7 +129,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Innovate Health Africa - Transforming Healthcare in Africa",
     description:
-      "Building tomorrow’s healthcare solutions today—designed by Africans, for Africa.",
+      "Building tomorrow's healthcare solutions today—designed by Africans, for Africa.",
     images: [OGImage.src],
   },
 };

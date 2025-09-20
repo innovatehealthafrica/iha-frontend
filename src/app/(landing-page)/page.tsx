@@ -9,7 +9,7 @@ export const revalidate = 60;
 
 async function getPost() {
   const query = `
-    *[_type == 'post'] | order(_createdAt desc) {
+    *[_type == 'post' && defined(slug.current)] | order(_createdAt desc) {
       _id,
       title,
       description,
@@ -22,8 +22,6 @@ async function getPost() {
   `;
   return await client.fetch<SanityTypes.BlogPost[]>(query);
 }
-
-
 
 
 export default async function Home() {

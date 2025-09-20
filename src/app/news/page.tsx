@@ -5,11 +5,11 @@ import { BlogArchiveGrid } from '@/components/news/blogArchiveView';
 import { BlogHeader } from '@/components/news/blogHero';
 
 
-export const revalidate = 60; // recall API every 60secs
+export const revalidate = 60;
 
 async function getPost() {
   const query = `
-    *[_type == 'post'] | order(_createdAt desc) {
+    *[_type == 'post' && defined(slug.current)] | order(_createdAt desc) {
       _id,
       title,
       description,
@@ -20,7 +20,8 @@ async function getPost() {
       body
     }
   `;
-  return await client.fetch<SanityTypes.BlogPost[]>(query);
+  const posts = await client.fetch<SanityTypes.BlogPost[]>(query);
+  return posts.filter((post) => post.slug?.current); // ✅ extra safety
 }
 
 const page = async () => {
