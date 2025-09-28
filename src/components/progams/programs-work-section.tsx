@@ -1,13 +1,14 @@
 import React from "react";
 import fellowshipImage from "@/assets/images/fellowship.png";
 import workshopImage from "@/assets/images/workshop.png";
+import pitchyardImage from "@/assets/images/pitchyard.webp";
 import innovationLabsImage from "@/assets/images/innovation_lab.png";
 import ReusableWorkSection, { WorkItem } from "@/components/reusable-work-section";
 import { AhifPrograms } from "./ahifComponent";
-import { InnovationPrograms } from "./innovationWorkshop";
+import { PitchYard } from "./pitchYard";
 import { OpenLabPrograms } from "./openLab";
 
-// Example of using the main reusable work section for programs
+
 const programsWorkItems: WorkItem[] = [
   {
     title: "Africa Health Innovation Fellowship",
@@ -23,17 +24,18 @@ const programsWorkItems: WorkItem[] = [
       "Mentorship",
     ],
     moreText: "View More",
+    viewMoreButtonLink: "https://innovatehealth.africa/ahif-2025",
     moreComponent: <AhifPrograms />
   },
   {
-    title: "Healthcare Innovation Workshop",
+    title: "PITCHYARD",
     description:
-      "This hands-on session empowers healthcare leaders to break barriers, craft user-driven solutions, and unlock business opportunities, delivering impact where it matters most.",
-    image: workshopImage,
+      "Most accelerators are built for startups already in motion. PitchYard is different. We’re Africa’s launchpad for idea - stage healthtech innovators, the nurses, doctors, technologists, and young builders closest to the problems.",
+    image: pitchyardImage,
     tags: ["Design Thinking", "Prototyping", "Testing", "Business Model"],
     reverse: true,
     moreText: "View More",
-    moreComponent: <InnovationPrograms />
+    moreComponent: <PitchYard />
   },
   {
     title: "Open Innovation Lab",
@@ -43,6 +45,33 @@ const programsWorkItems: WorkItem[] = [
     tags: ["Design Thinking", "Co-creation", "Prototyping", "Testing"],
     moreText: "View More",
     moreComponent: <OpenLabPrograms />
+  },
+  {
+    title: "Digital Health Literacy Self-Assessment Tool (DHL‑SAT)",
+    description:
+      "DHL-SAT is scientifically validated tool built for African frontline healthcare professionals to self-assess their digital health literacy. In just a few minutes, users receive a personalized literacy profile and curated learning recommendations to bridge skill gaps and advance their digital capabilities.",
+    image: workshopImage,
+    tags: ["Design Thinking", "Co-creation", "Prototyping", "Testing"],
+    moreText: "Take the Assessment",
+    viewMoreButtonLink: "https://dhl.innovatehealth.africa/"
+  },
+  {
+    title: "Mpox Diagnostic Tool",
+    description:
+      "Built in response to the Mpox outbreak, our AI-powered skin lesion detection tool helps healthcare workers in low-resource settings make faster, more accurate diagnoses. Developed through our open innovation lab and grounded in real-world data, the tool is being piloted across Africa to support early detection and outbreak response.",
+    image: innovationLabsImage,
+    tags: ["Design Thinking", "Co-creation", "Prototyping", "Testing"],
+    moreText: " Learn More",
+    viewMoreButtonLink: "#"
+  },
+  {
+    title: "Innovation Toolkit for African HealthTech Innovators",
+    description:
+      "This practical toolkit is your innovation co-pilot. Access expert insights, plug-and-play templates, interactive worksheets, and scalable frameworks—all designed to help you build, test, and launch impactful health solutions in Africa. Whether you're at concept stage or ready to scale, this toolkit helps you do it right.",
+    image: innovationLabsImage,
+    tags: ["Design Thinking", "Co-creation", "Prototyping", "Testing"],
+    moreText: " Access Toolkit",
+    viewMoreButtonLink: "#"
   },
 ];
 

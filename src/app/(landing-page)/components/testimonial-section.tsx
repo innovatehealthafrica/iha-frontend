@@ -19,74 +19,46 @@ type TestimonialItem = {
 const defaultTestimonials: TestimonialItem[] = [
   {
     testimonial:
-      "Thanks to IHA, my healthcare app is now used by thousands, transforming patient care across multiple regions.",
-    name: "Dr. Alex O.",
-    jobTitle: "App Developer",
-    avatarUrl: "https://randomuser.me/api/portraits/men/1.jpg",
+      "AHIF 2025 has not only expanded my knowledge and skillset but also reshaped how I see my path forward.",
+    name: "Esther Murunga, Kenya.",
+    jobTitle: "AHIF Fellow 2025",
+    avatarUrl: "/icon.png",
   },
   {
     testimonial:
-      "The support and resources provided by IHA have been invaluable in scaling our healthcare services.",
-    name: "Sarah W.",
-    jobTitle: "Healthcare Administrator",
-    avatarUrl: "https://randomuser.me/api/portraits/women/2.jpg",
+      " I learned the importance of human-centered design, focusing on the real needs of African communities when developing innovative solutions.",
+    name: "Yisak Mitiku Debela, Ethiopia",
+    jobTitle: "AHIF Fellow 2025",
+    avatarUrl: "/icon.png",
   },
   {
     testimonial:
-      "IHA's innovative solutions have significantly improved our hospital's operational efficiency.",
-    name: "Michael T.",
-    jobTitle: "Hospital Manager",
-    avatarUrl: "https://randomuser.me/api/portraits/men/3.jpg",
+      "Participating in the AHIF 2025 Fellowship has been a defining moment in my journey as a healthcare innovator.",
+    name: "Toyyib Muhammad-Jamiu, Nigeria",
+    jobTitle: "AHIF Fellow 2025",
+    avatarUrl: "/icon.png",
   },
   {
     testimonial:
-      "The user-friendly interface of the IHA platform has made a big difference in our daily operations.",
-    name: "Linda P.",
-    jobTitle: "Nurse",
-    avatarUrl: "https://randomuser.me/api/portraits/women/4.jpg",
+      "I’m truly motivated and very excited to start working on my project, and I feel much more confident about it.",
+    name: "Atfa Mohamed Awad Ahmaidi, Sudan",
+    jobTitle: "AHIF Fellow 2025",
+    avatarUrl: "/icon.png",
   },
   {
     testimonial:
-      "IHA has helped us streamline our patient management system, saving us time and resources.",
-    name: "John D.",
-    jobTitle: "Clinic Owner",
-    avatarUrl: "https://randomuser.me/api/portraits/men/5.jpg",
+      " I leave the fellowship empowered, inspired, and ready to drive meaningful change in healthcare across the continent.",
+    name: "ABDULMALIK SALIHU MAIWADA, Nigeria",
+    jobTitle: "AHIF Fellow 2025",
+    avatarUrl: "/icon.png",
   },
   {
     testimonial:
-      "With IHA, we have seen a notable increase in patient satisfaction and engagement.",
-    name: "Emily R.",
-    jobTitle: "Patient Coordinator",
-    avatarUrl: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-  {
-    testimonial:
-      "The analytics tools provided by IHA are top-notch and have helped us make better decisions.",
-    name: "James K.",
-    jobTitle: "Data Analyst",
-    avatarUrl: "https://randomuser.me/api/portraits/men/7.jpg",
-  },
-  {
-    testimonial:
-      "IHA's training and support have been exceptional, helping our team get up to speed quickly.",
-    name: "Karen L.",
-    jobTitle: "Training Manager",
-    avatarUrl: "https://randomuser.me/api/portraits/women/8.jpg",
-  },
-  {
-    testimonial:
-      "The integration capabilities of IHA have been crucial for connecting our various healthcare systems.",
-    name: "Daniel S.",
-    jobTitle: "IT Specialist",
-    avatarUrl: "https://randomuser.me/api/portraits/men/9.jpg",
-  },
-  {
-    testimonial:
-      "IHA has truly transformed how we deliver care to our patients, making our processes more efficient and effective.",
-    name: "Patricia M.",
-    jobTitle: "Chief Medical Officer",
-    avatarUrl: "https://randomuser.me/api/portraits/women/10.jpg",
-  },
+      "I am overjoyed to have been introduced to digital health, I am now confident and I know a lot has been done",
+    name: "Aime Ishimwe,Rwanda",
+    jobTitle: "AHIF Fellow 2025",
+    avatarUrl: "/icon.png"
+  }
 ];
 
 export default function TestimonialSection({

@@ -21,15 +21,20 @@ export function BlogCard({ post }: BlogCardProps) {
   return (
     <Card className="overflow-hidden cursor-pointer bg-transparent border-none shadow-none">
       <Link href={`/news/${post.slug.current}`} className="flex flex-col gap-4">
-        {/* Image wrapper ensures fill works */}
-        <div className="relative w-full h-64">
+
+        <div className="relative w-full h-64 bg-gray-100 rounded-md overflow-hidden">
           <Image
             src={postImage}
             alt={post.title}
             fill
-            className="object-cover rounded-md"
+            className="object-cover"
+            loading="lazy"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0..."
           />
         </div>
+
+
 
         {/* Content */}
         <div>

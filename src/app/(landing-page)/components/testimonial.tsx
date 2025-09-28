@@ -1,6 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getInitials } from "@/lib/utils";
-import { QuoteIcon } from "@radix-ui/react-icons";
 
 export default function Testimonial({
   testimonial: { testimonial, name, jobTitle, avatarUrl },
@@ -16,8 +15,9 @@ export default function Testimonial({
     <div className="lg:pe-12">
       <div className="h-48">
         <div className="relative h-36 border border-primary text-primary bg-white rounded-md px-6 py-5">
-          {testimonial}
-
+          <p className="text-sm">
+            {testimonial}
+          </p>
           {/* Chat Bubble Tip - The curved tip below the chat bubble */}
           <svg
             width="65"

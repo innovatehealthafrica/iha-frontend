@@ -4,7 +4,7 @@ import React, { ReactNode, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { ArrowBigDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export interface WorkItem {
   title: string;
@@ -14,6 +14,7 @@ export interface WorkItem {
   reverse?: boolean;
   moreComponent?: ReactNode;
   moreText?: string;
+  viewMoreButtonLink?: string
 }
 
 interface ReusableWorkSectionProps {
@@ -33,7 +34,7 @@ export default function ReusableWorkSection({
   viewMoreButtonLink,
   className,
 }: ReusableWorkSectionProps) {
-  // track open/closed state for each workItem by index
+
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const handleToggle = (index: number) => {
@@ -51,15 +52,15 @@ export default function ReusableWorkSection({
           <div className="space-y-14">
             {workItems.map((item, index) => (
               <React.Fragment key={item.title}>
-                {/* Card Box */}
+
                 <div
                   className={cn(
-                    "flex flex-col-reverse lg:flex-row items-center gap-x-12 bg-white p-4 sm:p-8 rounded-lg shadow-[0_0_8px_8px_rgba(0,0,0,0.05)]",
-                    { "lg:flex-row-reverse": item.reverse }
+                    "flex flex-col-reverse lg:flex-row items-start gap-x-12 bg-white p-4 sm:p-8 rounded-lg shadow-[0_0_8px_8px_rgba(0,0,0,0.05)]",
+                    { "lg:flex-row-reverse": index % 2 === 1 }
                   )}
                 >
                   <div className="w-full lg:w-1/2">
-                    <h4 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">
+                    <h4 className="text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6 pt-4">
                       {item.title}
                     </h4>
                     <p className="leading-8 mb-7 text-lg">{item.description}</p>
@@ -93,17 +94,19 @@ export default function ReusableWorkSection({
                     )}
                   </div>
 
+
                   <Image
                     src={item.image}
                     width={1408}
                     height={768}
                     alt={item.title}
-                    className="rounded-lg aspect-video w-full lg:w-1/2 mb-4 sm:mb-0"
+                    objectFit="contain"
+                    className="rounded-lg w-full lg:w-1/2 mb-4 sm:mb-0"
                   />
                 </div>
 
 
-                {/* Dropdown outside the bg-white box */}
+
                 {openIndex === index && (
                   <div className="mt-4">{item.moreComponent}</div>
                 )}

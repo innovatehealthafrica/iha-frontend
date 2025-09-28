@@ -13,7 +13,7 @@ export function BlogArchiveGrid({ posts }: BlogGridProps) {
   const regularPosts = posts.slice(1)
 
   return (
-    <div className="flex flex-col space-y-8">
+    <div className="flex flex-col space-y-8 px-8 lg:px-0">
       {featuredPost && <FeaturedBlogCard post={featuredPost} />}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {regularPosts.map((post) => (

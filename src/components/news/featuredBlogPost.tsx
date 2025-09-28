@@ -45,15 +45,19 @@ export function FeaturedBlogCard({ post }: FeaturedBlogCardProps) {
               Read More
             </Link>
           </div>
-
-          <div className="lg:w-1/2 relative">
+          <div className="lg:w-1/2 relative bg-gray-100 rounded-md overflow-hidden">
             <Image
               src={postImage}
               alt={post.title}
-              fill
-              className="object-cover hover:scale-95 transition-transform duration-300 rounded-lg"
+              width={800}
+              height={500} // maintain aspect ratio
+              className="w-full h-auto"
+              loading="lazy"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0..."
             />
           </div>
+
         </div>
       </div>
     </section>

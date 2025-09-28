@@ -2,7 +2,7 @@
   {
     "name": "Oluwatobi Adewumi",
     "title": "Executive Director",
-    "image": "/team/oluwatobi.png",
+    "image": "/team/mr-tobi.jpg",
     "funFact": "Loves to Dance but very bad at it. Brain of IHA",
     "linkedIn": "https://linkedin.com/in/josephajibodu",
     "tag": "Leadership"
@@ -31,13 +31,13 @@
     "linkedIn": "#",
     "tag": "Leadership"
   },
-  {
-    "name": "Ezinne Awah",
+    {
+    "name": "Ibironke Taiwo Mary",
     "title": "Director of Communication",
-    "image": "/team/Ezinne.png",
+    "image": "/team/ibironke.png",
     "funFact": "",
-    "linkedIn": "#",
-    "tag": "Communications"
+    "linkedIn": "https://www.linkedin.com/in/ibironke-taiwo-mary/",
+    "tag": "Leadership"
   },
   {
     "name": "Araromi Sulaimon Olawale",
@@ -57,7 +57,7 @@
   },
   {
     "name": "Raheema Saadan",
-    "title": "Program Manager",
+    "title": "Program Manager, Tanzania",
     "image": "/team/Rehema-Saadan.png",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/rehema-saadan-3a415214a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -90,7 +90,7 @@
   {
     "name": "Micheal Oluwafemi Adeniyi",
     "title": "Research Associate",
-    "image": "",
+   "image": "/team/michael-oluwafemi-adeniyi.jpg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/michealadeniyi",
     "tag": "Research & Development"
@@ -130,7 +130,7 @@
   {
     "name": "Ermiyas Neway",
     "title": "AI Engineer",
-    "image": "/team/Ermiyas-Neway.jfif",
+    "image": "/team/ermiyas-neway.jpg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/ermiyas-neway/",
     "tag": "Design & Innovation"
@@ -154,7 +154,7 @@
   {
     "name": "Dr. Melissa Okiemen",
     "title": "Product Manager",
-    "image": "",
+   "image": "/team/melissa-okiemen.jpg",
     "funFact": "",
     "linkedIn": "#",
     "tag": "Design & Innovation"
@@ -162,7 +162,7 @@
   {
     "name": "Dr. Nasirat Ibukun Akinlade",
     "title": "Data Analyst",
-    "image": "",
+  "image": "/team/nasirat-akinlade.jpg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/nasirat-akinlade-a89705250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     "tag": "Design & Innovation"
@@ -178,23 +178,15 @@
   {
     "name": "Izhar Mahjoub",
     "title": "Digital Health Consultant",
-    "image": "",
+  "image": "/team/izhar-mahjoub.jpg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
     "tag": "Consultations"
   },
   {
-    "name": "Rebatho Madiba",
-    "title": "Digital Transformation Strategist",
-    "image": "",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
-    "tag": "Design & Innovation"
-  },
-  {
     "name": "Fausat Abiola",
     "title": "Product Manager",
-    "image": "",
+     "image": "/team/fausat-abiola.jpg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
     "tag": "Design & Innovation"
@@ -202,7 +194,7 @@
   {
     "name": "Tadeo Wandera",
     "title": "Partnership Manager",
-    "image": "",
+    "image": "/team/tadeo-wandera.jpg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
     "tag": "Partnership & Grants"
@@ -210,7 +202,7 @@
   {
     "name": "Maryflorence Akinyi Omollo ",
     "title": "Communications Specialist",
-    "image": "",
+    "image": "/team/mary-florence-omollo.jpg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
     "tag": "Communications"
@@ -218,7 +210,7 @@
   {
     "name": "Emmanuella Mawuse Donani",
     "title": "Communications Manager",
-    "image": "",
+   "image": "/team/emmanuel-maws.jpg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
     "tag": "Communications"
@@ -232,37 +224,51 @@
     "tag": "Research & Development"
   },
   {
-    "name": "Ibironke Taiwo Mary",
-    "title": "Program Associate",
-    "image": "/team/ibironke.png",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/ibironke-taiwo-mary/",
-    "tag": "Programs"
-  },
-  {
-    "name": "Lazarus M. Nthusi, CPA",
-    "title": "Financial Advisor",
-    "image": "/team/Lazarus-Nthusi.jpg",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/lazarus-m-nthusi-cpa-a8782a162?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BhP2P5yniTmyM79TBKaJvtQ%3D%3D",
-    "tag": "Partnership & Grants"
-  },
-  {
     "name": "Faith Keru",
-    "title": "Program Coordinator",
-    "image": "",
+    "title": "Program Manager, Kenya",
+     "image": "/team/faith-keru.jpg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/faith-keru-a0b087219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "tag": "Programs"
   },
   {
-    "name": "Ajomewo Okeoghene Hezekiah",
-    "title": "Technical Lead",
+    "name": "Tobiloba Adegboyega",
+    "title": "Lead Creative Designer",
+    "image": "/team/tobiloba-adegboyega.jpg",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Communications"
+  }, {
+    "name": "Oluwasolabomi Onadipe",
+    "title": "Corporate Communications Strategist",
+    "image": "/team/tobiloba-adegboyega.jpg",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Communications"
+  },
+   {
+    "name": "Raphael Oyeniji",
+    "title": "Program Manager, Nigeria",
     "image": "",
     "funFact": "",
-    "linkedIn": "http://www.linkedin.com/in/hezekiah-ajomewo",
-    "tag": "Design & Innovation"
+    "linkedIn": "#",
+    "tag": "Programs"
+  },
+   {
+    "name": "Solome Nekahiwot",
+    "title": "Program Manager, Ethiopia",
+    "image": "/team/Solome-Nekahiwot.JPG",
+    "funFact": "",
+    "linkedIn": "",
+    "tag": "Programs"
+  },
+  {
+    "name": "Tobechukwu Onwurah",
+    "title": "Program Manager, Africa - Diaspora",
+    "image": "/team/tobechukwu-onwirah.jpg",
+    "funFact": "",
+    "linkedIn": "",
+    "tag": "Programs"
   }
-  
 ]
 
