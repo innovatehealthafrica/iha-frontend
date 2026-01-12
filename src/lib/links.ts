@@ -14,9 +14,9 @@ const LINKS = {
     title: "About",
     href: "/about",
   },
-  AHIF2025: {
-    title: "AHIF 2025",
-    href: "/ahif-2025",
+  AHIF2026: {
+    title: "AHIF 2026",
+    href: "/ahif-2026",
   },
   News: {
     title: "News",

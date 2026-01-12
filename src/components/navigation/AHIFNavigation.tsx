@@ -92,6 +92,26 @@ export default function AHIFNavigation() {
             >
               Overview
             </Link>
+
+            <Link
+              className={cn(
+                "text-primary font-medium py-2 px-3 md:py-3 md:px-5 rounded-md transition-colors whitespace-nowrap text-sm md:text-base",
+                {
+                  "bg-primary-green/10 hover:bg-primary-green/20 text-primary-green":
+                    activeSection !== "structure",
+                  "bg-primary-green text-white": activeSection === "structure",
+                }
+              )}
+              href="#gain"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("structure");
+              }}
+            >
+              What You'll Gain
+            </Link>
+
+
             <Link
               className={cn(
                 "text-primary font-medium py-2 px-3 md:py-3 md:px-5 rounded-md transition-colors whitespace-nowrap text-sm md:text-base",
@@ -109,24 +129,7 @@ export default function AHIFNavigation() {
             >
               Structure
             </Link>
-            <Link
-              className={cn(
-                "text-primary font-medium py-2 px-3 md:py-3 md:px-5 rounded-md transition-colors whitespace-nowrap text-sm md:text-base",
-                {
-                  "bg-primary-green/10 hover:bg-primary-green/20 text-primary-green":
-                    activeSection !== "core-modules",
-                  "bg-primary-green text-white":
-                    activeSection === "core-modules",
-                }
-              )}
-              href="#core-modules"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("core-modules");
-              }}
-            >
-              Core Module
-            </Link>
+
             <Link
               className={cn(
                 "text-primary font-medium py-2 px-3 md:py-3 md:px-5 rounded-md transition-colors whitespace-nowrap text-sm md:text-base",
@@ -144,6 +147,7 @@ export default function AHIFNavigation() {
             >
               Why Apply
             </Link>
+
             <Link
               className={cn(
                 "text-primary font-medium py-2 px-3 md:py-3 md:px-5 rounded-md transition-colors whitespace-nowrap text-sm md:text-base",
@@ -161,6 +165,25 @@ export default function AHIFNavigation() {
               }}
             >
               Eligibility
+            </Link>
+
+            <Link
+              className={cn(
+                "text-primary font-medium py-2 px-3 md:py-3 md:px-5 rounded-md transition-colors whitespace-nowrap text-sm md:text-base",
+                {
+                  "bg-primary-green/10 hover:bg-primary-green/20 text-primary-green":
+                    activeSection !== "eligibility",
+                  "bg-primary-green text-white":
+                    activeSection === "eligibility",
+                }
+              )}
+              href="#keyDates"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("eligibility");
+              }}
+            >
+              Key Dates
             </Link>
           </div>
         </div>

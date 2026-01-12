@@ -424,18 +424,18 @@ export default function AHIF2025Page() {
 }
 
 export const metadata: Metadata = {
-  title: "Africa Healthcare Innovation Fellowship 2025",
+  title: "Africa Healthcare Innovation Fellowship 2026",
   description:
     "Empowering innovators to transform healthcare in Africa through digital solutions.",
   alternates: {
-    canonical: "https://innovatehealth.africa/ahif-2025",
+    canonical: "https://innovatehealth.africa/ahif-2026",
   },
 
   openGraph: {
-    title: "Africa Healthcare Innovation Fellowship 2025",
+    title: "Africa Healthcare Innovation Fellowship 2026",
     description:
       "Empowering innovators to transform healthcare in Africa through digital solutions.",
-    url: "https://innovatehealth.africa/ahif-2025",
+    url: "https://innovatehealth.africa/ahif-2026",
     type: "website",
     images: [
       {
@@ -448,7 +448,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Africa Healthcare Innovation Fellowship 2025",
+    title: "Africa Healthcare Innovation Fellowship 2026",
     description:
       "Empowering innovators to transform healthcare in Africa through digital solutions.",
     images: [AHIFSocialCard.src],
