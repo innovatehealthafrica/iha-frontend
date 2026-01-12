@@ -108,7 +108,7 @@ export default function AHIFNavigation() {
                 scrollToSection("structure");
               }}
             >
-              What You'll Gain
+              What You&apos;ll Gain
             </Link>
 
 

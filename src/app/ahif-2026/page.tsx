@@ -83,7 +83,7 @@ export default function AHIF2025Page() {
       <section id="gain" className="bg-primary-green/10 py-14 lg:py-20">
         <div className="px-8 lg:px-0 space-y-8 max-w-screen-xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
-            What You'll Gain
+            What You&apos;ll Gain
           </h2>
 
           <p className="text-lg leading-relaxed text-gray-800 mb-8">
