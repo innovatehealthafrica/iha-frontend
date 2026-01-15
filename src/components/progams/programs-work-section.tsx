@@ -24,7 +24,7 @@ const programsWorkItems: WorkItem[] = [
       "Mentorship",
     ],
     moreText: "View More",
-    viewMoreButtonLink: "https://innovatehealth.africa/ahif-2025",
+    viewMoreButtonLink: "https://innovatehealth.africa/ahif-2026",
     moreComponent: <AhifPrograms />
   },
   {

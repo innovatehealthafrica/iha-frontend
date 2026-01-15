@@ -26,6 +26,7 @@ interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
 }
 
+
 const toggleBodyScroll = (disable: boolean) => {
   if (disable) {
     document.body.style.overflow = "hidden";
@@ -87,35 +88,44 @@ export default function Header() {
         {/* Desktop Navigation */}
         <NavigationMenu className="hidden md:block">
           <NavigationMenuList className="flex gap-6">
-            {Navigation.main.map((item) => (
-              <NavigationMenuItem key={item.title}>
-                {item.href && <Link href={item.href}>{item.title}</Link>}
+            {Navigation.main?.filter(Boolean).map((item) => {
+              // Add safety check for item
+              if (!item) return null;
 
-                {item.menu && (
-                  <>
-                    <NavigationMenuTrigger
-                      className={cn("", navigationMenuTriggerStyle())}
-                    >
-                      {item.title}
-                    </NavigationMenuTrigger>
+              return (
+                <NavigationMenuItem key={item.title}>
+                  {item.href && <Link href={item.href}>{item.title}</Link>}
 
-                    <NavigationMenuContent className="z-index-99999">
-                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                        {item.menu.map((subItem) => (
-                          <ListItem
-                            key={subItem.title}
-                            title={subItem.title}
-                            href={subItem.href}
-                          >
-                            {subItem.description}
-                          </ListItem>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </>
-                )}
-              </NavigationMenuItem>
-            ))}
+                  {item.menu && (
+                    <>
+                      <NavigationMenuTrigger
+                        className={cn("", navigationMenuTriggerStyle())}
+                      >
+                        {item.title}
+                      </NavigationMenuTrigger>
+
+                      <NavigationMenuContent className="z-index-99999">
+                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                          {item.menu.filter(Boolean).map((subItem) => {
+                            if (!subItem || !subItem.href) return null;
+
+                            return (
+                              <ListItem
+                                key={subItem.title}
+                                title={subItem.title}
+                                href={subItem.href}
+                              >
+                                {subItem.description}
+                              </ListItem>
+                            );
+                          })}
+                        </ul>
+                      </NavigationMenuContent>
+                    </>
+                  )}
+                </NavigationMenuItem>
+              );
+            })}
           </NavigationMenuList>
         </NavigationMenu>
 
@@ -124,7 +134,7 @@ export default function Header() {
           size="lg"
           asChild
         >
-          <NextLink href={LINKS.AHIF2025.href}>AHIF 2025</NextLink>
+          <NextLink href={LINKS.AHIF2026.href}>AHIF 2026</NextLink>
         </Button>
       </div>
 
@@ -146,31 +156,35 @@ export default function Header() {
               onClick={toggle}
               asChild
             >
-              <NextLink href={LINKS.AHIF2025.href}>AHIF 2025</NextLink>
+              <NextLink href={LINKS.AHIF2026.href}>AHIF 2026</NextLink>
             </Button>
 
-            {Navigation.main.map((item) => (
-              <NavigationMenuItem key={item.title}>
-                {item.href && (
-                  <NextLink
-                    href={item.href}
-                    className="text-base font-[400] w-full"
-                    onClick={toggle}
-                  >
-                    {item.title}
-                  </NextLink>
-                )}
+            {Navigation.main?.filter(Boolean).map((item) => {
+              if (!item) return null;
 
-                {item.menu && (
-                  <MobileNavigationDropdown
-                    title="Programs"
-                    items={item.menu}
-                    className="w-full"
-                    onClick={toggle}
-                  />
-                )}
-              </NavigationMenuItem>
-            ))}
+              return (
+                <NavigationMenuItem key={item.title}>
+                  {item.href && (
+                    <NextLink
+                      href={item.href}
+                      className="text-base font-[400] w-full"
+                      onClick={toggle}
+                    >
+                      {item.title}
+                    </NextLink>
+                  )}
+
+                  {item.menu && (
+                    <MobileNavigationDropdown
+                      title={item.title}
+                      items={item.menu}
+                      className="w-full"
+                      onClick={toggle}
+                    />
+                  )}
+                </NavigationMenuItem>
+              );
+            })}
 
             <NextLink
               href="/news"
@@ -286,7 +300,7 @@ const MobileNavigationDropdown = ({
             {items.map((item) => (
               <NextLink
                 key={item.title}
-                href={item.href as string}
+                href={item.href ?? '#'}
                 className="text-base font-[400] block first-of-type:mt-4"
                 onClick={onClick}
               >
