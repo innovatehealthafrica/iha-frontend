@@ -367,6 +367,15 @@ export default function AHIF2025Page() {
 
           <div className="flex justify-center">
             <Button
+              disabled
+              size="lg"
+              variant="secondary"
+              className="mt-14 h-14 text-md font-medium bg-gray-300 text-gray-500 cursor-not-allowed pointer-events-none"
+            >
+              Apply Now
+            </Button>
+
+            {/* <Button
               asChild
               className="h-14 px-10 text-lg font-medium transition-transform hover:scale-105"
             >
@@ -376,7 +385,7 @@ export default function AHIF2025Page() {
               >
                 Apply Now
               </Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>

@@ -22,14 +22,14 @@ export default function AHIFHeader2026() {
           Build solutions. Strengthen health systems. Lead innovation in Africa.
         </p>
         <Button
-          className="mt-14 text-md h-14 bg-white text-primary-green font-medium hover:bg-primary-green hover:text-white"
+          disabled
           size="lg"
           variant="secondary"
+          className="mt-14 h-14 text-md font-medium bg-gray-300 text-gray-500 cursor-not-allowed pointer-events-none"
         >
-          <Link href="https://form.jotform.com/250440880751051" target="_blank">
-            Apply Now
-          </Link>
+          Apply Now
         </Button>
+
         <span className="block text-white text-sm mt-2">
           1000+ Previously Enrolled
         </span>
