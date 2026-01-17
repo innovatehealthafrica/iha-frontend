@@ -212,8 +212,7 @@ export default function AHIF2025Page() {
               </AccordionTrigger>
               <AccordionContent className="py-6 px-4 text-base">
                 <p className="text-gray-800 leading-relaxed mb-6">
-                  Guided mentorship and structured learning across leadership, ethics, data, and digital health
-                  entrepreneurship.
+                  Design sprints to co-create and develop solution prototypes, progressing toward MVPs.
                 </p>
 
               </AccordionContent>
@@ -245,21 +244,8 @@ export default function AHIF2025Page() {
         </div>
       </section>
 
-      {/* Why Apply */}
-      <section id="why-apply" className="py-14 lg:py-20 bg-primary-green/10">
-        <div className="px-8 lg:px-0 space-y-8 max-w-screen-xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-8">
-            Why Apply?
-          </h2>
-
-          <p>AHIF 2026 is designed for young African professionals who are ready to commit, learn, and
-            build.</p>
-
-        </div>
-      </section>
-
       {/* Eligibility */}
-      <section id="eligibility" className="bg-white py-14 lg:py-20">
+      <section id="eligibility" className="bg-primary-green/10 py-14 lg:py-20">
         <div className="px-8 lg:px-0 space-y-8 max-w-screen-xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-8">
             Eligibility
@@ -325,7 +311,7 @@ export default function AHIF2025Page() {
 
 
       {/* Key Dates */}
-      <section id="keyDates" className="bg-primary-green/10 py-14 lg:py-20">
+      <section id="keyDates" className="bg-white py-14 lg:py-20">
         <div className="px-8 lg:px-0 space-y-8 max-w-screen-xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-8">
             Key Dates
@@ -381,6 +367,15 @@ export default function AHIF2025Page() {
 
           <div className="flex justify-center">
             <Button
+              disabled
+              size="lg"
+              variant="secondary"
+              className="mt-14 h-14 text-md font-medium bg-gray-300 text-gray-500 cursor-not-allowed pointer-events-none"
+            >
+              Apply Now
+            </Button>
+
+            {/* <Button
               asChild
               className="h-14 px-10 text-lg font-medium transition-transform hover:scale-105"
             >
@@ -390,7 +385,7 @@ export default function AHIF2025Page() {
               >
                 Apply Now
               </Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
