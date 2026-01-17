@@ -98,14 +98,14 @@ export default function AHIFNavigation() {
                 "text-primary font-medium py-2 px-3 md:py-3 md:px-5 rounded-md transition-colors whitespace-nowrap text-sm md:text-base",
                 {
                   "bg-primary-green/10 hover:bg-primary-green/20 text-primary-green":
-                    activeSection !== "structure",
-                  "bg-primary-green text-white": activeSection === "structure",
+                    activeSection !== "gain",
+                  "bg-primary-green text-white": activeSection === "gain",
                 }
               )}
               href="#gain"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection("structure");
+                scrollToSection("gain");
               }}
             >
               What You&apos;ll Gain
@@ -135,24 +135,6 @@ export default function AHIFNavigation() {
                 "text-primary font-medium py-2 px-3 md:py-3 md:px-5 rounded-md transition-colors whitespace-nowrap text-sm md:text-base",
                 {
                   "bg-primary-green/10 hover:bg-primary-green/20 text-primary-green":
-                    activeSection !== "why-apply",
-                  "bg-primary-green text-white": activeSection === "why-apply",
-                }
-              )}
-              href="#why-apply"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("why-apply");
-              }}
-            >
-              Why Apply
-            </Link>
-
-            <Link
-              className={cn(
-                "text-primary font-medium py-2 px-3 md:py-3 md:px-5 rounded-md transition-colors whitespace-nowrap text-sm md:text-base",
-                {
-                  "bg-primary-green/10 hover:bg-primary-green/20 text-primary-green":
                     activeSection !== "eligibility",
                   "bg-primary-green text-white":
                     activeSection === "eligibility",
@@ -172,15 +154,15 @@ export default function AHIFNavigation() {
                 "text-primary font-medium py-2 px-3 md:py-3 md:px-5 rounded-md transition-colors whitespace-nowrap text-sm md:text-base",
                 {
                   "bg-primary-green/10 hover:bg-primary-green/20 text-primary-green":
-                    activeSection !== "eligibility",
+                    activeSection !== "keyDates",
                   "bg-primary-green text-white":
-                    activeSection === "eligibility",
+                    activeSection === "keyDates",
                 }
               )}
               href="#keyDates"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection("eligibility");
+                scrollToSection("keyDates");
               }}
             >
               Key Dates
