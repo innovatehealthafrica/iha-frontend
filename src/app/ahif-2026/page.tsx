@@ -273,17 +273,6 @@ export default function AHIF2025Page() {
                 <div className="w-2 h-2 bg-white rounded-full"></div>
               </div>
               <p className="text-lg leading-relaxed text-gray-800">
-                Receive guidance from renowned digital health professionals and
-                seasoned entrepreneurs who will support your growth, help
-                navigate challenges, and shape you into an influential leader in
-                Africa&apos;s healthcare space.
-              </p>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="rounded-full bg-primary-green w-6 h-6 flex items-center justify-center mt-1 flex-shrink-0">
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-              </div>
-              <p className="text-lg leading-relaxed text-gray-800">
                 Have a background or demonstrated experience in healthcare, public health, digital
                 health, technology, or innovation
               </p>
