@@ -68,7 +68,7 @@ export default function AHIF2025Page() {
           </p>
 
           <p className="text-lg leading-relaxed text-gray-800">
-            The AHIF 2026 cohort is a 14-week, field-based fellowship designed to equip young African
+            The AHIF 2026 cohort is a 14-weeks, field-based fellowship designed to equip young African
             professionals with the skills, networks, and hands-on experience needed to identify problems,
             design, test, and scale context-relevant healthcare solutions.
           </p>
@@ -160,7 +160,7 @@ export default function AHIF2025Page() {
       <section id="structure" className="py-14 lg:py-20 bg-white">
         <div className="px-8 lg:px-0 space-y-8 max-w-screen-xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
-            Structure
+            Fellowship Structure
           </h2>
 
           <p className="text-lg leading-relaxed text-gray-800 mb-8">
@@ -175,7 +175,7 @@ export default function AHIF2025Page() {
               </AccordionTrigger>
               <AccordionContent className="py-6 px-4 text-base">
                 <p className="text-gray-800 leading-relaxed mb-6">
-                  Introduction to Africa&aos;s health systems, digital transformation priorities, innovation ecosystems,
+                  Introduction to Africa&apos;s health systems, digital transformation priorities, innovation ecosystems,
                   and core competencies
                 </p>
 
@@ -248,8 +248,13 @@ export default function AHIF2025Page() {
       <section id="eligibility" className="bg-primary-green/10 py-14 lg:py-20">
         <div className="px-8 lg:px-0 space-y-8 max-w-screen-xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-8">
-            Eligibility
+            Who Should Apply ?
           </h2>
+
+          <p className="text-lg leading-relaxed text-gray-800 mb-6">
+            AHIF 2026 is designed for young African Professionals who are ready to commit, learn and build.
+
+            You are eligible if you:</p>
 
           <ul className="space-y-4 mb-8">
             <li className="flex items-start gap-3">
@@ -266,17 +271,6 @@ export default function AHIF2025Page() {
               </div>
               <p className="text-lg leading-relaxed text-gray-800">
                 Are aged 18–35 years at the time of application
-              </p>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="rounded-full bg-primary-green w-6 h-6 flex items-center justify-center mt-1 flex-shrink-0">
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-              </div>
-              <p className="text-lg leading-relaxed text-gray-800">
-                Receive guidance from renowned digital health professionals and
-                seasoned entrepreneurs who will support your growth, help
-                navigate challenges, and shape you into an influential leader in
-                Africa&apos;s healthcare space.
               </p>
             </li>
             <li className="flex items-start gap-3">
@@ -366,26 +360,18 @@ export default function AHIF2025Page() {
           </p>
 
           <div className="flex justify-center">
-            <Button
-              disabled
-              size="lg"
-              variant="secondary"
-              className="mt-14 h-14 text-md font-medium bg-gray-300 text-gray-500 cursor-not-allowed pointer-events-none"
-            >
-              Apply Now
-            </Button>
 
-            {/* <Button
+            <Button
               asChild
-              className="h-14 px-10 text-lg font-medium transition-transform hover:scale-105"
+              className="h-14 px-10 text-lg font-medium transition-transform hover:scale-105 cursor-pointer"
             >
               <Link
                 target="_blank"
-                href="https://form.jotform.com/250440880751051"
+                href="https://forms.gle/gGcocuE2qZEJfsBB6"
               >
                 Apply Now
               </Link>
-            </Button> */}
+            </Button>
           </div>
         </div>
       </section>
