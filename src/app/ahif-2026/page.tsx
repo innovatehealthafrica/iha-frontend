@@ -360,26 +360,18 @@ export default function AHIF2025Page() {
           </p>
 
           <div className="flex justify-center">
-            <Button
-              disabled
-              size="lg"
-              variant="secondary"
-              className="mt-14 h-14 text-md font-medium bg-gray-300 text-gray-500 cursor-not-allowed pointer-events-none"
-            >
-              Apply Now
-            </Button>
 
-            {/* <Button
+            <Button
               asChild
-              className="h-14 px-10 text-lg font-medium transition-transform hover:scale-105"
+              className="h-14 px-10 text-lg font-medium transition-transform hover:scale-105 cursor-pointer"
             >
               <Link
                 target="_blank"
-                href="https://form.jotform.com/250440880751051"
+                href="https://forms.gle/gGcocuE2qZEJfsBB6"
               >
                 Apply Now
               </Link>
-            </Button> */}
+            </Button>
           </div>
         </div>
       </section>

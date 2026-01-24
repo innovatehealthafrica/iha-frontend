@@ -1,0 +1,33 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "ahif-2026",
+    "develop",
+    "main",
+    "origin",
+    "programs",
+    "revert-3-feat-about-page",
+    "updates",
+    "website-update"
+  ],
+  "parent": {
+    "ahif-2026": "main",
+    "develop": "main",
+    "main": null,
+    "origin": "main",
+    "programs": "main",
+    "revert-3-feat-about-page": "main",
+    "updates": "main",
+    "website-update": "main"
+  },
+  "order": [
+    "main",
+    "ahif-2026",
+    "develop",
+    "origin",
+    "programs",
+    "revert-3-feat-about-page",
+    "updates",
+    "website-update"
+  ]
+}
