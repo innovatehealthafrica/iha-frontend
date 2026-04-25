@@ -3,12 +3,12 @@ import ContactUsSection from '@/components/contact-us-section'
 import { ProjectHeader } from '@/components/progams/projectHeader'
 import NewsletterSubscriptionSection from '@/components/newsletter-subscription-section'
 
-
-const layout = ({ children }: { children: ReactNode }) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <ProjectHeader
-
+        title="Innovations"
+        description="We work with public and private health institutions to design, develop, and implement digital health solutions that are shaped by the communities they serve."
       />
       {children}
       <ContactUsSection />
@@ -17,4 +17,4 @@ const layout = ({ children }: { children: ReactNode }) => {
   )
 }
 
-export default layout
+export default Layout
