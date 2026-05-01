@@ -11,6 +11,8 @@ import toast from "react-hot-toast";
 import { Info } from "lucide-react";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
+import Link from "next/link";
+
 
 export default function ContactUsSection() {
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
@@ -32,7 +34,7 @@ export default function ContactUsSection() {
         <div className="flex flex-col justify-center items-center lg:items-start lg:px-12 lg:w-1/2">
           <h3 className="font-[600] text-3xl lg:text-5xl mb-4">Get in Touch</h3>
           <p className="max-w-lg text-center lg:text-start mb-4 italic font-light">
-            We’re open to answer your questions, discuss Partnerships, Services,
+            We&apos;re open to answer your questions, discuss Partnerships, Services,
             and Collaborative Opportunities!
           </p>
         </div>
@@ -40,19 +42,17 @@ export default function ContactUsSection() {
         <div className="lg:border-l lg:px-20 w-full lg:w-1/2 mx-auto">
           <div className="w-full max-w-sm mx-auto flex flex-col items-center ">
             <h2 className="mb-6 font-[600] text-3xl lg:text-5xl text-end lg:text-start">
-              Let’s Talk
+              Let&apos;s Talk
             </h2>
             <Button
               className="w-full"
               size="lg"
-              onClick={() =>
-                toast("Feature coming soon.", {
-                  icon: <Info />,
-                  className: "border border-primary-green",
-                })
-              }
+
             >
-              Schedule a meeting
+              <Link href="https://calendly.com/innovatehealth-africa1/">
+                Schedule a meeting
+              </Link>
+
             </Button>
 
             <div className="flex items-center gap-4 py-6 w-full">

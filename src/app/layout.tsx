@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "react-hot-toast";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import OGImage from "@/assets/images/ahif/ahif-socail-card.webp";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -96,9 +97,41 @@ const fontGilroy = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Innovate Health Africa",
+  metadataBase: new URL("https://innovatehealth.africa"),
+  title: "Innovate Health Africa | Advancing Equitable Healthcare in Africa",
   description:
-    "Building Tomorrow’s Healthcare  Solution Today - By Africans, for Africa",
+    "Innovate Health Africa is advancing Equitable Healthcare in Africa through Innovation, Research, and Workforce Capacity Development",
+  keywords: [
+    "Innovate Health Africa",
+    "Healthcare Innovation",
+    "African Healthcare",
+    "Medical Technology",
+    "Health Solutions",
+    "Digital Health Africa",
+    "Healthcare Startups Africa",
+  ],
+  openGraph: {
+    title: "Innovate Health Africa | Advancing Equitable Healthcare in Africa",
+    description:
+      "Innovate Health Africa is advancing Equitable Healthcare in Africa through Innovation, Research, and Workforce Capacity Development",
+    url: "/",
+    type: "website",
+    images: [
+      {
+        url: OGImage.src,
+        width: 1200,
+        height: 600,
+        alt: "Innovate Health Africa | Advancing Equitable Healthcare in Africa",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Innovate Health Africa | Advancing Equitable Healthcare in Africa",
+    description:
+      "Advancing Equitable Healthcare in Africa through Innovation, Research, and Workforce Capacity Development",
+    images: [OGImage.src],
+  },
 };
 
 export default function RootLayout({
@@ -116,7 +149,7 @@ export default function RootLayout({
       )}
     >
       <body
-        className={cn("min-h-screen bg-background fonst-gilroy antialiased")}
+        className={cn("min-h-screen bg-background font-gilroy antialiased")}
       >
         <Header />
         {children}

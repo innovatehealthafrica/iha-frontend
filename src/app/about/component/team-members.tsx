@@ -1,92 +1,116 @@
-import React from "react";
-import member1 from "@/assets/images/team/oluwatobi.png";
-import member2 from "@/assets/images/team/Timeyin.png";
-import member3 from "@/assets/images/team/Faridat.png";
-import member4 from "@/assets/images/team/Joseph.png";
-import member5 from "@/assets/images/team/Ezinne.png";
-import linkedin from "@/assets/images/about-page/linkedin.svg";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Linkedin } from "lucide-react";
+import teamData from "@/json/teamData.json";
+import { cn } from "@/lib/utils";
 
-const teamMembers = [
-  {
-    name: "Oluwatobi Adewumi",
-    title: "Executive Director",
-    image: member1,
-    funFact: "Loves to Dance but very bad at it. Brain of IHA",
-    linkedIn: "https://linkedin.com/in/josephajibodu",
-  },
+const teamDataArray = teamData as MemberType[];
 
-  {
-    name: "Timehin Arueyingho",
-    title: "Director of Training & Development",
-    image: member2,
-    funFact: "",
-    linkedIn: "https://linkedin.com/in/josephajibodu",
-  },
+interface MemberType {
+  name: string;
+  title: string;
+  image: string;
+  linkedIn: string;
+  tag: string;
+}
 
-  {
-    name: "Faridat Ibidun",
-    title: "Director of Programs",
-    image: member3,
-    funFact: "",
-    linkedIn: "https://linkedin.com/in/josephajibodu",
-  },
-
-  {
-    name: "Joseph Ajibodu",
-    title: "Director of Technology",
-    image: member4,
-    funFact: "",
-    linkedIn: "https://linkedin.com/in/josephajibodu",
-  },
-
-  {
-    name: "Ezinne Awah",
-    title: "Director of Communication",
-    image: member5,
-    funFact: "",
-    linkedIn: "https://linkedin.com/in/josephajibodu",
-  },
+const TAGS = [
+  "Leadership",
+  "Design & Innovation",
+  "Partnership & Grants",
+  "Research & Development",
+  "Communications",
+  "Consultations",
+  "Programs",
 ];
 
-const boardMembers = [
-  {
-    name: "Oluwatobi Adewumi",
-    title: "Executive Director",
-    image: member1,
-    funFact: "Loves to Dance but very bad at it. Brain of IHA",
-    linkedIn: "https://linkedin.com/in/josephajibodu",
-  },
-];
 export default function TeamMembers() {
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 m-[1.5rem] items-center justify-center">
-      {teamMembers.map((member) => (
-        <div key={member.name} className="h-[340px] flex items-end">
-          <div className="flex flex-col items-center justify-center text-center px-[2.5rem] text-white pb-4 h-[230px] bg-primary/40 rounded-xl shadow-lg">
-            <div className="-mt-[150px] top-0 flex flex-col items-center justify-center text-center">
-              <Image
-                src={member.image}
-                alt={member.name}
-                className="clip-path-mypolygon object-cover rounded-2xl"
-              />
-            </div>
+  const [activeTag, setActiveTag] = useState("Leadership");
 
-            <h4 className="font-medium mb-1 mt-3 text-primary">
-              {member.name}
-            </h4>
-            <span className="text-xs mb-2 text-primary">{member.title}</span>
-            <a
-              target="_blank"
-              href={member.linkedIn}
-              className="size-7 flex justify-center items-center rounded-full bg-primary/40"
-            >
-              <Linkedin color="white" size={18} className="p-[2px]" />
-            </a>
+  const renderMember = (member: MemberType) => (
+    <article
+      key={member.name}
+      className="flex flex-col items-center text-center bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6"
+    >
+      <div className="relative w-40 h-40 rounded-2xl overflow-hidden bg-gray-100">
+        {member.image ? (
+          <Image
+            src={member.image}
+            alt={member.name}
+            fill
+            sizes="160px"
+            className="object-cover object-top"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-gray-200">
+            <span className="text-gray-600 text-2xl font-bold">
+              {member.name
+                .split(" ")
+                .map((n) => n[0])
+                .join("")}
+            </span>
           </div>
+        )}
+      </div>
+
+      <h3 className="font-bold text-primary text-lg sm:text-xl mt-5">
+        {member.name}
+      </h3>
+      <p className="text-sm text-gray-700 mt-1 mb-4 min-h-[2.5em]">
+        {member.title}
+      </p>
+
+      {member.linkedIn && (
+        <a
+          href={member.linkedIn}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${member.name} on LinkedIn`}
+          className="size-9 flex justify-center items-center rounded-full bg-[#0A66C2] hover:bg-[#004182] transition-colors"
+        >
+          <Linkedin color="white" size={18} />
+        </a>
+      )}
+    </article>
+  );
+
+  const filtered = teamDataArray.filter((m) => m.tag === activeTag);
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 py-8">
+      <nav
+        aria-label="Filter team by department"
+        className="px-4 max-w-screen-xl mx-auto flex justify-center mb-12"
+      >
+        <div className="flex gap-3 overflow-x-auto py-2">
+          {TAGS.map((tag) => (
+            <button
+              key={tag}
+              type="button"
+              onClick={() => setActiveTag(tag)}
+              aria-pressed={activeTag === tag}
+              className={cn(
+                "border border-slate-300 px-4 py-2 text-sm md:text-base rounded-md whitespace-nowrap transition-colors",
+                activeTag === tag
+                  ? "bg-primary-bright-orange border-primary-bright-orange"
+                  : "bg-white hover:border-[#006666]",
+              )}
+            >
+              {tag}
+            </button>
+          ))}
         </div>
-      ))}
+      </nav>
+
+      {filtered.length === 0 ? (
+        <p className="text-center text-gray-600 py-12">
+          Team members for this department coming soon.
+        </p>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {filtered.map((member) => renderMember(member))}
+        </div>
+      )}
     </div>
   );
 }
