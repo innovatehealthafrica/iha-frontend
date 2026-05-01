@@ -8,6 +8,12 @@ import dhaLogo from "@/assets/images/partners/dha_logo.png";
 import ethioHealthLogo from "@/assets/images/partners/Ethio-Health-Logo-.png";
 import healthlyticLogo from "@/assets/images/partners/healthlytic.webp";
 import pranaEventsLogo from "@/assets/images/partners/prana_events.svg";
+import alxAfricaLogo from "@/assets/images/partners/alx logo.webp";
+import anuLogo from "@/assets/images/partners/anu-logo-1.webp";
+import futurizeLogo from "@/assets/images/partners/futurize logo.webp";
+import gitexAfricaLogo from "@/assets/images/partners/Gitex logo.webp";
+import socialLogo from "@/assets/images/partners/social_entrepreneurship_innovation_hub_seih_logo.jpeg"
+
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 interface Partner {
@@ -25,14 +31,11 @@ const PARTNERS: Partner[] = [
   { name: "Ethio Health", logo: ethioHealthLogo },
   { name: "Healthlytic", logo: healthlyticLogo },
   { name: "Prana Events", logo: pranaEventsLogo },
-  // TODO: add when IHA supplies SVG/PNG-transparent logos
-  // { name: "Africa Nazarene University", logo: africaNazareneLogo },
-  // { name: "Social Entrepreneurship and Innovation Hub", logo: seihLogo },
-  // { name: "Futurize", logo: futurizeLogo },
-  // { name: "MTN Innovation Lab", logo: mtnInnovationLabLogo },
-  // { name: "ALX Kenya", logo: alxKenyaLogo },
-  // { name: "TORG", logo: torgLogo },
-  // { name: "GITEX Africa", logo: gitexAfricaLogo },
+  { name: "ALX Africa", logo: alxAfricaLogo },
+  { name: "Africa Nazarene University", logo: anuLogo },
+  { name: "Futurize", logo: futurizeLogo },
+  { name: "GITEX Africa", logo: gitexAfricaLogo },
+  { name: "Social Entrepreneurship and Innovation Hub", logo: socialLogo },
 ];
 
 export default function PartnerSection() {

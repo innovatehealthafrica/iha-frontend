@@ -2,9 +2,9 @@ import React from "react";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import workforceImage from "@/assets/images/fellowship.png";
-import researchImage from "@/assets/images/workshop.png";
-import innovationImage from "@/assets/images/innovation_lab.png";
+import workforceImage from "@/assets/images/workforce-capacity-development.jpg";
+import researchImage from "@/assets/images/implementation-and-research.jpg";
+import innovationImage from "@/assets/images/innovation.jpg";
 
 interface PortfolioCard {
   title: string;
