@@ -17,42 +17,34 @@
   },
   {
     "name": "Faridat Ibidun",
-    "title": "Director of Programs",
-    "image": "/team/Faridat.png",
+    "title": "Director of Operations & Strategy",
+    "image": "/team/Faridat-Ibidun.png",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/faridat-ibidun/",
-    "tag": "Leadership"
-  },
-  {
-    "name": "Joseph Ajibodu",
-    "title": "Director of Technology",
-    "image": "/team/Joseph.png",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/josephajibodu/",
     "tag": "Leadership"
   },
     {
     "name": "Ibironke Taiwo Mary",
     "title": "Director of Communication",
-    "image": "/team/ibironke.png",
+    "image": "/team/Mary-Ibironke.jpeg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/ibironke-taiwo-mary/",
     "tag": "Leadership"
   },
   {
-    "name": "Araromi Sulaimon Olawale",
-    "title": "Research Associate (R&D)",
-    "image": "/team/Sulaimon-Araromi.jpg",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/sulaimon-araromi-395573151/",
-    "tag": "Research & Development"
-  },
-  {
     "name": "Shamsuddeen Yusuf Ma'aruf",
-    "title": "Lead (R&D)",
-    "image": "/team/Shamsuddeen-Yusuf.jpg",
+    "title": "Director of Research & Development",
+    "image": "/team/Shamsuddeen-Yusuf.jpeg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/maarufshamsuddeenyusuf",
+    "tag": "Research & Development"
+  },
+    {
+    "name": "Dr. Saravanan Thangarajan",
+    "title": "Digital Health Research Consultant",
+    "image": "/team/Saravanan-Thangarajan.jpg",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/saravanan-thangarajan/",
     "tag": "Research & Development"
   },
   {
@@ -64,11 +56,35 @@
     "tag": "Research & Development"
   },
   {
-    "name": "Dr. Saravanan Thangarajan",
-    "title": "R&D Consultant",
-    "image": "/team/Saravanan-Thangarajan.jpg",
+    "name": "Araromi Sulaimon Olawale",
+    "title": "Research Associate (R&D)",
+    "image": "/team/Sulaimon-Araromi.jpg",
     "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/saravanan-thangarajan/",
+    "linkedIn": "https://www.linkedin.com/in/sulaimon-araromi-395573151/",
+    "tag": "Research & Development"
+  },
+  {
+    "name": "Oluwatooni Owoade",
+    "title": "Research Associate",
+   "image": "/team/Oluwatooni-Owoade.jpeg",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Research & Development"
+  },
+  {
+    "name": "Omolabake Salako",
+    "title": "Research Associate",
+   "image": "/team/Omolabake-Salako.jpeg",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Research & Development"
+  },
+  {
+    "name": "Sulaimon Araromi",
+    "title": "Research Associate",
+   "image": "/team/Sulaimon-Araromi.jpeg",
+    "funFact": "",
+    "linkedIn": "#",
     "tag": "Research & Development"
   },
   {
@@ -114,10 +130,18 @@
    {
     "name": "Raphael Oyeniji",
     "title": "Program Manager, Nigeria",
-    "image": "",
+    "image": "/team/Raphael-Oyeniji.jpeg",
     "funFact": "",
     "linkedIn": "#",
     "tag": "Programs"
+  },
+  {
+    "name": "Joseph Ajibodu",
+    "title": "Senior Technical Advisor",
+    "image": "/team/Joseph-Ajibodu.jpeg",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/josephajibodu/",
+    "tag": "Design & Innovation"
   },
   {
     "name": "Marvelous Olawale",
@@ -125,6 +149,14 @@
     "image": "/team/Marvelous-Olawole.png",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/marvelous-olawole-9634b11b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "tag": "Design & Innovation"
+  },
+   {
+    "name": "Adeola Abdulramon",
+    "title": "Software Developer",
+    "image": "/team/adeola-abdulramon.png",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
     "tag": "Design & Innovation"
   },
   {
@@ -135,9 +167,17 @@
     "linkedIn": "https://www.linkedin.com/in/khalil-mekni-603803197?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "tag": "Design & Innovation"
   },
+   {
+    "name": "Ismail Tijani",
+    "title": "AI & Computer Vision Engineer",
+    "image": "/team/Ismail-Tijani.jpeg",
+    "funFact": "",
+    "linkedIn":"#",
+    "tag": "Design & Innovation"
+  },
   {
     "name": "Irene Mutio Martha",
-    "title": "Product Manager ",
+    "title": "SeniorProduct Manager ",
     "image": "/team/Irene-Maitha.JPG",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/ms-irene-m-maitha-aa4a2389?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
@@ -165,14 +205,6 @@
   "image": "/team/nasirat-akinlade.jpg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/nasirat-akinlade-a89705250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    "tag": "Design & Innovation"
-  },
-  {
-    "name": "Adeola Abdulramon",
-    "title": "Frontend Developer",
-    "image": "/team/adeola-abdulramon.png",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
     "tag": "Design & Innovation"
   },
   {
@@ -207,10 +239,10 @@
     "linkedIn": "#",
     "tag": "Design & Innovation"
   },
-  {
-    "name": "Tadeo Wandera",
+   {
+    "name": "Oladotun Ajayi",
     "title": "Partnership Manager",
-    "image": "/team/tadeo-wandera.jpg",
+    "image": "/team/Oladotun-Ajayi.jpeg",
     "funFact": "",
     "linkedIn": "#",
     "tag": "Partnership & Grants"
@@ -233,7 +265,7 @@
   },
   {
     "name": "Emmanuella Mawuse Donani",
-    "title": "Communications Manager",
+    "title": "Communications Specialist",
    "image": "/team/emmauella-maws.jpg",
     "funFact": "",
     "linkedIn": "#",
@@ -241,14 +273,14 @@
   },
   {
     "name": "Tobiloba Adegboyega",
-    "title": "Lead Creative Designer",
-    "image": "/team/tobiloba-adegboyega.jpg",
+    "title": "Creative Lead",
+    "image": "/team/Oluwatobiloba-Adegboyega.jpeg",
     "funFact": "",
     "linkedIn": "#",
     "tag": "Communications"
   }, {
     "name": "Oluwasolabomi Onadipe",
-    "title": "Corporate Communications Strategist",
+    "title": "Communications & Partnership Specialist",
     "image": "/team/oluwasolabomi-onadipe.jpg",
     "funFact": "",
     "linkedIn": "#",

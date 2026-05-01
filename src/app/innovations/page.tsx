@@ -1,9 +1,9 @@
 import React from 'react'
 import type { Metadata } from 'next'
 import PillarCardGrid, { PillarCard } from '@/components/pillar-card-grid'
-import mpoxImage from "@/assets/images/innovation_lab.png";
-import dhlsatImage from "@/assets/images/workshop.png";
-import toolkitImage from "@/assets/images/fellowship.png";
+import mpoxImage from "@/assets/images/Mpox.jpg";
+import dhlsatImage from "@/assets/images/dhlsat.jpg";
+import toolkitImage from "@/assets/images/big-ideas-book-with-different-light-bulb-stationery-blue-backdrop.jpg";
 
 export const metadata: Metadata = {
   title: "Innovations | InnovateHealth Africa",
@@ -19,7 +19,7 @@ const cards: PillarCard[] = [
       'An award-winning digital solution leveraging artificial intelligence to provide rapid and accessible diagnostics for Mpox, recognised and awarded a grant for further development at the 2025 Forum Galien Africa for its potential to improve outbreak response.',
     image: mpoxImage,
     // TODO: confirm destination URL with IHA
-    readMoreHref: '#',
+    readMoreHref: 'https://preprints.jmir.org/preprint/84758',
   },
   {
     id: 'dhlsat',
@@ -35,8 +35,7 @@ const cards: PillarCard[] = [
     description:
       'A comprehensive resource hub for innovators to build user-driven healthcare products.',
     image: toolkitImage,
-    // TODO: confirm destination URL with IHA
-    readMoreHref: '#',
+    readMoreHref: 'https://afri-health-innovate-4e81d1f2.base44.app/',
   },
 ]
 
