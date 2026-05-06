@@ -23,12 +23,28 @@
     "linkedIn": "https://www.linkedin.com/in/faridat-ibidun/",
     "tag": "Leadership"
   },
-    {
+  {
+    "name": "Adeola Abdulramon",
+    "title": "Director of Design & Innovation",
+    "image": "/team/adeola-abdulramon.png",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
+    "tag": "Leadership"
+  },
+  {
     "name": "Ibironke Taiwo Mary",
     "title": "Director of Communication",
     "image": "/team/Mary-Ibironke.jpeg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/ibironke-taiwo-mary/",
+    "tag": "Leadership"
+  },
+   {
+    "name": "Solome Nekahiwot",
+    "title": "Director of Programs",
+    "image": "/team/Solome-Nekahiwot.JPG",
+    "funFact": "",
+    "linkedIn": "#",
     "tag": "Leadership"
   },
   {
@@ -88,35 +104,11 @@
     "tag": "Research & Development"
   },
   {
-    "name": "Joan Lusanji",
-    "title": "Research Associate (R&D)",
-    "image": "",
-    "funFact": "",
-    "linkedIn": "#",
-    "tag": "Research & Development"
-  },
-  {
     "name": "Raheema Saadan",
     "title": "Program Manager, Tanzania",
     "image": "/team/Rehema-Saadan.png",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/rehema-saadan-3a415214a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "tag": "Programs"
-  },
-  {
-    "name": "Faith Keru",
-    "title": "Program Manager, Kenya",
-     "image": "/team/faith-keru.jpg",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/faith-keru-a0b087219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "tag": "Programs"
-  },
-   {
-    "name": "Solome Nekahiwot",
-    "title": "Program Manager, Ethiopia",
-    "image": "/team/Solome-Nekahiwot.JPG",
-    "funFact": "",
-    "linkedIn": "#",
     "tag": "Programs"
   },
   {
@@ -149,14 +141,6 @@
     "image": "/team/Marvelous-Olawole.png",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/marvelous-olawole-9634b11b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "tag": "Design & Innovation"
-  },
-   {
-    "name": "Adeola Abdulramon",
-    "title": "Software Developer",
-    "image": "/team/adeola-abdulramon.png",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
     "tag": "Design & Innovation"
   },
   {
@@ -192,38 +176,6 @@
     "tag": "Design & Innovation"
   },
   {
-    "name": "Agbonkonkon Blessing",
-    "title": "Data Analyst",
-    "image": "/team/Agbonkonkon-Blessing.jpg",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/blessing-fausta-pharmd-mpsgh-mpsn-50422618a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    "tag": "Design & Innovation"
-  },
-  {
-    "name": "Dr. Nasirat Ibukun Akinlade",
-    "title": "Data Analyst",
-  "image": "/team/nasirat-akinlade.jpg",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/nasirat-akinlade-a89705250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    "tag": "Design & Innovation"
-  },
-  {
-    "name": "Fausat Abiola",
-    "title": "Product Manager",
-     "image": "/team/fausat-abiola.jpg",
-    "funFact": "",
-    "linkedIn": "#",
-    "tag": "Design & Innovation"
-  },
-  {
-    "name": "Dr. Melissa Okiemen",
-    "title": "Product Manager",
-   "image": "/team/melissa-okiemen.jpg",
-    "funFact": "",
-    "linkedIn": "#",
-    "tag": "Design & Innovation"
-  },
-  {
     "name": "Heeba Hazzan Ahmed",
     "title": "Product Designer",
     "image": "/team/Heeba-Hassan.png",
@@ -246,14 +198,6 @@
     "funFact": "",
     "linkedIn": "#",
     "tag": "Partnership & Grants"
-  },
-   {
-    "name": "Omojolaade Zainab Omotosho",
-    "title": "Creative Designer",
-    "image": "/team/Omotosho-Omojolaade.jpg",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/omotosho-omojolaade",
-    "tag": "Communications"
   },
   {
     "name": "Maryflorence Akinyi Omollo ",
@@ -278,14 +222,8 @@
     "funFact": "",
     "linkedIn": "#",
     "tag": "Communications"
-  }, {
-    "name": "Oluwasolabomi Onadipe",
-    "title": "Communications & Partnership Specialist",
-    "image": "/team/oluwasolabomi-onadipe.jpg",
-    "funFact": "",
-    "linkedIn": "#",
-    "tag": "Communications"
-  } ,{
+  },
+  {
     "name": "Izhar Mahjoub",
     "title": "Digital Health Consultant",
   "image": "/team/izhar-mahjoub.jpg",

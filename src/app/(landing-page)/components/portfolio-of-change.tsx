@@ -44,7 +44,7 @@ const cards: PortfolioCard[] = [
 export default function PortfolioOfChange() {
   return (
     <section className="max-w-screen-xl mx-auto px-6 lg:px-0 py-20 lg:py-28">
-      <h2 className="text-3xl lg:text-5xl text-center text-primary font-bold mb-12">
+      <h2 className="text-3xl lg:text-5xl text-center text-primary font-bold mb-14 mt-56 lg:my-20">
         Our Portfolio of Change
       </h2>
 
