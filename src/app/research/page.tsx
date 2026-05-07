@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Metadata } from 'next'
 import PillarCardGrid, { PillarCard } from '@/components/pillar-card-grid'
-import researchPlaceholder from "@/assets/images/innovation_lab.png";
+import researchPlaceholder from "@/assets/images/Mpox.jpg";
 
 export const metadata: Metadata = {
   title: "Implementation Research | InnovateHealth Africa",
@@ -17,6 +17,7 @@ const cards: PillarCard[] = [
     description:
       'A comprehensive review of how AI-powered diagnostic tools are being designed, deployed, and evaluated for infectious diseases in low-resource healthcare settings across Africa.',
     image: researchPlaceholder,
+    externalLink: { label: "Read More", href: "https://preprints.jmir.org/preprint/84758" },
   },
 ]
 

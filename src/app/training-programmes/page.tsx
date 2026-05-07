@@ -1,10 +1,10 @@
 import React from 'react'
 import type { Metadata } from 'next'
 import PillarCardGrid, { PillarCard } from '@/components/pillar-card-grid'
-import fellowshipImage from "@/assets/images/fellowship.png";
-import workshopImage from "@/assets/images/workshop.png";
+import ahifProgram from "@/assets/images/ahif.jpg";
+import workforceReadiness from "@/assets/images/workforce-readiness.jpg";
 import pitchyardImage from "@/assets/images/pitchyard.webp";
-import innovationLabsImage from "@/assets/images/innovation_lab.png";
+import leadershipInitiative from "@/assets/images/leadersip-executive.jpg";
 
 export const metadata: Metadata = {
   title: "Training Programmes | InnovateHealth Africa",
@@ -18,7 +18,7 @@ const cards: PillarCard[] = [
     title: 'Africa Healthcare Innovation Fellowship (AHIF)',
     description:
       'Addressing the challenges of healthcare in Africa requires more than technology; it requires leaders who understand systems, context, and people. The Africa Healthcare Innovation Fellowship (AHIF) was designed to produce such leaders.',
-    image: fellowshipImage,
+    image: ahifProgram,
     externalLink: { label: 'Learn more about AHIF 2026', href: '/ahif-2026' },
   },
   {
@@ -26,7 +26,7 @@ const cards: PillarCard[] = [
     title: 'Digital Health Workforce Readiness Initiative',
     description:
       "Africa's health system is changing faster than the workforce has been prepared for. This programme equips frontline health workers with the practical digital competency they need to navigate new tools, make better use of health data, and deliver care with greater confidence in an increasingly digital workplace.",
-    image: workshopImage,
+    image: workforceReadiness,
     comingSoon: true,
   },
   {
@@ -34,7 +34,7 @@ const cards: PillarCard[] = [
     title: 'Digital Health Leadership Executive Programme',
     description:
       "This programme is designed for the professionals inside Africa's health institutions who carry formal responsibility for digital strategy, systems, and change and who need structured development, a rigorous curriculum, and a peer network equal to the demands of that responsibility.",
-    image: innovationLabsImage,
+    image: leadershipInitiative,
     comingSoon: true,
   },
   {

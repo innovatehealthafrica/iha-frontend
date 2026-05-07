@@ -5,7 +5,7 @@ import heroSlide1 from "@/assets/images/hero/slide1.png";
 import heroSlide2 from "@/assets/images/hero/slide2.png";
 import heroSlide3 from "@/assets/images/hero/slide3.png";
 import background from "@/assets/images/background.png";
-import communityImage from "@/assets/images/community.png";
+import communityImage from "@/assets/images/community.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -141,7 +141,7 @@ export const ClientSection = () => {
       </section>
 
       {/* Join Community CTA */}
-      <section className="bg-white py-14 lg:py-20">
+      <section className="bg-white py-14 lg:pt-10 lg:pb-20">
         <div className="flex flex-col lg:flex-row px-8 lg:px-0 lg:space-x-12 gap-8 lg:gap-0 max-w-screen-xl mx-auto">
           <div className="flex flex-col justify-center w-full max-w-lg">
             <h2 className="font-[600] text-3xl lg:text-[2.5rem] leading-tight lg:leading-10 text-primary">
@@ -164,12 +164,12 @@ export const ClientSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Join the Largest Community of Healthcare Innovators
+                Join Now!
               </a>
             </Button>
           </div>
 
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-start lg:justify-center">
             <Image
               src={communityImage}
               alt="Image of innovators connected by one goal"
