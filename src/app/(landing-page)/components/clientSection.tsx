@@ -141,21 +141,24 @@ export const ClientSection = () => {
       </section>
 
       {/* Join Community CTA */}
-      <section className="bg-white py-14 lg:pt-10 lg:pb-20">
-        <div className="flex flex-col lg:flex-row px-8 lg:px-0 lg:space-x-12 gap-8 lg:gap-0 max-w-screen-xl mx-auto">
-          <div className="flex flex-col justify-center w-full max-w-lg">
-            <h2 className="font-[600] text-3xl lg:text-[2.5rem] leading-tight lg:leading-10 text-primary">
+      <section className="bg-white py-14 md:py-20">
+        {/* Container: Stays flex-col across all sizes, but centered */}
+        <div className="flex flex-col items-center px-8 md:px-16 max-w-screen-xl mx-auto text-left md:text-center">
+
+          {/* Text Content: Full width but constrained for readability */}
+          <div className="w-full max-w-2xl lg:max-w-3xl">
+            <h2 className="font-[600] text-3xl md:text-4xl lg:text-[2.5rem] leading-tight text-primary">
               Join the largest community of healthcare innovators
             </h2>
 
-            <p className="mt-4 text-lg">
+            <p className="mt-4 text-lg md:text-xl text-gray-700">
               Join the largest community of innovators, encompassing product
               developers, data scientists, engineers, healthcare professionals,
               AI developers, cloud engineers, and more.
             </p>
 
             <Button
-              className="w-fit mt-4 lg:mt-9 text-white text-base"
+              className="w-fit mt-6 md:mx-auto lg:mt-9 text-white text-base"
               size="lg"
               asChild
             >
@@ -169,15 +172,17 @@ export const ClientSection = () => {
             </Button>
           </div>
 
-          <div className="w-full flex justify-start lg:justify-center">
+          {/* Image: Full width with a controlled max-height/width for tablet */}
+          <div className="w-full mt-12 flex justify-center">
             <Image
               src={communityImage}
               alt="Image of innovators connected by one goal"
-              width={553}
-              height={300}
-              className="rounded-3xl overflow-hidden"
+              width={800} // Increased width for better resolution on tablet
+              height={450}
+              className="rounded-3xl overflow-hidden object-cover w-full max-w-4xl h-auto shadow-sm"
             />
           </div>
+
         </div>
       </section>
 
