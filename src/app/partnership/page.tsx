@@ -11,10 +11,7 @@ const layout = () => {
       <ProjectHeader
         title="Partnership"
         description="We partner with organizations to develop innovative digital solutions that advance healthcare in Africa."
-        ctaLabel="Work with Us"
         ctaHref="#who-we-are"
-        backgroundImageUrl="/path/to/image.jpg"
-        overlayClassName="bg-black/40"
         heightClassName="h-[60vh] sm:h-[540px]"
       />
       <PartnerShipView />
