@@ -13,6 +13,7 @@ import anuLogo from "@/assets/images/partners/anu-logo-1.webp";
 import futurizeLogo from "@/assets/images/partners/futurize logo.webp";
 import gitexAfricaLogo from "@/assets/images/partners/Gitex logo.webp";
 import socialLogo from "@/assets/images/partners/social_entrepreneurship_innovation_hub_seih_logo.jpeg"
+import mtnInnovationLabLogo from "@/assets/images/partners/MTN_Innovation_Lab.png";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
@@ -36,6 +37,7 @@ const PARTNERS: Partner[] = [
   { name: "Futurize", logo: futurizeLogo },
   { name: "GITEX Africa", logo: gitexAfricaLogo },
   { name: "Social Entrepreneurship and Innovation Hub", logo: socialLogo },
+  { name: "MTN Innovation Lab", logo: mtnInnovationLabLogo },
 ];
 
 export default function PartnerSection() {
