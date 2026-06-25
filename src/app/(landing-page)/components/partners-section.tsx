@@ -14,6 +14,7 @@ import futurizeLogo from "@/assets/images/partners/futurize logo.webp";
 import gitexAfricaLogo from "@/assets/images/partners/Gitex logo.webp";
 import socialLogo from "@/assets/images/partners/social_entrepreneurship_innovation_hub_seih_logo.jpeg"
 import mtnInnovationLabLogo from "@/assets/images/partners/MTN_Innovation_Lab.png";
+import ahfidLogo from "@/assets/images/partners/AHFID_Black_with_tag.png";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
@@ -38,6 +39,7 @@ const PARTNERS: Partner[] = [
   { name: "GITEX Africa", logo: gitexAfricaLogo },
   { name: "Social Entrepreneurship and Innovation Hub", logo: socialLogo },
   { name: "MTN Innovation Lab", logo: mtnInnovationLabLogo },
+  { name: "AHFID", logo: ahfidLogo },
 ];
 
 export default function PartnerSection() {
@@ -61,13 +63,13 @@ export default function PartnerSection() {
             {PARTNERS.map((partner) => (
               <div
                 key={partner.name}
-                className="mx-8 opacity-60 hover:opacity-100 transition-opacity duration-300"
+                className="mx-8 flex items-center justify-center h-[110px] w-[220px] opacity-60 hover:opacity-100 transition-opacity duration-300"
                 title={partner.name}
               >
                 <Image
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-[60px] w-auto object-contain"
+                  className="max-h-full max-w-full w-auto h-auto object-contain"
                 />
               </div>
             ))}
