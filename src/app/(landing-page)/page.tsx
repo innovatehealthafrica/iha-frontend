@@ -3,6 +3,7 @@ import NewsletterSubscriptionSection from "@/components/newsletter-subscription-
 import { client } from '@/sanity/lib/client';
 import { SanityTypes } from '@/@types';
 import { ClientSection } from "./components/clientSection";
+import FeaturedReport from "./components/featured-report";
 
 
 export const revalidate = 60;
@@ -33,6 +34,7 @@ export default async function Home() {
     <>
       <ClientSection />
 
+      <FeaturedReport />
 
       <BlogSection posts={posts} />
 
