@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import reportCover from "@/assets/images/the_state_of_digital_health_readines_in_the_african_health_workforce_report_2026.png";
 
 const REPORT_URL =
-  "https://drive.google.com/file/d/1fPco94lJAnaRF6sXylFvRr182F_8NCFP/view?usp=sharing";
+  "https://zenodo.org/records/22009775?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjFjYzhlNzFmLTNlYjgtNDkyMC04MDViLWU5OThiMDU2MDU3OSIsImRhdGEiOnt9LCJyYW5kb20iOiJiY2YyNWQ1OGNlYjVmOGI1YjYwMzNhNzgyNzgzNDQzNyJ9.iDSRug3_rxo9FBynQltZUja9B4rZPERdaguGhAyF8WMP6UJBedEdEcen-7mNk7XSKRDZyKt0nuyJP5JuPoGLWg";
 
 export default function FeaturedReport() {
   return (
