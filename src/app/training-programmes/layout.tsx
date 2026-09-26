@@ -1,16 +1,13 @@
 import React, { ReactNode } from 'react'
 import ContactUsSection from '@/components/contact-us-section'
-import { ProjectHeader } from '@/components/progams/projectHeader'
 import NewsletterSubscriptionSection from '@/components/newsletter-subscription-section'
 
-
+// The hero header lives in each page (not here) so nested initiative pages
+// such as /training-programmes/digital-health-workforce-readiness-initiative
+// can render their own hero while still sharing the footer sections below.
 const layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <ProjectHeader
-        title="Training Programmes"
-        description="Competency-based training in digital health that equips health workers from the frontline to leadership level with the competence, confidence, and capability to deliver better care."
-      />
       {children}
       <ContactUsSection />
       <NewsletterSubscriptionSection />

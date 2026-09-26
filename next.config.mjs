@@ -16,6 +16,11 @@ const nextConfig = {
         destination: "/training-programmes",
         permanent: true,
       },
+      {
+        source: "/ahif-2026",
+        destination: "/training-programmes/ahif-2026",
+        permanent: true,
+      },
     ];
   },
   // output: "export",

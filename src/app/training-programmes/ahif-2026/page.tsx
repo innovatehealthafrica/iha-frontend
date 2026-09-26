@@ -384,14 +384,14 @@ export const metadata: Metadata = {
   description:
     "Empowering innovators to transform healthcare in Africa through digital solutions.",
   alternates: {
-    canonical: "https://innovatehealth.africa/ahif-2026",
+    canonical: "https://innovatehealth.africa/training-programmes/ahif-2026",
   },
 
   openGraph: {
     title: "Africa Healthcare Innovation Fellowship 2026",
     description:
       "Empowering innovators to transform healthcare in Africa through digital solutions.",
-    url: "https://innovatehealth.africa/ahif-2026",
+    url: "https://innovatehealth.africa/training-programmes/ahif-2026",
     type: "website",
     images: [
       {

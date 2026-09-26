@@ -23,7 +23,8 @@ export function ProjectHeader({
   hideCta = false,
   backgroundImageUrl,
   overlayClassName = "bg-primary/50",
-  heightClassName = "h-[70vh] sm:h-[600px]",
+  // min-height rather than a fixed height so long descriptions never clip on mobile
+  heightClassName = "min-h-[70vh] sm:min-h-[600px]",
   className,
 }: ProjectHeaderProps) {
   return (
@@ -42,7 +43,7 @@ export function ProjectHeader({
       {backgroundImageUrl && (
         <div className={cn("absolute inset-0 z-0", overlayClassName)} />
       )}
-      <div className="text-center max-w-screen-lg mt-24 mb-36 lg:my-36 px-4 z-[2] space-y-4 lg:space-y-8">
+      <div className="text-center max-w-screen-lg mt-24 mb-20 lg:my-36 px-4 z-[2] space-y-4 lg:space-y-8">
         <h1 className="text-primary-bright-orange text-center font-bold lg:mb-12 text-4xl lg:text-5xl">
           {title}
         </h1>

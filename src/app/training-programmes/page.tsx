@@ -1,6 +1,7 @@
 import React from 'react'
 import type { Metadata } from 'next'
 import PillarCardGrid, { PillarCard } from '@/components/pillar-card-grid'
+import { ProjectHeader } from '@/components/progams/projectHeader'
 import ahifProgram from "@/assets/images/ahif.jpg";
 import workforceReadiness from "@/assets/images/workforce-readiness.jpg";
 import pitchyardImage from "@/assets/images/pitchyard.webp";
@@ -19,7 +20,7 @@ const cards: PillarCard[] = [
     description:
       'Addressing the challenges of healthcare in Africa requires more than technology; it requires leaders who understand systems, context, and people. The Africa Healthcare Innovation Fellowship (AHIF) was designed to produce such leaders.',
     image: ahifProgram,
-    externalLink: { label: 'Learn more about AHIF 2026', href: '/ahif-2026' },
+    readMoreHref: '/training-programmes/ahif-2026',
   },
   {
     id: 'dhwri',
@@ -27,7 +28,7 @@ const cards: PillarCard[] = [
     description:
       "Africa's health system is changing faster than the workforce has been prepared for. This programme equips frontline health workers with the practical digital competency they need to navigate new tools, make better use of health data, and deliver care with greater confidence in an increasingly digital workplace.",
     image: workforceReadiness,
-    comingSoon: true,
+    readMoreHref: '/training-programmes/digital-health-workforce-readiness-initiative',
   },
   {
     id: 'dhlep',
@@ -46,6 +47,14 @@ const cards: PillarCard[] = [
   },
 ]
 
-const Page = () => <PillarCardGrid title="Training Programmes" cards={cards} />
+const Page = () => (
+  <>
+    <ProjectHeader
+      title="Training Programmes"
+      description="Competency-based training in digital health that equips health workers from the frontline to leadership level with the competence, confidence, and capability to deliver better care."
+    />
+    <PillarCardGrid title="Training Programmes" cards={cards} />
+  </>
+)
 
 export default Page
