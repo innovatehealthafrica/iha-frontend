@@ -2,11 +2,10 @@
 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import { SanityTypes } from "@/@types";
-import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
+import { PostImage } from "./postImage";
 
 interface BlogCardProps {
   post: SanityTypes.BlogPost;
@@ -14,24 +13,18 @@ interface BlogCardProps {
 
 export function BlogCard({ post }: BlogCardProps) {
   const postDate = new Date(post._createdAt).toLocaleDateString();
-  const postImage = post.mainImage
-    ? urlFor(post.mainImage).width(800).height(500).fit("crop").auto("format").url()
-    : "/hero-bg.png";
 
   return (
     <Card className="overflow-hidden bg-transparent border-none shadow-none">
       <div className="flex flex-col gap-4">
 
-        <div className="relative w-full aspect-[16/10] bg-gray-100 rounded-md overflow-hidden">
-          <Image
-            src={postImage}
-            alt={post.title}
-            fill
-            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-            className="object-cover"
-            loading="lazy"
-          />
-        </div>
+        <PostImage
+          image={post.mainImage}
+          alt={post.title}
+          width={800}
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          className="aspect-[16/10] rounded-md"
+        />
 
         {/* Content */}
         <div>

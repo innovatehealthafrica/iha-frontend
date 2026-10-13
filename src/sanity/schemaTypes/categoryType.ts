@@ -3,11 +3,14 @@ import { defineField, defineType } from "sanity";
 
 // Spec H1 — fixed set of four allowed categories. The legacy 'Uncategorized'
 // option must not be selectable; constrain to this list at the schema layer.
+// Titles use "and" rather than "&" to match the live category documents and
+// to keep titles safe in URLs, metadata and screen readers. The news page
+// filter matches categories by _id, so the wording here only affects display.
 export const NEWS_CATEGORIES = [
   "Latest Announcements",
-  "Programs & Fellowships",
-  "Research & Innovation",
-  "Partnerships & Events",
+  "Programs and Fellowships",
+  "Research and Innovation",
+  "Partnerships and Events",
 ] as const;
 
 export const categoryType = defineType({
