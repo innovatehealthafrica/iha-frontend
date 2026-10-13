@@ -1,11 +1,10 @@
-"use clients";
+"use client";
 
 import { Badge } from "@/components/ui/badge"
 import { SanityTypes } from "@/@types"
 import { Calendar } from "lucide-react"
-import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
+import { PostImage } from "./postImage";
 
 interface FeaturedBlogCardProps {
   post: SanityTypes.BlogPost
@@ -13,10 +12,6 @@ interface FeaturedBlogCardProps {
 
 export function FeaturedBlogCard({ post }: FeaturedBlogCardProps) {
   const postDate = new Date(post._createdAt).toLocaleDateString();
-  const postImage = post.mainImage
-    ? urlFor(post.mainImage).width(1200).height(800).fit("crop").auto("format").url()
-    : "/hero-bg.png";
-
 
   return (
     <section className="mt-20 mb-16">
@@ -45,16 +40,14 @@ export function FeaturedBlogCard({ post }: FeaturedBlogCardProps) {
               Read More
             </Link>
           </div>
-          <div className="lg:w-2/5 relative bg-gray-100 rounded-md overflow-hidden aspect-[4/3] max-w-md mx-auto lg:mx-0">
-            <Image
-              src={postImage}
-              alt={post.title}
-              fill
-              sizes="(min-width: 1024px) 40vw, (min-width: 768px) 60vw, 100vw"
-              className="object-cover"
-              loading="lazy"
-            />
-          </div>
+          <PostImage
+            image={post.mainImage}
+            alt={post.title}
+            width={1200}
+            sizes="(min-width: 1024px) 40vw, (min-width: 768px) 60vw, 100vw"
+            className="lg:w-2/5 aspect-[4/3] rounded-md max-w-md mx-auto lg:mx-0"
+            priority
+          />
 
         </div>
       </div>
