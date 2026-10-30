@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import PillarCardGrid, { PillarCard } from '@/components/pillar-card-grid'
 import researchPlaceholder from "@/assets/images/Mpox.jpg";
 import digitalHealthReadinessReport from "@/assets/images/the_state_of_digital_health_readines_in_the_african_health_workforce_report_2026.png";
+import digitalHealthliteracyframework from "@/assets/images/digital-health-literacy-framework.jpeg";
 
 export const metadata: Metadata = {
   title: "Implementation Research | InnovateHealth Africa",
@@ -11,6 +12,16 @@ export const metadata: Metadata = {
 };
 
 const cards: PillarCard[] = [
+  {
+    id: 'digital-health-literacy-competency-framework',
+    title:
+      'Digital Health Literacy Competency Framework for Frontline Healthcare Professionals in Africa',
+    description:
+      'This Framework defines the digital health competencies frontline healthcare professionals need to practise safely and effectively in digitally enabled care, providing a common reference for workforce education, professional development and digital health planning across Africa.',
+    image: digitalHealthliteracyframework,
+    externalLink: { label: "Read the Report", href: "https://zenodo.org/records/23693343?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImU5NjhjZWRiLWIwNjQtNDQ1Zi04NjhmLWQ1ZWMwMDNkZTcyOSIsImRhdGEiOnt9LCJyYW5kb20iOiIyNWVjMzA4ZmU0ZjA1NzYxYzU3NGQ2ZTM2OTNlZDg0MCJ9.EpCws7F2xVzQqagP6v0xQo5yJqaIfHXhhXcemVXwR2GLppM2TJK6c59P_iRPULxP0vsC4v6O52eTQn_XhEBDAw" },
+    readMoreHref: "https://zenodo.org/records/23693343?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImU5NjhjZWRiLWIwNjQtNDQ1Zi04NjhmLWQ1ZWMwMDNkZTcyOSIsImRhdGEiOnt9LCJyYW5kb20iOiIyNWVjMzA4ZmU0ZjA1NzYxYzU3NGQ2ZTM2OTNlZDg0MCJ9.EpCws7F2xVzQqagP6v0xQo5yJqaIfHXhhXcemVXwR2GLppM2TJK6c59P_iRPULxP0vsC4v6O52eTQn_XhEBDAw",
+  },
   {
     id: 'digital-health-readiness-report-2026',
     title:
